@@ -21,7 +21,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = ["check", "Result", "PROMPT"]
 
 PROMPT = (
@@ -92,9 +92,25 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
         body["reasoning_format"] = "hidden"
     if "gpt-oss" in model:
         body["reasoning_effort"] = "low"
-    req = urllib.request.Request(f"{base}/chat/completions", data=json.dumps(body).encode(), headers={"content-type": "application/json", "authorization": f"Bearer {key}", "user-agent": f"groundedness/{__version__} (+https://github.com/aghasalim/groundedness)"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        data = json.load(r)
+    headers = {"content-type": "application/json", "authorization": f"Bearer {key}", "user-agent": f"groundedness/{__version__} (+https://github.com/aghasalim/groundedness)"}
+    # Small models cap max_tokens below the thinking-model budget; on that
+    # specific 400, retry once with the cap the server names (or 2000).
+    data = None
+    for _attempt in (1, 2):
+        req = urllib.request.Request(f"{base}/chat/completions", data=json.dumps(body).encode(), headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                data = json.load(r)
+            break
+        except urllib.error.HTTPError as e:
+            msg = e.read().decode("utf-8", "replace") if e.code == 400 else ""
+            m = re.search(r"max_tokens.*?`?(\d{3,6})`?", msg)
+            if _attempt == 1 and e.code == 400 and "max_tokens" in msg:
+                body["max_tokens"] = min(int(m.group(1)) if m else 2000, body["max_tokens"] - 1)
+                continue
+            raise
+    if data is None:
+        return Result(fixed=answer, original=answer, model=model, judged=False)
     raw = (data.get("choices") or [{}])[0].get("message", {}).get("content", "") or ""
     if not raw.strip():
         return Result(fixed=answer, original=answer, model=model, raw=raw, judged=False)
