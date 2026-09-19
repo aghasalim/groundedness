@@ -53,9 +53,23 @@ GROQ_API_KEY=... python -m pytest -q
 
 Three languages, one planted wrong price and one invented opening day each; plus a grounded answer that must come back unchanged.
 
+## Benchmark: which model judges best, in eleven languages
+
+The same case in en, az, ru, tr, uk, kk, ar, fa, hi, id, vi: a clinic's facts, a grounded answer that must pass, and two answers with one planted error each (a wrong price, an invented opening day). Every chat model on Groq's free tier, 19 September 2026. Reproduce with `python benchmark/run.py`; full per-language grid in [`benchmark/RESULTS.md`](benchmark/RESULTS.md).
+
+| Model | Planted errors caught | Grounded answers wrongly flagged | Median latency |
+|---|---:|---:|---:|
+| `openai/gpt-oss-120b` | 22/22 | 0/11 | 0.58 s |
+| `openai/gpt-oss-20b` | 22/22 | 0/11 | 0.48 s |
+| `qwen/qwen3.8-27b` | 22/22 | 0/11 | 0.27 s |
+| `allam-2-7b` | 15/22 | 11/11 | 0.25 s |
+
+Three models are perfect across all eleven languages, including Kazakh, Persian and Vietnamese, with no false alarms; `qwen/qwen3.8-27b` is the fastest of them. `allam-2-7b` flags every grounded answer and misses a third of the errors: a 7B Arabic-centred model is not a judge. The set is small on purpose (33 answers per model, one domain) — it is a smoke test that a model can read the language and follow the instruction, not a measure of fine judgement. Adding a language is one JSON entry in `benchmark/cases.json`; adding a model is one endpoint that lists it.
+
 ## Roadmap
 
-- A benchmark: the same planted-error set in ten non-English languages, and a table of which models judge best. There is no multilingual hallucination leaderboard yet.
+- More domains per language (a return policy, a timetable, a contract clause) and harder errors: a right number in the wrong place, a plausible synonym.
+- Models beyond Groq: run the same file against OpenRouter, Ollama, vLLM.
 - A DeepEval / RAGAS metric that wraps this.
 
 ## Origin
