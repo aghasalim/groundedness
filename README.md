@@ -53,34 +53,41 @@ GROQ_API_KEY=... python -m pytest -q
 
 Three languages, one planted wrong price and one invented opening day each; plus a grounded answer that must come back unchanged.
 
-## Benchmark: which model judges best, in eleven languages
+## Benchmark v2: judges vs the English-trained detectors, eleven languages
 
-The same case in en, az, ru, tr, uk, kk, ar, fa, hi, id, vi: a clinic's facts, a grounded answer that must pass, and two answers with one planted error each (a wrong price, an invented opening day). Every chat model on Groq's free tier, 19 September 2026. Reproduce with `python benchmark/run.py`; full per-language grid in [`benchmark/RESULTS.md`](benchmark/RESULTS.md).
+Two domains (a dental clinic, an electronics shop), eleven languages across five scripts, and for each a grounded answer plus seven single-error variants planted by slot substitution — wrong price, wrong hours, wrong street number, one phone digit changed, wrong return window, an invented Sunday opening, an added claim. **154 answers, 132 of them wrong**, identical across languages. Full tables: [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md), [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). Paper: [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf).
 
-| Model | Planted errors caught | Grounded answers wrongly flagged | Median latency |
-|---|---:|---:|---:|
-| `openai/gpt-oss-120b` | 22/22 | 0/11 | 0.58 s |
-| `openai/gpt-oss-20b` | 22/22 | 0/11 | 0.48 s |
-| `qwen/qwen3.8-27b` | 22/22 | 0/11 | 0.27 s |
-| `allam-2-7b` | 15/22 | 11/11 | 0.25 s |
+| Detector | Kind | Errors caught | False alarms | Median latency |
+|---|---|---:|---:|---:|
+| `openai/gpt-oss-120b` | LLM judge, Groq | **132/132** | **0/22** | 0.70 s |
+| `gemini-3.8-flash` | LLM judge, Google | **132/132** | **0/22** | 2.88 s |
+| `qwen/qwen3.8-27b` | LLM judge, Groq | 131/132 | 0/22 | **0.36 s** |
+| `openai/gpt-oss-20b` | LLM judge, Groq | 130/132 | 1/22 | 0.45 s |
+| `gemini-3.5-flash` | LLM judge, Google | 129/132 | 0/22 | 5.05 s |
+| `gemini-2.5-flash` | LLM judge, Google | 129/132 | 0/22 | 5.54 s |
+| `vectara/HHEM-2.1-Open` | trained classifier, CPU | 104/132 | **12/22** | 0.05 s |
+| `allam-2-7b` | LLM judge, Groq | 67/132 | 21/22 | 0.32 s |
+| `LettuceDetect-base (en)` | trained classifier, CPU | 65/132 | 11/22 | 0.06 s |
 
-And Google's models over their OpenAI-compatible endpoint (`python benchmark/run.py --gemini`, results in [`benchmark/gemini.md`](benchmark/gemini.md)):
+Three things the tables show:
 
-| Model | Planted errors caught | Grounded answers wrongly flagged | Median latency |
-|---|---:|---:|---:|
-| `gemini-3.8-flash` | 22/22 | 0/11 | 2.7 s |
-| `gemini-3.5-flash` | 22/22 | 0/11 | 4.4 s |
-| `gemini-2.5-flash` | 22/22 | 0/11 | 4.3 s |
-| `gemini-2.5-pro` | 21/21 | 0/11 | 10.6 s |
+- **The judge approach transfers; the trained detectors do not.** Two open models are perfect in all eleven languages, and a 27B model misses one case in 0.36 s.
+- **HHEM's 79 % is a language detector, not a hallucination detector.** In English it catches 5/12 with no false alarms. In Russian, Arabic, Persian and Indonesian it catches 12/12 *and flags both grounded answers*: its consistency score for any non-English pair sits under the threshold whatever the content. Recall without the false-alarm column is meaningless.
+- **LettuceDetect follows script distance**: 8/12 in the Latin-script languages, 6/12 in Russian, 2/12 in Kazakh and Hindi, with false alarms in eight languages. Where it works it names spans and costs 0.06 s on a CPU, which is its real advantage.
 
-Seven models are perfect across all eleven languages, including Kazakh, Persian and Vietnamese, with no false alarms; `qwen/qwen3.8-27b` on Groq is the fastest by ten times. `allam-2-7b` flags every grounded answer and misses a third of the errors: a 7B Arabic-centred model is not a judge. One `gemini-2.5-pro` call (Azerbaijani, wrong price) hit a transient request error and is left out rather than guessed.
+Among the judges, the single changed phone digit and the wrong hours cause nearly all the misses. A 7B model (allam) over-flags and misses in every language including English: below roughly 20B parameters this is not a judge.
 
-A lesson from the first run, kept here so nobody repeats it: thinking models spend their token budget before the first visible character. With `max_tokens: 1200` Gemini 2.5 Pro returned empty replies and an early version of this package scored an empty reply as "grounded" — 0/22 caught, 0 false alarms, a perfect-looking failure. The package now returns `judged=False` for an empty or non-JSON reply, and the benchmark counts it as a miss. The set is small on purpose (33 answers per model, one domain) — it is a smoke test that a model can read the language and follow the instruction, not a measure of fine judgement. Adding a language is one JSON entry in `benchmark/cases.json`; adding a model is one endpoint that lists it.
+Two measurement bugs were caught before publishing and are documented in the paper: an empty reply from a thinking model was scored as "grounded" (fixed in 0.1.1), and HHEM's score was first treated as a span and required to overlap the planted text, giving 0/132 (rescored from the saved raw outputs).
+
+### v1 (smoke test, 33 answers per model)
+
+Kept in [`benchmark/RESULTS.md`](benchmark/RESULTS.md) and [`gemini.md`](benchmark/gemini.md): seven of nine models perfect on the one-domain, two-error set.
 
 ## Roadmap
 
-- More domains per language (a return policy, a timetable, a contract clause) and harder errors: a right number in the wrong place, a plausible synonym.
-- Models beyond Groq: run the same file against OpenRouter, Ollama, vLLM.
+- Harder errors that will lower every row: a right number in the wrong sentence, a claim implied but not stated, an omitted condition, a meaning-changing paraphrase.
+- Native-speaker review of the nine non-native case sets (PRs welcome: one JSON entry per language).
+- More providers: the runner takes any OpenAI-compatible endpoint (`--openrouter` is wired, unfunded).
 - A DeepEval / RAGAS metric that wraps this.
 
 ## Origin
