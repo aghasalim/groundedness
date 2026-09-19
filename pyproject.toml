@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "groundedness"
-version = "0.1.1"
+version = "0.1.2"
 description = "Did the model make this up? Claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language."
 readme = "README.md"
 license = "MIT"
