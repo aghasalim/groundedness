@@ -1,6 +1,6 @@
 # groundedness
 
-**Did the model make this up?** A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language.
+**Did the model make this up?** A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)** — it also hosts the public multilingual detector leaderboard.
 
 ```python
 from groundedness import check
@@ -55,7 +55,9 @@ Three languages, one planted wrong price and one invented opening day each; plus
 
 ## Benchmark v2: judges vs the English-trained detectors, eleven languages
 
-Two domains (a dental clinic, an electronics shop), eleven languages across five scripts, and for each a grounded answer plus seven single-error variants planted by slot substitution — wrong price, wrong hours, wrong street number, one phone digit changed, wrong return window, an invented Sunday opening, an added claim. **154 answers, 132 of them wrong**, identical across languages. Full tables: [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md), [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). Paper: [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf).
+Two domains (a dental clinic, an electronics shop), eleven languages across five scripts, and for each a grounded answer plus seven single-error variants planted by slot substitution — wrong price, wrong hours, wrong street number, one phone digit changed, wrong return window, an invented Sunday opening, an added claim. **154 answers, 132 of them wrong**, identical across languages. Full tables: [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md), [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). Paper: [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf). Live leaderboard: [grounded.siba.az](https://grounded.siba.az/#leaderboard).
+
+![Planted errors caught per language, nine detectors](benchmark/heatmap.png)
 
 | Detector | Kind | Errors caught | False alarms | Median latency |
 |---|---|---:|---:|---:|
