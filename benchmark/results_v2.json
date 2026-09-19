@@ -4440,14 +4440,6 @@
     0.367,
     1.649
    ]
-  },
-  "none": {
-   "calls": {
-    "en/clinic/ok": {
-     "error": "HTTP 401"
-    }
-   },
-   "latency": []
   }
  }
 }
