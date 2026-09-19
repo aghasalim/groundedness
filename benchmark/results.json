@@ -1,0 +1,281 @@
+{
+ "models": {
+  "allam-2-7b": {
+   "per_language": {
+    "en": {
+     "ok_flagged": true,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "ru": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "tr": {
+     "ok_flagged": true,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "kk": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "ar": {
+     "ok_flagged": true,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "hi": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    },
+    "id": {
+     "ok_flagged": true,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": true,
+     "price": true,
+     "day": false
+    }
+   },
+   "errors": 0,
+   "recall": 0.6818181818181818,
+   "caught": 15,
+   "planted": 22,
+   "false_alarms": 11,
+   "grounded_cases": 11,
+   "median_latency_s": 0.25
+  },
+  "openai/gpt-oss-120b": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 0.58
+  },
+  "openai/gpt-oss-20b": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 0.48
+  },
+  "qwen/qwen3.8-27b": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 0.27
+  }
+ },
+ "languages": [
+  "en",
+  "az",
+  "ru",
+  "tr",
+  "uk",
+  "kk",
+  "ar",
+  "fa",
+  "hi",
+  "id",
+  "vi"
+ ]
+}
