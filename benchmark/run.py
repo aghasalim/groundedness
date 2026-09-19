@@ -31,10 +31,31 @@ def models_available():
     return sorted(i for i in ids if not any(s in i for s in skip))
 
 
+# The OpenRouter set: one representative per family, the models people ask
+# about. Free-tier and cheap; nothing that needs a special provider.
+OPENROUTER = [
+    "openai/gpt-4o-mini", "openai/gpt-4.1-mini",
+    "anthropic/claude-3.5-haiku",
+    "google/gemini-2.5-flash", "google/gemma-3-27b-it",
+    "meta-llama/llama-3.3-70b-instruct", "meta-llama/llama-4-scout",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "deepseek/deepseek-chat-v3-0324",
+    "qwen/qwen3-32b", "qwen/qwen3-8b",
+    "x-ai/grok-3-mini",
+]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", help="comma-separated; default: every chat model the endpoint lists")
+    ap.add_argument("--openrouter", action="store_true", help="run the OpenRouter set (needs OPENROUTER_API_KEY)")
+    ap.add_argument("--out", default="results.json")
     a = ap.parse_args()
+    if a.openrouter:
+        os.environ["OPENAI_BASE_URL"] = "https://openrouter.ai/api/v1"
+        os.environ["OPENAI_API_KEY"] = os.environ["OPENROUTER_API_KEY"]
+        if not a.models:
+            a.models = ",".join(OPENROUTER)
     cases = {k: v for k, v in json.load(open(os.path.join(HERE, "cases.json"), encoding="utf-8")).items() if not k.startswith("_")}
     models = a.models.split(",") if a.models else models_available()
     out = {"models": {}, "languages": list(cases)}
@@ -80,7 +101,7 @@ def main():
             print(f"{m:34s} {lang}  ok_flagged={r['ok_flagged']}  price={r['price']}  day={r['day']}", flush=True)
         row.update(recall=caught / planted if planted else None, caught=caught, planted=planted, false_alarms=alarms, grounded_cases=len(cases), median_latency_s=round(statistics.median(lat), 2) if lat else None)
         out["models"][m] = row
-    json.dump(out, open(os.path.join(HERE, "results.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    json.dump(out, open(os.path.join(HERE, a.out), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # the table
     lines = ["| Model | Recall (planted errors caught) | False alarms (grounded answers flagged) | Median latency | Languages fully caught |", "|---|---:|---:|---:|---|"]
     for m, row in sorted(out["models"].items(), key=lambda kv: (-(kv[1]["recall"] or 0), kv[1]["false_alarms"])):
@@ -95,7 +116,7 @@ def main():
     for m, row in out["models"].items():
         cells = [f"{'✗' if r['ok_flagged'] else '✓'}{sym(r['price'])}{sym(r['day'])}" for r in row["per_language"].values()]
         lines.append(f"| `{m}` | " + " | ".join(cells) + " |")
-    open(os.path.join(HERE, "RESULTS.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
+    open(os.path.join(HERE, "RESULTS.md" if a.out == "results.json" else a.out.replace(".json", ".md")), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print("\n".join(lines))
 
 
