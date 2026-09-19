@@ -49,6 +49,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", help="comma-separated; default: every chat model the endpoint lists")
     ap.add_argument("--openrouter", action="store_true", help="run the OpenRouter set (needs OPENROUTER_API_KEY)")
+    ap.add_argument("--gemini", action="store_true", help="run Google's models over their OpenAI-compatible endpoint (needs GEMINI_API_KEY)")
     ap.add_argument("--out", default="results.json")
     a = ap.parse_args()
     if a.openrouter:
@@ -56,6 +57,11 @@ def main():
         os.environ["OPENAI_API_KEY"] = os.environ["OPENROUTER_API_KEY"]
         if not a.models:
             a.models = ",".join(OPENROUTER)
+    if a.gemini:
+        os.environ["OPENAI_BASE_URL"] = "https://generativelanguage.googleapis.com/v1beta/openai"
+        os.environ["OPENAI_API_KEY"] = os.environ["GEMINI_API_KEY"]
+        if not a.models:
+            a.models = "gemini-2.5-flash-lite,gemini-2.5-flash,gemini-2.5-pro"
     cases = {k: v for k, v in json.load(open(os.path.join(HERE, "cases.json"), encoding="utf-8")).items() if not k.startswith("_")}
     models = a.models.split(",") if a.models else models_available()
     out = {"models": {}, "languages": list(cases)}
@@ -89,6 +95,12 @@ def main():
                     continue
                 lat.append(time.time() - t)
                 time.sleep(1.2)
+                if not res.judged:
+                    row["unjudged"] = row.get("unjudged", 0) + 1
+                    r[kind] = "unjudged"
+                    if kind != "ok":
+                        planted += 1
+                    continue
                 if kind == "ok":
                     r["ok_flagged"] = not res.grounded
                     alarms += int(not res.grounded)
@@ -108,11 +120,11 @@ def main():
         full = [l for l, r in row["per_language"].items() if r["price"] is True and r["day"] is True]
         lines.append(f"| `{m}` | {row['caught']}/{row['planted']} ({(row['recall'] or 0) * 100:.0f} %) | {row['false_alarms']}/{row['grounded_cases']} | {row['median_latency_s']} s | {len(full)}/{len(cases)}: {' '.join(full)} |")
     lines.append("")
-    lines.append("Per language, columns are: grounded answer wrongly flagged · wrong price caught · invented day caught.")
+    lines.append("Per language, columns are: grounded answer wrongly flagged · wrong price caught · invented day caught. `?` = the model returned no usable judgement (counted as a miss), `!` = request error.")
     lines.append("")
     hdr = "| Model | " + " | ".join(cases) + " |"
     lines += [hdr, "|---|" + "---|" * len(cases)]
-    sym = lambda v: "✓" if v is True else ("✗" if v is False else "!")
+    sym = lambda v: "✓" if v is True else ("✗" if v is False else ("?" if v == "unjudged" else "!"))
     for m, row in out["models"].items():
         cells = [f"{'✗' if r['ok_flagged'] else '✓'}{sym(r['price'])}{sym(r['day'])}" for r in row["per_language"].values()]
         lines.append(f"| `{m}` | " + " | ".join(cells) + " |")

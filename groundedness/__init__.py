@@ -21,7 +21,7 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["check", "Result", "PROMPT"]
 
 PROMPT = (
@@ -42,10 +42,12 @@ class Result:
     original: str = ""
     model: str = ""
     raw: str = ""
+    judged: bool = True
+    """False when the model returned nothing usable: treat as unknown, never as grounded."""
 
     @property
     def grounded(self) -> bool:
-        return not self.unsupported
+        return self.judged and not self.unsupported
 
     @property
     def score(self) -> float:
@@ -83,7 +85,9 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
     base, key = _endpoint()
     base = (base_url or base).rstrip("/")
     key = api_key or key
-    body = {"model": model, "temperature": temperature, "max_tokens": 1200, "messages": [{"role": "system", "content": PROMPT.format(facts=facts)}, {"role": "user", "content": answer}]}
+    # Thinking models spend tokens before the first visible character; the
+    # budget has to cover that or the reply comes back empty.
+    body = {"model": model, "temperature": temperature, "max_tokens": 8000, "messages": [{"role": "system", "content": PROMPT.format(facts=facts)}, {"role": "user", "content": answer}]}
     if "qwen3" in model:
         body["reasoning_format"] = "hidden"
     if "gpt-oss" in model:
@@ -92,6 +96,8 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
     with urllib.request.urlopen(req, timeout=timeout) as r:
         data = json.load(r)
     raw = (data.get("choices") or [{}])[0].get("message", {}).get("content", "") or ""
+    if not raw.strip():
+        return Result(fixed=answer, original=answer, model=model, raw=raw, judged=False)
     text = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.M).strip()
     try:
         j = json.loads(text)
@@ -101,6 +107,8 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
             j = json.loads(m.group(0)) if m else {}
         except json.JSONDecodeError:
             j = {}
-    unsupported = [str(x).strip() for x in j.get("unsupported", []) if str(x).strip()] if isinstance(j, dict) else []
-    fixed = j.get("answer") if isinstance(j, dict) and isinstance(j.get("answer"), str) else None
+    if not isinstance(j, dict) or "unsupported" not in j:
+        return Result(fixed=answer, original=answer, model=model, raw=raw, judged=False)
+    unsupported = [str(x).strip() for x in j.get("unsupported", []) if str(x).strip()]
+    fixed = j.get("answer") if isinstance(j.get("answer"), str) else None
     return Result(unsupported=unsupported, fixed=(fixed or answer).strip(), original=answer, model=model, raw=raw)

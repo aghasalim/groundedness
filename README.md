@@ -64,7 +64,18 @@ The same case in en, az, ru, tr, uk, kk, ar, fa, hi, id, vi: a clinic's facts, a
 | `qwen/qwen3.8-27b` | 22/22 | 0/11 | 0.27 s |
 | `allam-2-7b` | 15/22 | 11/11 | 0.25 s |
 
-Three models are perfect across all eleven languages, including Kazakh, Persian and Vietnamese, with no false alarms; `qwen/qwen3.8-27b` is the fastest of them. `allam-2-7b` flags every grounded answer and misses a third of the errors: a 7B Arabic-centred model is not a judge. The set is small on purpose (33 answers per model, one domain) — it is a smoke test that a model can read the language and follow the instruction, not a measure of fine judgement. Adding a language is one JSON entry in `benchmark/cases.json`; adding a model is one endpoint that lists it.
+And Google's models over their OpenAI-compatible endpoint (`python benchmark/run.py --gemini`, results in [`benchmark/gemini.md`](benchmark/gemini.md)):
+
+| Model | Planted errors caught | Grounded answers wrongly flagged | Median latency |
+|---|---:|---:|---:|
+| `gemini-3.8-flash` | 22/22 | 0/11 | 2.7 s |
+| `gemini-3.5-flash` | 22/22 | 0/11 | 4.4 s |
+| `gemini-2.5-flash` | 22/22 | 0/11 | 4.3 s |
+| `gemini-2.5-pro` | 21/21 | 0/11 | 10.6 s |
+
+Seven models are perfect across all eleven languages, including Kazakh, Persian and Vietnamese, with no false alarms; `qwen/qwen3.8-27b` on Groq is the fastest by ten times. `allam-2-7b` flags every grounded answer and misses a third of the errors: a 7B Arabic-centred model is not a judge. One `gemini-2.5-pro` call (Azerbaijani, wrong price) hit a transient request error and is left out rather than guessed.
+
+A lesson from the first run, kept here so nobody repeats it: thinking models spend their token budget before the first visible character. With `max_tokens: 1200` Gemini 2.5 Pro returned empty replies and an early version of this package scored an empty reply as "grounded" — 0/22 caught, 0 false alarms, a perfect-looking failure. The package now returns `judged=False` for an empty or non-JSON reply, and the benchmark counts it as a miss. The set is small on purpose (33 answers per model, one domain) — it is a smoke test that a model can read the language and follow the instruction, not a measure of fine judgement. Adding a language is one JSON entry in `benchmark/cases.json`; adding a model is one endpoint that lists it.
 
 ## Roadmap
 
