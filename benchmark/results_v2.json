@@ -1,0 +1,598 @@
+{
+ "cases": 154,
+ "models": {
+  "allam-2-7b": {
+   "calls": {
+    "en/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "en/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "en/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "en/shop/price": {
+     "error": "HTTP 400"
+    },
+    "en/shop/address": {
+     "error": "HTTP 400"
+    },
+    "en/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "en/shop/days": {
+     "error": "HTTP 400"
+    },
+    "en/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "en/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "az/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "az/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "az/shop/price": {
+     "error": "HTTP 400"
+    },
+    "az/shop/address": {
+     "error": "HTTP 400"
+    },
+    "az/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "az/shop/days": {
+     "error": "HTTP 400"
+    },
+    "az/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "az/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "ru/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/price": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/address": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/days": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "ru/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "tr/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/price": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/address": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/days": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "tr/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "uk/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/price": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/address": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/days": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "uk/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "kk/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/price": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/address": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/days": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "kk/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "ar/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/price": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/address": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/days": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "ar/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "fa/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/price": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/address": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/days": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "fa/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "hi/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/price": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/address": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/days": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "hi/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "id/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "id/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "id/shop/price": {
+     "error": "HTTP 400"
+    },
+    "id/shop/address": {
+     "error": "HTTP 400"
+    },
+    "id/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "id/shop/days": {
+     "error": "HTTP 400"
+    },
+    "id/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "id/shop/extra": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/ok": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/price": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/hours": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/address": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/phone": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/sunday": {
+     "error": "HTTP 400"
+    },
+    "vi/clinic/extra": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/ok": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/price": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/address": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/phone": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/days": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/sunday": {
+     "error": "HTTP 400"
+    },
+    "vi/shop/extra": {
+     "error": "HTTP 400"
+    }
+   },
+   "latency": []
+  },
+  "openai/gpt-oss-120b": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "A consultation is 25 AZN."
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "open Monday to Saturday 9:00–17:00"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Phone number +994 12 555 01 03"
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We are open on Sundays too."
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking is free for patients."
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN."
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "phone +994 12 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "You can return an unopened item within 30 days with the receipt."
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too."
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery is free above 100 AZN."
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasiya 25 AZN-dir."
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    }
+   },
+   "latency": [
+    0.325,
+    0.708,
+    0.989,
+    0.625,
+    0.57,
+    0.726,
+    0.899,
+    0.476,
+    0.823,
+    0.505,
+    0.928,
+    0.545,
+    0.734,
+    0.993,
+    0.504,
+    0.782,
+    1.187,
+    0.737
+   ]
+  }
+ }
+}

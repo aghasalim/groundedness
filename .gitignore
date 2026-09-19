@@ -6,3 +6,4 @@ build/
 .env
 .claude/
 .venv/
+benchmark/run_v2.log
