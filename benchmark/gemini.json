@@ -1,0 +1,281 @@
+{
+ "models": {
+  "gemini-2.5-flash": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 4.25
+  },
+  "gemini-2.5-pro": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": "error: The read operation timed out",
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 1,
+   "recall": 1.0,
+   "caught": 21,
+   "planted": 21,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 10.6
+  },
+  "gemini-3.5-flash": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 4.4
+  },
+  "gemini-3.8-flash": {
+   "per_language": {
+    "en": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "az": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ru": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "tr": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "uk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "kk": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "ar": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "fa": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "hi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "id": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    },
+    "vi": {
+     "ok_flagged": false,
+     "price": true,
+     "day": true
+    }
+   },
+   "errors": 0,
+   "recall": 1.0,
+   "caught": 22,
+   "planted": 22,
+   "false_alarms": 0,
+   "grounded_cases": 11,
+   "median_latency_s": 2.66
+  }
+ },
+ "languages": [
+  "en",
+  "az",
+  "ru",
+  "tr",
+  "uk",
+  "kk",
+  "ar",
+  "fa",
+  "hi",
+  "id",
+  "vi"
+ ]
+}
