@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "groundedness"
+version = "0.1.0"
+description = "Did the model make this up? Claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Salim Mustafazada" }]
+keywords = ["llm", "hallucination", "groundedness", "rag", "evaluation", "multilingual"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/aghasalim/groundedness"
+
+[project.scripts]
+groundedness = "groundedness.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["groundedness*"]
