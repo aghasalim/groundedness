@@ -8,3 +8,6 @@ build/
 .venv/
 benchmark/run_v2.log
 benchmark/*.log
+train/data/
+train/out/
+train/out-*.log
