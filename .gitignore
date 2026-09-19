@@ -7,3 +7,4 @@ build/
 .claude/
 .venv/
 benchmark/run_v2.log
+benchmark/*.log
