@@ -6,11 +6,9 @@ set -u; cd "$(dirname "$0")/.."; PY=.venv/bin/python
 export HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HF_TOKEN="" PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.85 PYTORCH_MPS_LOW_WATERMARK_RATIO=0.7
 K=$(grep '^GROQ_API_KEY=' ~/SIBA/.env.local | cut -d= -f2- | tr -d '"'"'"' \r')
 log(){ echo "[$(date +%H:%M)] $*"; }
-while :; do
-  L=$(curl -s -D - -o /dev/null https://api.groq.com/openai/v1/chat/completions -H "authorization: Bearer $K" -H "content-type: application/json" -H "user-agent: groundedness/0.1.3" --data '{"model":"openai/gpt-oss-120b","messages":[{"role":"user","content":"hi"}],"max_tokens":1}' | grep -i 'x-ratelimit-limit-tokens' | tr -dc '0-9')
-  [ "${L:-0}" -gt 20000 ] && break; sleep 300
-done
-log "paid tier detected: ${L} TPM"
+while ! grep -q '^OPENROUTER_API_KEY=sk-or-' ~/SIBA/.env.local; do sleep 120; done
+L=openrouter
+log "OpenRouter key found"
 $PY train/augment2.py --workers 6 --hours 1.5 > train/data/augment2.log 2>&1
 log "augment2: $(wc -l < train/data/synth-para2.jsonl) documents"
 $PY train/prepare.py --ragtruth-cap 4000 --dev 0.05
