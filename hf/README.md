@@ -8,6 +8,8 @@ datasets: [wandb/RAGTruth-processed]
 ---
 # grounded-multilingual-base
 
+Repo: `aghasalim/grounded-multilingual-base` (published as `siba/grounded-multilingual-base` in the paper and leaderboard — same weights).
+
 Token classifier: which spans of an assistant's answer are **not supported** by the sources it was given. Input `<s> answer </s></s> sources </s>`; label 1 = unsupported.
 
 Trained on 2,844 synthetic labelled answers in 30 languages (business documents, 100 domains, errors planted and marked by open LLMs) plus 3,883 RAGTruth answers. Fine-tuned from xlm-roberta-base, 384 tokens, 3 epochs, Apple M4.
