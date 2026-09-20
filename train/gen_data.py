@@ -55,7 +55,7 @@ def endpoints():
     return eps
 
 def call(ep, prompt):
-    body = {'model': ep['model'], 'temperature': 1.0, 'max_tokens': 4000, 'messages': [{'role': 'user', 'content': prompt}]}
+    body = {'model': ep['model'], 'temperature': ep.get('temperature', 1.0), 'max_tokens': ep.get('max_tokens', 4000), 'messages': [{'role': 'user', 'content': prompt}]}
     if 'qwen3' in ep['model']: body['reasoning_format'] = 'hidden'
     if 'gpt-oss' in ep['model']: body['reasoning_effort'] = 'low'
     if ep['model'].startswith('gemini'): body['max_tokens'] = 8000

@@ -20,3 +20,5 @@ train 7161 answers, 4833 with spans; synth 2676 para 660 ragtruth 3825 | en:4029
 siba/grounded-multilingual-base-probe: caught 288/372 false alarms 23/62 median 0.02s
 [13:37] run4 not better (caught 288, fa 23); run2 stays
 [13:37] night3 done
+[14:05] augment2 on the free tier
+[14:42] augment2 on the free tier
