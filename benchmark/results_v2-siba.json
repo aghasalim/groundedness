@@ -1,0 +1,1095 @@
+{
+ "cases": 154,
+ "models": {
+  "siba/grounded-multilingual-base": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Saturday 9:00–19:00"
+     ]
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "Saturday 9:00–19:00"
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Saturday 9:00–17:00"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "Saturday 9:00–19:00"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "Saturday 9:00–19:00"
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Monday to Saturday",
+      "We are open on Sundays too"
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Monday",
+      "Saturday",
+      "Parking is free for patients"
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN."
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14",
+      "St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "en/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too"
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery",
+      "free above 100 AZN"
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 12",
+      "şə"
+     ]
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "Ünvan Nizami küçəsi 12",
+      "şə"
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 12",
+      "şən",
+      "əyə 9:00–17:00"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14",
+      "şə"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 12",
+      "şə"
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 12",
+      "şə",
+      "Bazar günü də işləyirik"
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Xəstələr üçün parkinq pulsuzdur"
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Nizami küçəsi 12"
+     ]
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN-dir",
+      "Nizami küçəsi 12"
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "Nizami küçəsi 12"
+     ]
+    },
+    "az/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "Nizami küçəsi 12"
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nizami küçəsi 12",
+      "Bazar günü də çatdırırıq"
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "küçəsi 12",
+      "100 AZN-dən yuxarı çatdırılma pulsuzdur"
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "понедельника по субботу"
+     ]
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "понедельника по субботу"
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "по субботу 9:00–17:00"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "ул. Низами 14",
+      "понедельника по субботу"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "понедельника по субботу"
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "а по субботу",
+      "Работаем также по воскресеньям"
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "понедельник",
+      "по субботу",
+      "Парковка для пациентов бесплатная"
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN"
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ул. Низами 14"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ru/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляем и по воскресеньям"
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка бесплатна при заказе от 100 AZN"
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "pazartesiden cumartesiye 9:00–19:00"
+     ]
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN'dir",
+      "pazartesiden cumartesiye 9:00–19:00"
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Caddesi 12",
+      "de",
+      "pazartesiden cumartesiye 9:00–17:00 arası"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'de",
+      "pazartesiden cumartesiye 9:00–19:00"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "pazartesiden cumartesiye 9:00–19:00"
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "pazartesiden cumartesiye 9:00–19:00",
+      "Pazar günleri de açığı"
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "pazartesiden cumartesiye 9:00–19:00",
+      "için otopark ücretsizdir"
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN'dir"
+     ]
+    },
+    "tr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "tr/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "12"
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de teslimat yapıyoruz"
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN üzeri teslimat ücretsizdir"
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "з понеділка по суботу"
+     ]
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "понеділка по суботу"
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "понеділка по суботу 9:00–17:00"
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "вул. Нізамі 14",
+      "понеділка по суботу"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "з понеділка по суботу"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "понеділка по суботу",
+      "Пра",
+      "також у неділю"
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "понеділка по суботу",
+      "Паркування для пацієнтів безкоштовне"
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "на вул. Нізамі 14,"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "uk/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "uk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляємо і в неділю"
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка безкоштовна від 100 AZN"
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін 9:00–19"
+     ]
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 A",
+      "дүйсенбіден сенбіге дейін 9:00–19:00"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін 9:00–17:00"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Низами көшесі 14-де",
+      "дүйсенбіден сенбіге дейін 9:00–19"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін 9:00–19:00"
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін",
+      "Жексенбіде де жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін",
+      "циенттерге тұрақ тегін"
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "көшесі 12-"
+     ]
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "көшесі 12-"
+     ]
+    },
+    "kk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Низами көшесі 14-де"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "көшесі 12-"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "и көшесі 12-"
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Низами көшесі 12-де",
+      "Жексенбіде де жеткіземіз"
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "изами көшесі 12-",
+      "100 AZN-нен жоғары жеткізу тегін"
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "الاثنين إلى السبت 9:00–19"
+     ]
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 مانات",
+      "الاثنين إلى السبت 9:00–19"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "الاثنين إلى السبت 9:00–17:00"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "نظامي 14",
+      "الاثنين إلى السبت 9:00–19"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "الاثنين إلى السبت 9:00–19"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "الاثنين إلى السبت",
+      "ونعمل يوم الأحد أيضاً"
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "إلى السبت",
+      "مواقف السيارات مجانية للمرضى"
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "كو 25 مانات"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ar/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 يوما"
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ونوصّل يوم الأحد أيضاً"
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل مجاني للطلبات فوق 100 مانات"
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      ":00"
+     ]
+    },
+    "fa/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "دوشنبه تا شنبه 9:00–17:00 باز"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      ":00",
+      "01"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم باز هستیم"
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "پارکینگ برای بیماران رایگان است"
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 من"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "555 01",
+      "یکشنبه‌ها هم ارسال داریم"
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 12",
+      "555 01",
+      "ارسال بالای ۱۰۰ منات رایگان است"
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "सोमवार से शनिवार 9:00–19:00"
+     ]
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN",
+      "सोमवार से शनिवार 9:00–19:00"
+     ]
+    },
+    "hi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "सोमवार",
+      "शनिवार 9:00–17:00"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "सोमवार",
+      "शनिवार 9:00–19"
+     ]
+    },
+    "hi/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "सोमवार से शनिवार 9:00–19:00"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "सोमवार",
+      "शनिवार 9:00–19",
+      "हम रविवार को भी खुले हैं"
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "सोमवार",
+      "शनिवार 9:00",
+      "मरीज़ों के लिए पार्किंग मुफ़्त है"
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN है"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 दिनों"
+     ]
+    },
+    "hi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी डिलीवरी करते हैं"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN से ऊपर डिलीवरी मुफ़्त है"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Sabtu"
+     ]
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 A",
+      "Sabtu"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Sabtu 9:00–17:00"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami 14",
+      "Sabtu"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "Sabtu",
+      "–19"
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nizami 12",
+      "Sabtu",
+      "Kami juga buka hari Minggu"
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "12",
+      "Parkir gratis untuk pasien"
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN"
+     ]
+    },
+    "id/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "id/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga mengirim hari Minggu."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman gratis di atas 100 AZN"
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "25 A"
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "thứ Bảy 9:00–17:00"
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 đường"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng mở cửa Chủ nhật."
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Bệnh nhân được đỗ xe miễn phí"
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "25 AZN"
+     ]
+    },
+    "vi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 đường"
+     ]
+    },
+    "vi/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 ngày"
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng giao hàng Chủ nhật"
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Miễn phí giao hàng cho đơn trên 100 AZN"
+     ]
+    }
+   },
+   "latency": [
+    0.46,
+    0.023,
+    0.023,
+    0.022,
+    0.023,
+    0.023,
+    0.024,
+    0.026,
+    0.035,
+    0.027,
+    0.028,
+    0.027,
+    0.03,
+    0.031,
+    0.03,
+    0.026,
+    0.027,
+    0.026,
+    0.027,
+    0.028,
+    0.029,
+    0.034,
+    0.027,
+    0.023,
+    0.024,
+    0.024,
+    0.025,
+    0.029,
+    0.026,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.024,
+    0.024,
+    0.026,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.028,
+    0.028,
+    0.026,
+    0.022,
+    0.022,
+    0.023,
+    0.022,
+    0.025,
+    0.024,
+    0.025,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.024,
+    0.024,
+    0.025,
+    0.023,
+    0.022,
+    0.022,
+    0.022,
+    0.024,
+    0.024,
+    0.025,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.025,
+    0.028,
+    0.027,
+    0.023,
+    0.023,
+    0.024,
+    0.023,
+    0.024,
+    0.024,
+    0.026,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.028,
+    0.028,
+    0.026,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.024,
+    0.023,
+    0.03,
+    0.027,
+    0.028,
+    0.027,
+    0.027,
+    0.029,
+    0.029,
+    0.024,
+    0.022,
+    0.022,
+    0.022,
+    0.022,
+    0.023,
+    0.023,
+    0.024,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.024,
+    0.024,
+    0.026,
+    0.023,
+    0.023,
+    0.022,
+    0.022,
+    0.024,
+    0.026,
+    0.031,
+    0.028,
+    0.03,
+    0.028,
+    0.028,
+    0.029,
+    0.028,
+    0.024,
+    0.022,
+    0.023,
+    0.023,
+    0.022,
+    0.024,
+    0.023,
+    0.025,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.024,
+    0.024,
+    0.025,
+    0.023,
+    0.023,
+    0.022,
+    0.022,
+    0.024,
+    0.026,
+    0.025,
+    0.023,
+    0.023,
+    0.023,
+    0.023,
+    0.025,
+    0.028
+   ]
+  }
+ }
+}
