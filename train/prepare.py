@@ -25,6 +25,15 @@ def synth():
             for v in r['sources']:
                 src = v + (('\n\nQuestion: ' + r['question']) if r.get('question') else '')
                 docs.append([{'source': src, 'answer': a['text'], 'spans': a['spans'], 'lang': r['lang'], 'src': 'para'} for a in r['answers']])
+    # both-direction paraphrases (augment2): original answers under paraphrased
+    # sources, and paraphrased answers under the original and paraphrased sources
+    pp = os.path.join(D, 'synth-para2.jsonl')
+    if os.path.exists(pp):
+        for line in open(pp, encoding='utf-8'):
+            r = json.loads(line); q = (('\n\nQuestion: ' + r['question']) if r.get('question') else '')
+            for v in [r['source']] + r['sources']:
+                for aset in ([r['answers']] if v != r['source'] else []) + [r['answers_para']]:
+                    docs.append([{'source': v + q, 'answer': a['text'], 'spans': a['spans'], 'lang': r['lang'], 'src': 'para'} for a in aset])
     return docs
 
 def ragtruth(cap, rnd):
