@@ -16,6 +16,15 @@ def synth():
         r = json.loads(line)
         src = r['source'] + (('\n\nQuestion: ' + r['question']) if r.get('question') else '')
         docs.append([{'source': src, 'answer': a['text'], 'spans': a['spans'], 'lang': r['lang'], 'src': 'synth'} for a in r['answers']])
+    # paraphrased sources: the same answers under a differently worded document,
+    # so the model learns that "Mon–Sat" and "Monday to Saturday" agree
+    pp = os.path.join(D, 'synth-para.jsonl')
+    if os.path.exists(pp):
+        for line in open(pp, encoding='utf-8'):
+            r = json.loads(line)
+            for v in r['sources']:
+                src = v + (('\n\nQuestion: ' + r['question']) if r.get('question') else '')
+                docs.append([{'source': src, 'answer': a['text'], 'spans': a['spans'], 'lang': r['lang'], 'src': 'para'} for a in r['answers']])
     return docs
 
 def ragtruth(cap, rnd):
@@ -54,7 +63,7 @@ def main():
             for x in rows: f.write(json.dumps(x, ensure_ascii=False) + '\n')
         langs = {}
         for x in rows: langs[x['lang']] = langs.get(x['lang'], 0) + 1
-        print(name, len(rows), 'answers,', sum(1 for x in rows if x['spans']), 'with spans;', 'synth', sum(1 for x in rows if x['src'] == 'synth'), 'ragtruth', sum(1 for x in rows if x['src'] == 'ragtruth'), '|', ' '.join(f'{k}:{v}' for k, v in sorted(langs.items(), key=lambda kv: -kv[1])[:14]))
+        print(name, len(rows), 'answers,', sum(1 for x in rows if x['spans']), 'with spans;', 'synth', sum(1 for x in rows if x['src'] == 'synth'), 'para', sum(1 for x in rows if x['src'] == 'para'), 'ragtruth', sum(1 for x in rows if x['src'] == 'ragtruth'), '|', ' '.join(f'{k}:{v}' for k, v in sorted(langs.items(), key=lambda kv: -kv[1])[:14]))
 
 if __name__ == '__main__':
     main()
