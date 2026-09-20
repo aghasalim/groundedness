@@ -31,15 +31,15 @@ def marked(a):
     return t
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument('--hours', type=float, default=1.5); ap.add_argument('--workers', type=int, default=6); ap.add_argument('--gap', type=float, default=1.0)
+    ap = argparse.ArgumentParser(); ap.add_argument('--hours', type=float, default=72); ap.add_argument('--workers', type=int, default=6); ap.add_argument('--gap', type=float, default=1.0)
     a = ap.parse_args()
     docs = [json.loads(l) for l in open(os.path.join(D, 'synth.jsonl'), encoding='utf-8')]
     done = set()
     if os.path.exists(OUT):
         for l in open(OUT, encoding='utf-8'): done.add(json.loads(l)['orig'])
     todo = [d for d in docs if d['source'][:80] not in done]; random.Random(2).shuffle(todo)
-    eps = [e for e in endpoints() if 'openrouter' in e['url']] or [e for e in endpoints() if 'gpt-oss-120b' in e['model'] or 'qwen' in e['model']]
-    for e in eps: e['gap'] = a.gap
+    eps = [e for e in endpoints() if 'openrouter' in e['url']] or [e for e in endpoints() if 'groq' in e['url']]
+    for e in eps: e['gap'] = a.gap; e['max_tokens'] = 2000; e['temperature'] = 0.7
     lock = threading.Lock(); fh = open(OUT, 'a', encoding='utf-8'); t0 = time.time(); n = {'ok': 0, 'bad': 0}
     def worker(k):
         ep = eps[k % len(eps)]
@@ -49,7 +49,7 @@ def main():
                 d = todo.pop()
             answers = '\n'.join(f'{i + 1}. {marked(x)}' for i, x in enumerate(d['answers']))
             raw, code, ra = call(ep, PROMPT.format(lang=LN[d['lang']], src=d['source'], answers=answers))
-            if code == 429: time.sleep(min(ra, 60) if ra else 15); todo.append(d); continue
+            if code == 429: time.sleep(min(ra, 900) + 1 if ra else 30); todo.append(d); continue
             if code != 200: time.sleep(10); todo.append(d); continue
             m = re.search(r'\{.*\}', raw or '', re.S)
             try: j = json.loads(m.group(0))
