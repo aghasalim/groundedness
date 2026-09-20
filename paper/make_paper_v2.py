@@ -58,7 +58,7 @@ judges = [m for m in order if models[m][0] != 'local CPU']
 best = [m for m in judges if S_[m]['caught'] == S_[m]['planted'] and S_[m]['fa'] == 0]
 
 E = [P('Do English Hallucination Detectors Work in Other Languages? LLM Judges Against HHEM and LettuceDetect on a Planted-Error Benchmark in Eleven Languages', TITLE),
-     P('Salim Mustafazada', AUTH),
+     P('Aghasalim Mustafazada', AUTH),
      P('SIBA — "Süni İntellekt Biznes Avtomatlaşdırma" MMC, Baku, Azerbaijan · September 2026 · v2', AFF),
      P(f'<b>Abstract.</b> Retrieval-augmented assistants fail their users most often by stating a price, hour, address or phone number that the documents they were given do not support. The open-weights detectors built for this failure — Vectara HHEM-2.1-Open and LettuceDetect — are trained on English. We ask whether they transfer, and whether the plain alternative, a general language model asked to list the unsupported claims in the answer\'s own language, does. We build a planted-error benchmark: two businesses (a dental clinic, an electronics shop), eleven languages across five scripts (English, Azerbaijani, Russian, Turkish, Ukrainian, Kazakh, Arabic, Persian, Hindi, Indonesian, Vietnamese), and for each a grounded answer plus seven single-error variants — a wrong price, wrong hours, a wrong street number, one phone digit changed, a wrong return window, an invented Sunday opening and an added claim — planted by slot substitution so every language receives identical errors: 154 answers, 132 of them wrong. Two open LLM judges ({", ".join(name(m) for m in best)}) catch all 132 with no false alarms; a 27B open model catches 131 in a median 0.36 s. HHEM-2.1-Open reaches 79 % recall, but its consistency score falls below the threshold for any non-English text: in Russian, Arabic, Persian and Indonesian it flags every answer, grounded or not, so its recall measures the language, not the claim; in English it catches 5 of 12. LettuceDetect catches 49 % overall, 8 of 12 in the Latin-script languages and 2 of 12 in Kazakh and Hindi. We also document a measurement pitfall in which an empty reply from a thinking model scores as "grounded", and the package fix. Code, data, raw outputs and the runner are at github.com/aghasalim/groundedness (MIT; <i>pip install groundedness</i>).', ABS)]
 
@@ -137,7 +137,7 @@ def deco(c, d):
     c.drawString(22 * mm, 12 * mm, 'Mustafazada — Do English Hallucination Detectors Work in Other Languages?'); c.drawRightString(188 * mm, 12 * mm, str(c.getPageNumber())); c.restoreState()
 
 out = os.path.join(here, 'groundedness-eleven-languages-v2.pdf')
-doc = BaseDocTemplate(out, pagesize=A4, leftMargin=22 * mm, rightMargin=22 * mm, topMargin=20 * mm, bottomMargin=20 * mm, title='Do English Hallucination Detectors Work in Other Languages?', author='Salim Mustafazada')
+doc = BaseDocTemplate(out, pagesize=A4, leftMargin=22 * mm, rightMargin=22 * mm, topMargin=20 * mm, bottomMargin=20 * mm, title='Do English Hallucination Detectors Work in Other Languages?', author='Aghasalim Mustafazada')
 doc.addPageTemplates([PageTemplate(id='n', frames=[Frame(22 * mm, 20 * mm, 166 * mm, A4[1] - 40 * mm, id='f', leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)], onPage=deco)])
 doc.build(E)
 print('OK ->', out, os.path.getsize(out), 'bytes')

@@ -9,7 +9,7 @@ description = "Did the model make this up? Claim-level groundedness check for LL
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.9"
-authors = [{ name = "Salim Mustafazada" }]
+authors = [{ name = "Aghasalim Mustafazada" }]
 keywords = ["llm", "hallucination", "groundedness", "rag", "evaluation", "multilingual"]
 classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent", "Topic :: Scientific/Engineering :: Artificial Intelligence"]
 dependencies = []
