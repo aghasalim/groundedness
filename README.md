@@ -31,7 +31,7 @@ RAG apps and support bots answer from documents. The failure that hurts is not a
 r = check(answer, sources=[facts], model="siba")   # grounded.siba.az, exact spans, free
 ```
 
-`model="siba"` calls our own multilingual detector (an XLM-R token classifier trained on 30 languages, served from a Raspberry Pi in Baku). No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer.
+`model="siba"` calls our own multilingual detector — `siba/grounded-multilingual-base`, an XLM-RoBERTa token classifier trained on 2,844 synthetic labelled answers in 30 languages plus RAGTruth, served from a Raspberry Pi 5 in Baku. On benchmark v3 (31 languages, 434 cases) it catches **352/372 planted errors (95 %)** with 32/62 false alarms in ~30 ms on a laptop CPU; HHEM-2.1-Open on the same cases: 265/372 with 22/62 false alarms. No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer. Weights: `train/out/run2` recipe in `train/`, paper v3 in `paper/`.
 
 ## Install
 
@@ -60,6 +60,23 @@ GROQ_API_KEY=... python -m pytest -q
 ```
 
 Three languages, one planted wrong price and one invented opening day each; plus a grounded answer that must come back unchanged.
+
+## Benchmark v3: our detector vs judges vs the English-trained detectors, 31 languages
+
+Full tables: [`benchmark/results_v3-siba.json`](benchmark/results_v3-siba.json), [`results_v3.md`](benchmark/results_v3.md), [`results_v3-baselines.md`](benchmark/results_v3-baselines.md). Paper: [`paper/groundedness-multilingual-detector-v3.pdf`](paper/groundedness-multilingual-detector-v3.pdf). Live leaderboard: [grounded.siba.az](https://grounded.siba.az/#leaderboard).
+
+| Detector | Kind | Languages | Errors caught | False alarms | Latency |
+|---|---|---:|---:|---:|---:|
+| `siba/grounded-multilingual-base` (ours) | trained classifier, Raspberry Pi | 31 | **352/372 (95 %)** | 32/62 | 0.03 s |
+| `vectara/HHEM-2.1-Open` | trained classifier | 31 | 265/372 (71 %) | 22/62 | 0.04 s |
+| `KRLabsOrg/lettucedect-base-modernbert-en-v1` | trained classifier | 31 | 191/372 (51 %) | 28/62 | 0.05 s |
+| `openai/gpt-oss-120b` | LLM judge, Groq | 14 | 163/163 | 0/28 | 0.70 s |
+| `qwen/qwen3.8-27b` | LLM judge, Groq | 19+ | 214/215 | 1/36 | 0.34 s |
+| `openai/gpt-oss-20b` | LLM judge, Groq | 17 | 200/203 | 2/34 | 0.44 s |
+
+The judges' language coverage is what the free daily quota allowed on 2026-09-20; the remaining rows fill in as it resets. Our detector's false alarms are all paraphrases of the source ("Monday to Saturday" for "Mon–Sat") — the first item of future work.
+
+![Planted errors caught per language](benchmark/heatmap.png)
 
 ## Benchmark v2: judges vs the English-trained detectors, eleven languages
 
