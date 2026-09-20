@@ -54,20 +54,33 @@ def evaluate(model, items, dev, bs, pad):
     return {'token_p': round(P, 3), 'token_r': round(R, 3), 'token_f1': round(F, 3), 'answer_recall': round(ex_tp / max(1, ex_tp + ex_fn), 3), 'answer_false_alarm': round(ex_fp / max(1, ex_fp + ex_tn), 3)}
 
 @torch.no_grad()
-def calibrate(model, items, dev, bs, pad):
+def calibrate(model, items, rows, dev, bs, pad):
+    """F1-optimal answer-level threshold, globally and per script group (a
+    script falls back to the global value when it has fewer than 20 dev answers)."""
+    from script import script_of
     model.eval(); probs, gold = [], []
     for ids, am, lab in batches(items, bs, pad, False, None):
         p = model(input_ids=ids.to(dev), attention_mask=am.to(dev)).logits.softmax(-1)[..., 1].cpu()
         for j in range(ids.shape[0]):
             m = lab[j] != -100
             probs.append(p[j][m]); gold.append(bool((lab[j] == 1).any()))
-    best = (0.5, -1.0)
-    for t in [x / 100 for x in range(30, 98, 2)]:
-        flag = [bool((pr >= t).any()) for pr in probs]
-        tp = sum(f and g for f, g in zip(flag, gold)); fp = sum(f and not g for f, g in zip(flag, gold)); fn = sum((not f) and g for f, g in zip(flag, gold))
-        pr_, rc = tp / max(1, tp + fp), tp / max(1, tp + fn); f1 = 2 * pr_ * rc / max(1e-9, pr_ + rc)
-        if f1 > best[1]: best = (t, f1)
-    return best[0]
+    # batches() sorts by length, so recover the row order the same way
+    order = sorted(range(len(items)), key=lambda i: len(items[i]['input_ids']))
+    scripts = [script_of(rows[i]['answer']) for i in order]
+    def best_for(idx):
+        best = (0.5, -1.0)
+        for t in [x / 100 for x in range(30, 98, 2)]:
+            flag = [bool((probs[i] >= t).any()) for i in idx]; g = [gold[i] for i in idx]
+            tp = sum(f and x for f, x in zip(flag, g)); fp = sum(f and not x for f, x in zip(flag, g)); fn = sum((not f) and x for f, x in zip(flag, g))
+            pr_, rc = tp / max(1, tp + fp), tp / max(1, tp + fn); f1 = 2 * pr_ * rc / max(1e-9, pr_ + rc)
+            if f1 > best[1]: best = (t, f1)
+        return best[0]
+    glob = best_for(range(len(probs)))
+    per = {}
+    for sc in sorted(set(scripts)):
+        idx = [i for i, x in enumerate(scripts) if x == sc]
+        per[sc] = best_for(idx) if len(idx) >= 20 else glob
+    return glob, per
 
 
 def main():
@@ -106,10 +119,10 @@ def main():
     # Pick the threshold on dev: answer-level F1-optimal, written next to the
     # weights for detect.py to read.
     model = AutoModelForTokenClassification.from_pretrained(a.out).to(dev)
-    thr = calibrate(model, dv, dev, a.bs, tok.pad_token_id)
-    info = json.load(open(os.path.join(a.out, 'training.json'))); info['threshold'] = thr
+    thr, per = calibrate(model, dv, dev_rows, dev, a.bs, tok.pad_token_id)
+    info = json.load(open(os.path.join(a.out, 'training.json'))); info['threshold'] = thr; info['thresholds_by_script'] = per; info['calibration'] = 'answer-level F1 on the held-out dev set, per script group'
     json.dump(info, open(os.path.join(a.out, 'training.json'), 'w'), indent=1)
-    print('done best token_f1', best, 'threshold', thr, flush=True)
+    print('done best token_f1', best, 'threshold', thr, per, flush=True)
 
 if __name__ == '__main__':
     main()

@@ -2,8 +2,10 @@
 """Inference for the trained detector: answer + sources -> unsupported spans.
 Shared by the benchmark eval and the server. CPU by default, int8 dynamic
 quantisation optional (the Pi)."""
-import torch
+import os, sys, torch
 from transformers import AutoTokenizer, AutoModelForTokenClassification
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from script import script_of  # noqa: E402
 
 class Detector:
     def __init__(self, path, quantize=False, threshold=0.5, max_len=512):
@@ -18,10 +20,12 @@ class Detector:
                 print('quantisation unavailable, fp32:', e)
         self.threshold, self.max_len = threshold, max_len
         # the trainer writes its dev-calibrated threshold next to the weights
+        self.by_script = {}
         try:
             import json, os
-            t = json.load(open(os.path.join(path, 'training.json'))).get('threshold')
-            if t and threshold == 0.5: self.threshold = float(t)
+            info = json.load(open(os.path.join(path, 'training.json')))
+            if info.get('threshold') and threshold == 0.5: self.threshold = float(info['threshold'])
+            self.by_script = {k: float(v) for k, v in (info.get('thresholds_by_script') or {}).items()}
         except Exception:
             pass
 
@@ -31,10 +35,11 @@ class Detector:
         e = self.tok(answer, src, truncation='longest_first', max_length=self.max_len, return_offsets_mapping=True, return_tensors='pt')
         off = e.pop('offset_mapping')[0].tolist(); seq = e.sequence_ids()
         prob = self.model(**e).logits.softmax(-1)[0, :, 1].tolist()
+        thr = self.by_script.get(script_of(answer), self.threshold) if self.by_script else self.threshold
         spans, cur = [], None
         for i, (s, t) in enumerate(off):
             if seq[i] != 0 or t == s: continue
-            if prob[i] >= self.threshold:
+            if prob[i] >= thr:
                 if cur and s - cur[1] <= 1: cur[1] = t
                 else:
                     if cur: spans.append(cur)

@@ -22,10 +22,12 @@ import urllib.request
 from dataclasses import dataclass, field
 
 __version__ = "0.1.3"
-__all__ = ["check", "Result", "PROMPT", "SIBA_DETECTOR"]
+__all__ = ["check", "Result", "PROMPT", "SIBA_DETECTOR", "CASCADE"]
 
 SIBA_DETECTOR = "siba"
 """Pass as `model` to use the free hosted multilingual detector at grounded.siba.az instead of an LLM judge: exact spans, no key, no rewrite."""
+CASCADE = "cascade"
+"""Pass as `model` for the hosted cascade: the detector first, and an LLM judge (with a rewrite) only for answers it flags. No key; the judge tier shares a daily budget."""
 
 PROMPT = (
     "You check an assistant's answer against the only facts it was allowed to use. Facts:\n{facts}\n\n"
@@ -87,6 +89,8 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
         return Result(fixed=answer, original=answer, model=model)
     if model == SIBA_DETECTOR:
         return _siba(answer, facts, timeout)
+    if model == CASCADE:
+        return _cascade(answer, facts, timeout)
     base, key = _endpoint()
     base = (base_url or base).rstrip("/")
     key = api_key or key
@@ -142,3 +146,11 @@ def _siba(answer: str, facts: str, timeout: float) -> Result:
     with urllib.request.urlopen(req, timeout=timeout) as r:
         data = json.loads(r.read().decode())
     return Result(unsupported=list(data.get("unsupported") or []), fixed=answer, original=answer, model=str(data.get("model") or SIBA_DETECTOR), raw=json.dumps(data, ensure_ascii=False))
+
+
+def _cascade(answer: str, facts: str, timeout: float) -> Result:
+    """siba.az/api/grounded with model=cascade: tier 1 is the detector, tier 2 the judge with its rewrite."""
+    req = urllib.request.Request("https://siba.az/api/grounded", data=json.dumps({"answer": answer, "sources": [facts], "model": "cascade"}).encode(), headers={"content-type": "application/json", "user-agent": f"groundedness/{__version__}"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        data = json.loads(r.read().decode())
+    return Result(unsupported=list(data.get("unsupported") or []), fixed=str(data.get("fixed") or answer), original=answer, model=f"{data.get('model')} (tier {data.get('tier')})", raw=json.dumps(data, ensure_ascii=False))
