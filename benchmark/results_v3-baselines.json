@@ -1,0 +1,6182 @@
+{
+ "cases": 154,
+ "models": {
+  "vectara/HHEM-2.1-Open": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.93"
+     ]
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.86"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.92"
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.87"
+     ]
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.13"
+     ]
+    },
+    "en/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.86"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.84"
+     ]
+    },
+    "en/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.90"
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "en/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.13"
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.19"
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.46"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "az/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.50"
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.41"
+     ]
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "ru/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "ru/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.37"
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.20"
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.63"
+     ]
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "tr/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.62"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.66"
+     ]
+    },
+    "tr/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "score=0.50"
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.20"
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.06"
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "uk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "uk/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "uk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.37"
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.28"
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.22"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.50"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.42"
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.60"
+     ]
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "kk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.62"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.35"
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.28"
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.28"
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.41"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.41"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.43"
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "fa/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.26"
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.26"
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.42"
+     ]
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.04"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "fa/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.32"
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "hi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.35"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.06"
+     ]
+    },
+    "hi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "hi/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "hi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "hi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.36"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.35"
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.29"
+     ]
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "id/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "id/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.29"
+     ]
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.16"
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.69"
+     ]
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.74"
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.67"
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.36"
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.71"
+     ]
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "vi/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.70"
+     ]
+    },
+    "vi/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.69"
+     ]
+    },
+    "vi/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.63"
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.19"
+     ]
+    },
+    "de/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "de/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.20"
+     ]
+    },
+    "de/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.52"
+     ]
+    },
+    "de/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.52"
+     ]
+    },
+    "de/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.49"
+     ]
+    },
+    "de/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "de/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "de/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.78"
+     ]
+    },
+    "de/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "de/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.77"
+     ]
+    },
+    "de/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.78"
+     ]
+    },
+    "de/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.76"
+     ]
+    },
+    "de/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "de/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "fr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "fr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "fr/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "fr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "fr/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "fr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.37"
+     ]
+    },
+    "fr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "fr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.77"
+     ]
+    },
+    "fr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.19"
+     ]
+    },
+    "fr/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.75"
+     ]
+    },
+    "fr/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.77"
+     ]
+    },
+    "fr/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.74"
+     ]
+    },
+    "fr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "fr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "es/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.77"
+     ]
+    },
+    "es/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "es/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.75"
+     ]
+    },
+    "es/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "es/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.75"
+     ]
+    },
+    "es/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "es/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.28"
+     ]
+    },
+    "es/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.66"
+     ]
+    },
+    "es/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "es/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "es/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.66"
+     ]
+    },
+    "es/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.68"
+     ]
+    },
+    "es/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "es/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "it/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.82"
+     ]
+    },
+    "it/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "it/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.78"
+     ]
+    },
+    "it/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "it/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.83"
+     ]
+    },
+    "it/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "it/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "it/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.62"
+     ]
+    },
+    "it/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "it/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "it/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.64"
+     ]
+    },
+    "it/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "it/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "it/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "pt/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.71"
+     ]
+    },
+    "pt/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.22"
+     ]
+    },
+    "pt/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "pt/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "pt/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.70"
+     ]
+    },
+    "pt/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "pt/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.33"
+     ]
+    },
+    "pt/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.70"
+     ]
+    },
+    "pt/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "pt/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.68"
+     ]
+    },
+    "pt/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.71"
+     ]
+    },
+    "pt/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.69"
+     ]
+    },
+    "pt/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.22"
+     ]
+    },
+    "pt/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "pl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "pl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "pl/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "pl/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "pl/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "pl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "pl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "pl/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "pl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "pl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.46"
+     ]
+    },
+    "pl/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "pl/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.37"
+     ]
+    },
+    "pl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "pl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.13"
+     ]
+    },
+    "nl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "nl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.16"
+     ]
+    },
+    "nl/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "nl/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "nl/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "nl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "nl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "nl/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "nl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "nl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.50"
+     ]
+    },
+    "nl/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "nl/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.49"
+     ]
+    },
+    "nl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.28"
+     ]
+    },
+    "nl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "zh/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.45"
+     ]
+    },
+    "zh/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.02"
+     ]
+    },
+    "zh/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "zh/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "zh/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.46"
+     ]
+    },
+    "zh/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "zh/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.38"
+     ]
+    },
+    "zh/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "zh/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.02"
+     ]
+    },
+    "zh/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "zh/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "zh/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.46"
+     ]
+    },
+    "zh/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "zh/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "ja/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "ja/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.01"
+     ]
+    },
+    "ja/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "ja/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "ja/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "ja/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "ja/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "ja/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.26"
+     ]
+    },
+    "ja/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.01"
+     ]
+    },
+    "ja/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "ja/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "ja/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "ja/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.21"
+     ]
+    },
+    "ja/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "ko/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "ko/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "ko/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "ko/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.30"
+     ]
+    },
+    "ko/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "ko/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "ko/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "ko/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "ko/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "ko/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "ko/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "ko/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "ko/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.49"
+     ]
+    },
+    "ko/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "uz/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "uz/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "uz/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "uz/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "uz/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.25"
+     ]
+    },
+    "uz/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "uz/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "uz/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "uz/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.04"
+     ]
+    },
+    "uz/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "uz/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "uz/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "uz/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "uz/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.04"
+     ]
+    },
+    "ka/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "ka/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.07"
+     ]
+    },
+    "ka/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "ka/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.13"
+     ]
+    },
+    "ka/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "ka/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.26"
+     ]
+    },
+    "ka/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.42"
+     ]
+    },
+    "ka/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "ka/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "ka/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "ka/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "ka/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "ka/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.43"
+     ]
+    },
+    "ka/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "he/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.67"
+     ]
+    },
+    "he/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.13"
+     ]
+    },
+    "he/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.60"
+     ]
+    },
+    "he/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.18"
+     ]
+    },
+    "he/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.66"
+     ]
+    },
+    "he/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.39"
+     ]
+    },
+    "he/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "he/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.68"
+     ]
+    },
+    "he/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "he/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.67"
+     ]
+    },
+    "he/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "he/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.59"
+     ]
+    },
+    "he/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.52"
+     ]
+    },
+    "he/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "bn/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.46"
+     ]
+    },
+    "bn/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "bn/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.41"
+     ]
+    },
+    "bn/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.06"
+     ]
+    },
+    "bn/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "bn/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.36"
+     ]
+    },
+    "bn/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.31"
+     ]
+    },
+    "bn/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.60"
+     ]
+    },
+    "bn/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.02"
+     ]
+    },
+    "bn/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "bn/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "bn/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.36"
+     ]
+    },
+    "bn/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "bn/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "score=0.53"
+     ]
+    },
+    "th/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.71"
+     ]
+    },
+    "th/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.06"
+     ]
+    },
+    "th/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "th/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "th/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.67"
+     ]
+    },
+    "th/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.74"
+     ]
+    },
+    "th/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "score=0.74"
+     ]
+    },
+    "th/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.69"
+     ]
+    },
+    "th/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.05"
+     ]
+    },
+    "th/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.64"
+     ]
+    },
+    "th/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.64"
+     ]
+    },
+    "th/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.58"
+     ]
+    },
+    "th/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.72"
+     ]
+    },
+    "th/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "sw/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.70"
+     ]
+    },
+    "sw/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "sw/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.75"
+     ]
+    },
+    "sw/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "sw/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.71"
+     ]
+    },
+    "sw/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.50"
+     ]
+    },
+    "sw/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "sw/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.21"
+     ]
+    },
+    "sw/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.03"
+     ]
+    },
+    "sw/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.22"
+     ]
+    },
+    "sw/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "sw/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.21"
+     ]
+    },
+    "sw/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "sw/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "ro/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.54"
+     ]
+    },
+    "ro/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "ro/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "score=0.48"
+     ]
+    },
+    "ro/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.43"
+     ]
+    },
+    "ro/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.56"
+     ]
+    },
+    "ro/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "ro/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.34"
+     ]
+    },
+    "ro/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.47"
+     ]
+    },
+    "ro/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "ro/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "ro/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.49"
+     ]
+    },
+    "ro/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.44"
+     ]
+    },
+    "ro/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.20"
+     ]
+    },
+    "ro/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.12"
+     ]
+    },
+    "cs/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "cs/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.15"
+     ]
+    },
+    "cs/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.62"
+     ]
+    },
+    "cs/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.49"
+     ]
+    },
+    "cs/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.60"
+     ]
+    },
+    "cs/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.40"
+     ]
+    },
+    "cs/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.19"
+     ]
+    },
+    "cs/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.64"
+     ]
+    },
+    "cs/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "cs/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.63"
+     ]
+    },
+    "cs/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "cs/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "cs/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.43"
+     ]
+    },
+    "cs/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.36"
+     ]
+    },
+    "el/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "el/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.11"
+     ]
+    },
+    "el/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.55"
+     ]
+    },
+    "el/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.17"
+     ]
+    },
+    "el/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.64"
+     ]
+    },
+    "el/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "el/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "el/shop/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.62"
+     ]
+    },
+    "el/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.06"
+     ]
+    },
+    "el/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.57"
+     ]
+    },
+    "el/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.61"
+     ]
+    },
+    "el/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "score=0.52"
+     ]
+    },
+    "el/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "score=0.51"
+     ]
+    },
+    "el/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.09"
+     ]
+    },
+    "hu/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": [
+      "score=0.73"
+     ]
+    },
+    "hu/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.33"
+     ]
+    },
+    "hu/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "score=0.69"
+     ]
+    },
+    "hu/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "score=0.66"
+     ]
+    },
+    "hu/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "score=0.65"
+     ]
+    },
+    "hu/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.35"
+     ]
+    },
+    "hu/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.10"
+     ]
+    },
+    "hu/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "hu/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    },
+    "hu/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "score=0.27"
+     ]
+    },
+    "hu/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "score=0.24"
+     ]
+    },
+    "hu/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "score=0.23"
+     ]
+    },
+    "hu/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "score=0.14"
+     ]
+    },
+    "hu/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "score=0.08"
+     ]
+    }
+   },
+   "latency": [
+    0.066,
+    0.038,
+    0.036,
+    0.035,
+    0.034,
+    0.037,
+    0.036,
+    0.037,
+    0.035,
+    0.035,
+    0.044,
+    0.043,
+    0.087,
+    0.052,
+    0.059,
+    0.079,
+    0.114,
+    0.063,
+    0.051,
+    0.058,
+    0.055,
+    0.063,
+    0.085,
+    0.063,
+    0.062,
+    0.058,
+    0.064,
+    0.063,
+    0.048,
+    0.048,
+    0.048,
+    0.048,
+    0.048,
+    0.055,
+    0.055,
+    0.062,
+    0.062,
+    0.109,
+    0.076,
+    0.083,
+    0.116,
+    0.079,
+    0.047,
+    0.046,
+    0.043,
+    0.046,
+    0.045,
+    0.047,
+    0.046,
+    0.051,
+    0.051,
+    0.051,
+    0.05,
+    0.051,
+    0.057,
+    0.058,
+    0.049,
+    0.05,
+    0.051,
+    0.05,
+    0.049,
+    0.05,
+    0.062,
+    0.071,
+    0.075,
+    0.079,
+    0.066,
+    0.062,
+    0.066,
+    0.063,
+    0.045,
+    0.045,
+    0.046,
+    0.049,
+    0.05,
+    0.056,
+    0.051,
+    0.058,
+    0.057,
+    0.055,
+    0.056,
+    0.056,
+    0.057,
+    0.057,
+    0.03,
+    0.03,
+    0.031,
+    0.032,
+    0.032,
+    0.034,
+    0.033,
+    0.037,
+    0.038,
+    0.038,
+    0.037,
+    0.035,
+    0.041,
+    0.041,
+    0.035,
+    0.037,
+    0.037,
+    0.037,
+    0.036,
+    0.034,
+    0.034,
+    0.039,
+    0.039,
+    0.039,
+    0.038,
+    0.038,
+    0.04,
+    0.04,
+    0.036,
+    0.037,
+    0.035,
+    0.035,
+    0.035,
+    0.034,
+    0.033,
+    0.038,
+    0.037,
+    0.037,
+    0.037,
+    0.036,
+    0.04,
+    0.042,
+    0.037,
+    0.035,
+    0.034,
+    0.034,
+    0.034,
+    0.04,
+    0.039,
+    0.041,
+    0.038,
+    0.038,
+    0.038,
+    0.038,
+    0.043,
+    0.043,
+    0.047,
+    0.043,
+    0.043,
+    0.046,
+    0.047,
+    0.056,
+    0.056,
+    0.062,
+    0.055,
+    0.055,
+    0.055,
+    0.055,
+    0.058,
+    0.063,
+    0.496,
+    0.029,
+    0.029,
+    0.029,
+    0.03,
+    0.03,
+    0.031,
+    0.037,
+    0.033,
+    0.034,
+    0.034,
+    0.034,
+    0.035,
+    0.034,
+    0.032,
+    0.03,
+    0.029,
+    0.03,
+    0.029,
+    0.03,
+    0.03,
+    0.033,
+    0.031,
+    0.03,
+    0.03,
+    0.03,
+    0.035,
+    0.034,
+    0.035,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.038,
+    0.04,
+    0.042,
+    0.041,
+    0.04,
+    0.04,
+    0.04,
+    0.045,
+    0.046,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.036,
+    0.04,
+    0.039,
+    0.039,
+    0.039,
+    0.039,
+    0.04,
+    0.041,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.034,
+    0.035,
+    0.036,
+    0.042,
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.044,
+    0.046,
+    0.041,
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.046,
+    0.044,
+    0.045,
+    0.044,
+    0.044,
+    0.044,
+    0.044,
+    0.048,
+    0.048,
+    0.034,
+    0.033,
+    0.034,
+    0.033,
+    0.033,
+    0.035,
+    0.034,
+    0.04,
+    0.039,
+    0.039,
+    0.039,
+    0.039,
+    0.041,
+    0.04,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.025,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.025,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.024,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.034,
+    0.034,
+    0.037,
+    0.035,
+    0.035,
+    0.035,
+    0.035,
+    0.04,
+    0.039,
+    0.047,
+    0.046,
+    0.046,
+    0.046,
+    0.046,
+    0.053,
+    0.053,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.029,
+    0.03,
+    0.031,
+    0.032,
+    0.032,
+    0.032,
+    0.032,
+    0.032,
+    0.036,
+    0.037,
+    0.032,
+    0.031,
+    0.031,
+    0.032,
+    0.032,
+    0.033,
+    0.032,
+    0.036,
+    0.036,
+    0.036,
+    0.036,
+    0.036,
+    0.036,
+    0.045,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.032,
+    0.032,
+    0.032,
+    0.032,
+    0.032,
+    0.037,
+    0.036,
+    0.026,
+    0.027,
+    0.027,
+    0.027,
+    0.027,
+    0.026,
+    0.027,
+    0.027,
+    0.027,
+    0.027,
+    0.028,
+    0.027,
+    0.026,
+    0.026,
+    0.039,
+    0.036,
+    0.036,
+    0.038,
+    0.037,
+    0.037,
+    0.036,
+    0.046,
+    0.047,
+    0.045,
+    0.046,
+    0.046,
+    0.052,
+    0.053,
+    0.034,
+    0.032,
+    0.032,
+    0.032,
+    0.033,
+    0.036,
+    0.033,
+    0.034,
+    0.034,
+    0.036,
+    0.036,
+    0.035,
+    0.036,
+    0.037,
+    0.037,
+    0.037,
+    0.038,
+    0.037,
+    0.037,
+    0.043,
+    0.042,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.049,
+    0.048,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.031,
+    0.036,
+    0.036,
+    0.035,
+    0.036,
+    0.036,
+    0.036,
+    0.036,
+    0.038,
+    0.042,
+    0.044,
+    0.042,
+    0.043,
+    0.042,
+    0.042,
+    0.045,
+    0.048,
+    0.044,
+    0.044,
+    0.044,
+    0.043,
+    0.044,
+    0.049,
+    0.052
+   ]
+  },
+  "KRLabsOrg/lettucedect-base-modernbert-en-v1": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "! A consultation is 25 AZN."
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      " Monday to Saturday"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " 14 N",
+      " St",
+      " Monday"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " open on Sundays too."
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Parking is free for patients."
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "N"
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " are at 14 Nizami St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " deliver on Sundays too"
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Delivery is free above 100 AZN."
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "van",
+      " ertəsindən şənbəyə 9:00–17:00 işləyirik"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Ünvan",
+      " kü",
+      "əsi 14"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Bazar günü də işləyirik."
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Xəstələr üçün parkinq pulsuzdur."
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ma 25 AZN-dir"
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "dir",
+      " Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "az/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "ay",
+      "ara"
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Bazar günü də çatdırırıq."
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "am",
+      " 100 AZN-dən yuxarı çatdırılma pulsuzdur."
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "онедельни"
+     ]
+    },
+    "ru/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "едельни"
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "ем с понедельника по субботу 9:00–17:00"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Мы на ул. Низами 14,",
+      "ем с понедельника"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "онедельни"
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "ем",
+      "ресень"
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Парковка для пациентов бесплатная."
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/shop/price": {
+     "caught": false,
+     "unsupported": [
+      " AZ"
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " Низами 14"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ru/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "оставляем и по воскресеньям."
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Доставка бесплатна при заказе от 100 AZN."
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " pazartesiden cumartesiye",
+      "ası açığız"
+     ]
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Merhab",
+      " Muayene 25 AZN'dir",
+      "ey",
+      " pazartesiden cumartesiye",
+      "ası açığız"
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "eyiz",
+      " pazartesiden cumartesiye 9:00–17:00 arası açığız"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "'deyiz",
+      " pazartesiden cumartesiye",
+      " arası açığız"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "ey",
+      " pazartesiden cumartesiye",
+      " arası açığız"
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " pazartesiden cumartesiye",
+      " Pazar günleri de açığız."
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " pazartesiden cumartesiye",
+      "ası açığız",
+      " Hastalar için otopark ücretsizdir."
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " iade edebilir",
+      "iz",
+      "ey"
+     ]
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " iade edebilirsiniz.",
+      "ü",
+      "i teslimat 25 AZN'dir",
+      "'dey"
+     ]
+    },
+    "tr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " iade edebilirsiniz",
+      " C",
+      "esi 14'dey"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " iade edebilir",
+      "iz",
+      "esi",
+      "'dey",
+      " 01 03"
+     ]
+    },
+    "tr/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "ün içinde iade edebilirsiniz",
+      "ey"
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " iade edebilirsiniz",
+      "ey",
+      " Pazar günleri de teslimat yapıyoruz."
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      " iade edebilir",
+      "esi",
+      "'dey",
+      " 100 AZN",
+      "i teslimat ücretsizdir."
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " працюємо з понеділка"
+     ]
+    },
+    "uk/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "ц",
+      "мо з понеділка"
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " працюємо з понеділка по суботу 9:00–17:00."
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "із",
+      " 14",
+      " працюємо з понеділка"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      " працюємо з понеділка"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " працюємо з понеділка",
+      " Працюємо також у неділю."
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " пр",
+      "цюємо з понеділка",
+      " Паркування для пацієнтів безкоштовне."
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/shop/price": {
+     "caught": false,
+     "unsupported": [
+      " тел",
+      "ф",
+      " +994"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "ел"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "uk/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "uk/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "ел"
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Доставка безкоштовна від 100 AZN."
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " ж",
+      "мы",
+      " істейміз"
+     ]
+    },
+    "kk/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      " ж",
+      "ұмы",
+      " істейміз"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "әлем",
+      "ейін 9:00–17:00 жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "ә",
+      " ж",
+      "ұмы",
+      " істейміз"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "ә",
+      " ж",
+      "мы",
+      " істейміз"
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "әлем",
+      "з",
+      "і",
+      "е жұмыс істейміз."
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      " жұмыс істейміз",
+      " П",
+      "циенттерге т"
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Сәлеметсіз",
+      "ласыз"
+     ]
+    },
+    "kk/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "Сәлеметсіз",
+      "ласыз"
+     ]
+    },
+    "kk/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "Сәлеметсіз",
+      " аласыз"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "Сәлеметс",
+      "з",
+      "ласыз"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "Сәлеметсіз",
+      "ласыз"
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "әлем",
+      "з",
+      "ласыз"
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "әлем",
+      "ласыз"
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "مرحباً!",
+      "م"
+     ]
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً!",
+      " 25 مانات",
+      "م"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً!",
+      "عم",
+      "–17",
+      "00"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "مرحباً!",
+      "نعم"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "مرحباً!",
+      "م"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً",
+      "نعمل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً",
+      " مواقف السيارات مجانية للمرضى."
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "مرحباً"
+     ]
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "مرح",
+      "اً",
+      "اخ",
+      "ا",
+      "و 25 مانات"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً",
+      "ن في شارع نظامي 14"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "مرحباً"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "مرح",
+      "ا"
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ر",
+      " ونوصّل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "مرحباً",
+      " التو",
+      "يل مجاني للطلبات فوق 100 مانات."
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "سل"
+     ]
+    },
+    "fa/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "سل",
+      "–",
+      ":"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "سل"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "سل"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "سل",
+      " هم باز",
+      " هستیم"
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "سل",
+      "پارکینگ برای بیماران رایگان است."
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ر باکو 25 منات"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " یکشنبه‌ها هم ارسال داریم."
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " بالای ۱۰۰ منات رایگان است."
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "00–17:00 ख"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/clinic/extra": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "994"
+     ]
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25 AZN",
+      "994"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " +994 12 555 01 03।"
+     ]
+    },
+    "hi/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "व",
+      " 30 AZ",
+      "न +994 12 555 01 02।"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "ं ड",
+      "िलीवरी 30 AZN ह",
+      ", फ़ोन +994 12 555 01 02। 100 AZN से ऊ",
+      "फ",
+      "्"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "ami di",
+      " buka",
+      " samp"
+     ]
+    },
+    "id/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "ami di",
+      "ka",
+      " samp"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "ami di",
+      " buka Senin sampai Sabtu 9",
+      "00–17:00."
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Kami di Jl",
+      " Nizami 14",
+      " buka",
+      " samp"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      " di",
+      " buka",
+      " samp"
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " samp",
+      " Kami juga buka hari Minggu."
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Parkir gratis untuk pasien."
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/shop/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "id/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 555 01 03"
+     ]
+    },
+    "id/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Kami juga mengirim hari Minggu."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Pengiriman gratis di atas 100 AZN."
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào",
+      "ư vấn là 25 AZN",
+      "ú"
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "–",
+      "00"
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "ú",
+      " tô",
+      " ở",
+      " 14"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      " +994 12 555 01 03"
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Bệnh nhân được đỗ xe miễn phí."
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/shop/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Miễn phí giao hàng cho đơn trên 100 AZN."
+     ]
+    },
+    "de/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "net von Montag bis"
+     ]
+    },
+    "de/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "net von Montag bis"
+     ]
+    },
+    "de/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " geöffnet von Montag bis Samstag 9:",
+      "–17:"
+     ]
+    },
+    "de/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Wir befinden uns in 14 Nizami St",
+      " geöffnet von Montag bis"
+     ]
+    },
+    "de/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "net von Montag bis"
+     ]
+    },
+    "de/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " von Montag bis",
+      " Wir haben auch sonntags geöffnet"
+     ]
+    },
+    "de/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Montag bis",
+      " Für Patienten ist das Parken kostenlos."
+     ]
+    },
+    "de/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/shop/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "de/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "de/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 01 03"
+     ]
+    },
+    "de/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "de/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Wir liefern auch sonntags."
+     ]
+    },
+    "de/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Lieferung ist kostenlos ab 100 AZN."
+     ]
+    },
+    "fr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fr/clinic/hours": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Nous sommes situés au 14 rue Nizami"
+     ]
+    },
+    "fr/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Nous sommes",
+      " ouverts le dimanche."
+     ]
+    },
+    "fr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Le stationnement est gratuit pour les patients."
+     ]
+    },
+    "fr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " La liv",
+      "ison à Bakou est 25 AZN"
+     ]
+    },
+    "fr/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 01"
+     ]
+    },
+    "fr/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "fr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Nous livrons aussi le dimanche."
+     ]
+    },
+    "fr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Livraison est gratuite au‑dessus de 100 AZN."
+     ]
+    },
+    "es/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "es/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " 9",
+      "–17:00"
+     ]
+    },
+    "es/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "es/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "994 12 555 01 03"
+     ]
+    },
+    "es/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " abiert",
+      " los domingos también."
+     ]
+    },
+    "es/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " El estacionamiento es gratuito para los pacientes."
+     ]
+    },
+    "es/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/shop/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "es/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "es/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "994 12 555 01 03"
+     ]
+    },
+    "es/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "es/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Entregamos los domingos también."
+     ]
+    },
+    "es/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " La entrega es gratuita por encima de 100 AZN."
+     ]
+    },
+    "it/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " al sabato",
+      " Chiama",
+      "994"
+     ]
+    },
+    "it/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "enza costa 25 AZN",
+      " Si",
+      " 12",
+      " N",
+      " al sabato",
+      " Chiama",
+      "994"
+     ]
+    },
+    "it/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " Siamo in 12 via Nizami",
+      " aperti dal lunedì al sabato 9:00–17:00. Chiama",
+      "994 12 555 01 02"
+     ]
+    },
+    "it/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Siamo in 14 via Nizami",
+      " al sabato",
+      " Chiama"
+     ]
+    },
+    "it/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      " al sabato",
+      " Chiama",
+      "994 12 555 01 03."
+     ]
+    },
+    "it/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "amo in 12 via Nizami",
+      " sabato",
+      "ama",
+      " Siamo aperti anche la domenica."
+     ]
+    },
+    "it/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Il parcheggio è gratuito per i pazienti."
+     ]
+    },
+    "it/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "it/shop/price": {
+     "caught": false,
+     "unsupported": [
+      " La con",
+      " a"
+     ]
+    },
+    "it/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "amo",
+      " Niz"
+     ]
+    },
+    "it/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 555 01 03"
+     ]
+    },
+    "it/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "it/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Consegniamo anche la domenica."
+     ]
+    },
+    "it/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " La consegna è gratuita sopra i 100 AZN."
+     ]
+    },
+    "pt/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "pt/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "–17",
+      "00"
+     ]
+    },
+    "pt/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " na 14"
+     ]
+    },
+    "pt/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "pt/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "ingos"
+     ]
+    },
+    "pt/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " O estacionamento é gratuito para pacientes."
+     ]
+    },
+    "pt/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25"
+     ]
+    },
+    "pt/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " na 14",
+      "ua"
+     ]
+    },
+    "pt/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 555 01 03"
+     ]
+    },
+    "pt/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "pt/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Entregamos aos domingos também."
+     ]
+    },
+    "pt/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Entrega grátis acima de 100 AZN."
+     ]
+    },
+    "pl/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "iedział",
+      "wo"
+     ]
+    },
+    "pl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "it",
+      " 25",
+      "iedział",
+      "wo"
+     ]
+    },
+    "pl/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " Zn",
+      "duj",
+      " poniedziałku do soboty 9:00–17:00.",
+      "wo"
+     ]
+    },
+    "pl/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      " Znajdujemy się przy",
+      ".",
+      "iedział",
+      "wo"
+     ]
+    },
+    "pl/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "du",
+      "iedział",
+      "wo"
+     ]
+    },
+    "pl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "zia",
+      "wo",
+      " Jesteśmy również otwarci w niedziele."
+     ]
+    },
+    "pl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "zia",
+      "wo",
+      " Parking jest bezpłatny dla pacjentów."
+     ]
+    },
+    "pl/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "ó",
+      " Jesteśmy pod adresem 12 ul."
+     ]
+    },
+    "pl/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "ó",
+      " Jesteśmy pod adresem 12 ul."
+     ]
+    },
+    "pl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ze",
+      "ó",
+      " Jesteśmy pod adresem 14 ul. N"
+     ]
+    },
+    "pl/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "ze",
+      "ó",
+      " Jesteśmy pod adresem 12 ul."
+     ]
+    },
+    "pl/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "ó",
+      " Jesteśmy pod adresem 12 ul"
+     ]
+    },
+    "pl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "C",
+      " Jesteśmy pod adresem 12 ul",
+      " Dostarczamy także w niedziele."
+     ]
+    },
+    "pl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Jesteśmy pod adresem 12 ul",
+      " Dostawa jest darmowa powyżej 100 AZN."
+     ]
+    },
+    "nl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "nl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      " kost 25 AZN"
+     ]
+    },
+    "nl/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "ater"
+     ]
+    },
+    "nl/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "nl/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "nl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " We zijn ook op zondag open."
+     ]
+    },
+    "nl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Parkeren is gratis voor patiënten."
+     ]
+    },
+    "nl/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "nl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25 AZN"
+     ]
+    },
+    "nl/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "nl/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      " 555 01 03"
+     ]
+    },
+    "nl/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "nl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " We leveren ook op zondag"
+     ]
+    },
+    "nl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Levering is gratis boven 100 AZN."
+     ]
+    },
+    "zh/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "zh/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "费用为 25 AZN"
+     ]
+    },
+    "zh/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "00–17"
+     ]
+    },
+    "zh/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "患者停车免费。"
+     ]
+    },
+    "zh/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "zh/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "巴",
+      "配送费用为 25 AZN"
+     ]
+    },
+    "zh/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "zh/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "我们也在周日配送。"
+     ]
+    },
+    "zh/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "订单满 100 AZN 免费配送。"
+     ]
+    },
+    "ja/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ja/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      " 25 AZN "
+     ]
+    },
+    "ja/clinic/hours": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "私たちは"
+     ]
+    },
+    "ja/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "駐車場は患者様に無料です。"
+     ]
+    },
+    "ja/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ja/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "こん",
+      "25 AZN"
+     ]
+    },
+    "ja/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ja/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "日曜日"
+     ]
+    },
+    "ja/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " 100 AZN以上のご注文で配送料無料です。"
+     ]
+    },
+    "ko/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ko/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ko/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "부",
+      "까",
+      "–17:00"
+     ]
+    },
+    "ko/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " 저희",
+      " 14",
+      "iz",
+      "에 있으며,",
+      "월요",
+      "일부터",
+      "까"
+     ]
+    },
+    "ko/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ko/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      " 일",
+      "요일",
+      "에"
+     ]
+    },
+    "ko/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "환자 주차는 무료입"
+     ]
+    },
+    "ko/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "으"
+     ]
+    },
+    "ko/shop/price": {
+     "caught": false,
+     "unsupported": [
+      " AZ",
+      " 저",
+      "희",
+      "으"
+     ]
+    },
+    "ko/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " 저희는 14 Nizami St에 있으며"
+     ]
+    },
+    "ko/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      " 저",
+      "희",
+      "희",
+      " 있으"
+     ]
+    },
+    "ko/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "으"
+     ]
+    },
+    "ko/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "일"
+     ]
+    },
+    "ko/shop/extra": {
+     "caught": false,
+     "unsupported": []
+    },
+    "uz/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " ko",
+      "ada joylashganmiz"
+     ]
+    },
+    "uz/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "om",
+      " 25",
+      "N",
+      " ko‘chada joylashganmiz"
+     ]
+    },
+    "uz/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      " ko‘chada joylashganmiz",
+      "–17",
+      "00"
+     ]
+    },
+    "uz/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      " Biz 14 Nizami ko‘chada joylashganmiz"
+     ]
+    },
+    "uz/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      " ko",
+      "ada joylashganmiz",
+      " 01 03"
+     ]
+    },
+    "uz/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " joylashgan",
+      "iz",
+      " Biz yakshanbalarda ham ochiqmiz."
+     ]
+    },
+    "uz/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "ada joylashganmiz",
+      " Bemorlar uchun parking bepul."
+     ]
+    },
+    "uz/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "ida joylashganmiz"
+     ]
+    },
+    "uz/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "ida joylashganmiz"
+     ]
+    },
+    "uz/shop/address": {
+     "caught": true,
+     "unsupported": [
+      " Biz 14",
+      "asida joylashganmiz"
+     ]
+    },
+    "uz/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "ida joylashganmiz",
+      " 01 03"
+     ]
+    },
+    "uz/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "ida joylashganmiz"
+     ]
+    },
+    "uz/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ida joylashganmiz",
+      " Biz yakshanbalarda ham yetkazib beramiz."
+     ]
+    },
+    "uz/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "ida joylashganmiz",
+      " Yetkazib berish 100 AZN dan yuqori bo'lsa bepul."
+     ]
+    },
+    "ka/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ka/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "მარ",
+      "ჯ"
+     ]
+    },
+    "ka/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "ჯ",
+      "00"
+     ]
+    },
+    "ka/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "ვ"
+     ]
+    },
+    "ka/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ka/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "მარჯ",
+      "დ",
+      "კვირასაც ღია ვ",
+      "არ",
+      "თ"
+     ]
+    },
+    "ka/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "ჯ"
+     ]
+    },
+    "ka/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ka/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25"
+     ]
+    },
+    "ka/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ka/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "994",
+      " 01 03"
+     ]
+    },
+    "ka/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "ძლ",
+      "ივთი"
+     ]
+    },
+    "ka/shop/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ka/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " უფასოა 100 AZN-ზე მეტი"
+     ]
+    },
+    "he/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "he/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "he/clinic/hours": {
+     "caught": false,
+     "unsupported": []
+    },
+    "he/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      " אנח",
+      "ו ב"
+     ]
+    },
+    "he/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "ו",
+      "994",
+      " 01 03"
+     ]
+    },
+    "he/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "he/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " חניה חינם למטופלים."
+     ]
+    },
+    "he/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      " אנחנו ב-"
+     ]
+    },
+    "he/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25",
+      ". אנחנו ב-12 רח",
+      "ז"
+     ]
+    },
+    "he/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "N. אנחנו ב-14"
+     ]
+    },
+    "he/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "N",
+      " אנחנו ב-"
+     ]
+    },
+    "he/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "נח",
+      "ו ב-"
+     ]
+    },
+    "he/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "N. אנחנו ב-12 רחוב נ",
+      "יזמי"
+     ]
+    },
+    "he/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " 30",
+      " אנחנו ב-12 רח",
+      "ב נ",
+      "יז",
+      " משלוח חינם מעל 100 AZN."
+     ]
+    },
+    "bn/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "bn/clinic/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "–17:00"
+     ]
+    },
+    "bn/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "মর",
+      " 14"
+     ]
+    },
+    "bn/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/clinic/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/clinic/extra": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "bn/shop/price": {
+     "caught": true,
+     "unsupported": [
+      " 25"
+     ]
+    },
+    "bn/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/shop/sunday": {
+     "caught": false,
+     "unsupported": []
+    },
+    "bn/shop/extra": {
+     "caught": false,
+     "unsupported": []
+    },
+    "th/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "ราตั้งอ",
+      "ู"
+     ]
+    },
+    "th/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "ราตั้งอยู่"
+     ]
+    },
+    "th/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "เราตั้งอยู่",
+      "00"
+     ]
+    },
+    "th/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "เราตั้งอยู่ที่ 14 ถนนนีซามี"
+     ]
+    },
+    "th/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "เราตั้งอยู่"
+     ]
+    },
+    "th/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "วัสดี",
+      "ราต",
+      "ร",
+      "เปิดให้บริการในวันอาทิตย์ด้วยเช่นกัน."
+     ]
+    },
+    "th/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "วัสดี",
+      "ราต",
+      "ง",
+      "จอดรถฟรีสำหรับผู้ป่วย."
+     ]
+    },
+    "th/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "ุ",
+      "ณ",
+      "ามารถ",
+      "เราตั้งอยู่"
+     ]
+    },
+    "th/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ามาร",
+      "ถ",
+      " 25 AZN",
+      "เราตั้งอยู่"
+     ]
+    },
+    "th/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ุ",
+      "ณ",
+      "ามาร",
+      "ถ",
+      "เราตั้งอยู่ที่ 14 ถ"
+     ]
+    },
+    "th/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "ุ",
+      "ามารถ",
+      "เราตั้งอยู่"
+     ]
+    },
+    "th/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "ุ",
+      "ณสามารถ",
+      " 30 วันพร้อ",
+      "ใบเสร็จ",
+      "เราตั้งอยู่"
+     ]
+    },
+    "th/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "ุณสามารถ",
+      "าตั้งอ",
+      "ู",
+      "าท",
+      "ย์ด้วยเช่นกั"
+     ]
+    },
+    "th/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "ุ",
+      "ณ",
+      "ามารถ",
+      "าตั้งอยู",
+      "ฟรีสำหรับยอดซื้อเกิน 100 AZN."
+     ]
+    },
+    "sw/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "sw/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Habari! Ushauri ni 25 AZN"
+     ]
+    },
+    "sw/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "00"
+     ]
+    },
+    "sw/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "sw/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "sw/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ab",
+      " Tunafungua pia Jumapili."
+     ]
+    },
+    "sw/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Hab",
+      " Parking ni bure kwa wagonjwa."
+     ]
+    },
+    "sw/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Habari",
+      "awe",
+      " kur",
+      " kipenge"
+     ]
+    },
+    "sw/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "Habari",
+      "we",
+      " kur",
+      " kipengele"
+     ]
+    },
+    "sw/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "Habari",
+      " Unaweza kurud",
+      " kipengele",
+      "uko"
+     ]
+    },
+    "sw/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Habari",
+      "aweza kur",
+      " kipengele",
+      " 01 03"
+     ]
+    },
+    "sw/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "Habari",
+      " Unaweza kur",
+      " kipengele"
+     ]
+    },
+    "sw/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Habari",
+      " Unaweza kurud",
+      " kipengele",
+      " Tunapeleka pia Jumapili."
+     ]
+    },
+    "sw/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Habari",
+      " kur",
+      " kipenge",
+      " Usafirishaji ni bure kwa zaidi ya 100 AZN."
+     ]
+    },
+    "ro/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ro/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Salut",
+      "a",
+      " costă 25 AZN"
+     ]
+    },
+    "ro/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "00–17:00"
+     ]
+    },
+    "ro/clinic/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ro/clinic/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "ro/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      " deschiși",
+      "uminicile"
+     ]
+    },
+    "ro/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Parcarea este gratuită pentru pacienți."
+     ]
+    },
+    "ro/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Sal"
+     ]
+    },
+    "ro/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Sal",
+      " 25"
+     ]
+    },
+    "ro/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "Salut"
+     ]
+    },
+    "ro/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Sal",
+      " 01 03"
+     ]
+    },
+    "ro/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "Salut"
+     ]
+    },
+    "ro/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      " duminicile"
+     ]
+    },
+    "ro/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Livrarea este gratuită pentru comenzi peste 100 AZN."
+     ]
+    },
+    "cs/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "obrý"
+     ]
+    },
+    "cs/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "obrý"
+     ]
+    },
+    "cs/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Dobrý",
+      "y",
+      "–"
+     ]
+    },
+    "cs/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "Dobrý",
+      " Nachází",
+      " se"
+     ]
+    },
+    "cs/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "obrý"
+     ]
+    },
+    "cs/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ob",
+      " Jsme otevřeni i v neděli."
+     ]
+    },
+    "cs/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      " Parkování je pro pacienty zdarma."
+     ]
+    },
+    "cs/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "cs/shop/price": {
+     "caught": false,
+     "unsupported": []
+    },
+    "cs/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "cs/shop/phone": {
+     "caught": false,
+     "unsupported": []
+    },
+    "cs/shop/days": {
+     "caught": false,
+     "unsupported": []
+    },
+    "cs/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Doručujeme i v neděli"
+     ]
+    },
+    "cs/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      " Doručení je zdarma nad 100 AZN."
+     ]
+    },
+    "el/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "α",
+      "Βρισκόμασ"
+     ]
+    },
+    "el/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Γεια",
+      " 25 AZN. Βρισκόμασ"
+     ]
+    },
+    "el/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "εια",
+      " Βρισκόμασ",
+      "υτέρα",
+      "β",
+      "ατο 9:00–17:00"
+     ]
+    },
+    "el/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "εια",
+      " Βρισκόμαστε στη"
+     ]
+    },
+    "el/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "α",
+      " Βρισκόμασ"
+     ]
+    },
+    "el/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      " Βρισκόμα",
+      " Είμαστε ανοιχτοί και τις Κυριακές."
+     ]
+    },
+    "el/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Βρισκόμα",
+      " Η στάθμευση είναι δωρεάν για τους ασθενείς."
+     ]
+    },
+    "el/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορ"
+     ]
+    },
+    "el/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορ",
+      " 25 AZN"
+     ]
+    },
+    "el/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορ",
+      " Βρισκόμαστε στη 14 οδός Nizami"
+     ]
+    },
+    "el/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορ"
+     ]
+    },
+    "el/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορεί"
+     ]
+    },
+    "el/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορεί",
+      "κ",
+      " τις Κυριακές."
+     ]
+    },
+    "el/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Γεια σας",
+      "Μπορ",
+      " Η παράδοση είναι δωρεάν για αγορές άνω των 100 AZN."
+     ]
+    },
+    "hu/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Üdvözlet"
+     ]
+    },
+    "hu/clinic/price": {
+     "caught": false,
+     "unsupported": [
+      "Ü",
+      "dvözlet"
+     ]
+    },
+    "hu/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Üdvözlet",
+      "ban vagyunk",
+      "va",
+      "ig",
+      "–"
+     ]
+    },
+    "hu/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "Üdvözlet",
+      "yunk"
+     ]
+    },
+    "hu/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "Üdvözlet",
+      "yunk",
+      "á"
+     ]
+    },
+    "hu/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Üdvözlet",
+      " Vasárnap is nyitva vagyunk."
+     ]
+    },
+    "hu/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Üdvözlet",
+      " A parkolás ingyenes a betegeknél."
+     ]
+    },
+    "hu/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "dvözl"
+     ]
+    },
+    "hu/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "Üdvözl"
+     ]
+    },
+    "hu/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "dvözl"
+     ]
+    },
+    "hu/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Üdvözl",
+      " 555 01 03"
+     ]
+    },
+    "hu/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "dvö",
+      "l"
+     ]
+    },
+    "hu/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Üdvözl",
+      " Vasárnap is szállítunk"
+     ]
+    },
+    "hu/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "dvö",
+      "l",
+      " 100 AZN felett ingyenes a szállítás."
+     ]
+    }
+   },
+   "latency": [
+    0.071,
+    0.038,
+    0.037,
+    0.037,
+    0.037,
+    0.043,
+    0.042,
+    0.043,
+    0.042,
+    0.043,
+    0.042,
+    0.042,
+    0.043,
+    0.046,
+    0.057,
+    0.053,
+    0.05,
+    0.049,
+    0.05,
+    0.051,
+    0.054,
+    0.061,
+    0.06,
+    0.06,
+    0.06,
+    0.06,
+    0.068,
+    0.085,
+    0.06,
+    0.056,
+    0.055,
+    0.054,
+    0.05,
+    0.051,
+    0.051,
+    0.057,
+    0.057,
+    0.056,
+    0.053,
+    0.062,
+    0.088,
+    0.063,
+    0.108,
+    0.053,
+    0.042,
+    0.043,
+    0.049,
+    0.056,
+    0.049,
+    0.098,
+    0.06,
+    0.061,
+    0.068,
+    0.055,
+    0.061,
+    0.056,
+    0.05,
+    0.051,
+    0.05,
+    0.049,
+    0.047,
+    0.053,
+    0.053,
+    0.053,
+    0.053,
+    0.053,
+    0.054,
+    0.053,
+    0.06,
+    0.06,
+    0.055,
+    0.056,
+    0.055,
+    0.056,
+    0.055,
+    0.058,
+    0.058,
+    0.066,
+    0.065,
+    0.065,
+    0.066,
+    0.065,
+    0.089,
+    0.071,
+    0.049,
+    0.049,
+    0.048,
+    0.049,
+    0.048,
+    0.049,
+    0.055,
+    0.065,
+    0.063,
+    0.063,
+    0.062,
+    0.063,
+    0.064,
+    0.073,
+    0.054,
+    0.051,
+    0.051,
+    0.05,
+    0.05,
+    0.056,
+    0.056,
+    0.062,
+    0.063,
+    0.063,
+    0.064,
+    0.063,
+    0.065,
+    0.065,
+    0.064,
+    0.065,
+    0.07,
+    0.07,
+    0.07,
+    0.075,
+    0.081,
+    0.093,
+    0.088,
+    0.082,
+    0.082,
+    0.082,
+    0.085,
+    0.082,
+    0.043,
+    0.04,
+    0.04,
+    0.041,
+    0.041,
+    0.042,
+    0.041,
+    0.048,
+    0.046,
+    0.045,
+    0.046,
+    0.046,
+    0.047,
+    0.046,
+    0.055,
+    0.053,
+    0.053,
+    0.055,
+    0.055,
+    0.058,
+    0.059,
+    0.058,
+    0.058,
+    0.057,
+    0.058,
+    0.057,
+    0.064,
+    0.064,
+    0.639,
+    0.041,
+    0.041,
+    0.041,
+    0.04,
+    0.046,
+    0.047,
+    0.05,
+    0.046,
+    0.046,
+    0.047,
+    0.046,
+    0.048,
+    0.052,
+    0.043,
+    0.039,
+    0.039,
+    0.039,
+    0.039,
+    0.041,
+    0.042,
+    0.048,
+    0.045,
+    0.044,
+    0.044,
+    0.044,
+    0.046,
+    0.046,
+    0.042,
+    0.04,
+    0.04,
+    0.04,
+    0.041,
+    0.045,
+    0.044,
+    0.045,
+    0.043,
+    0.043,
+    0.042,
+    0.042,
+    0.043,
+    0.043,
+    0.038,
+    0.037,
+    0.037,
+    0.037,
+    0.037,
+    0.038,
+    0.042,
+    0.043,
+    0.042,
+    0.041,
+    0.041,
+    0.041,
+    0.043,
+    0.043,
+    0.039,
+    0.037,
+    0.037,
+    0.037,
+    0.037,
+    0.043,
+    0.041,
+    0.044,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.043,
+    0.045,
+    0.042,
+    0.042,
+    0.042,
+    0.043,
+    0.045,
+    0.044,
+    0.046,
+    0.044,
+    0.043,
+    0.043,
+    0.043,
+    0.049,
+    0.048,
+    0.038,
+    0.037,
+    0.037,
+    0.037,
+    0.037,
+    0.039,
+    0.038,
+    0.043,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.043,
+    0.044,
+    0.044,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.043,
+    0.043,
+    0.045,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.048,
+    0.049,
+    0.047,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.049,
+    0.048,
+    0.049,
+    0.047,
+    0.047,
+    0.047,
+    0.047,
+    0.048,
+    0.05,
+    0.057,
+    0.054,
+    0.053,
+    0.054,
+    0.053,
+    0.056,
+    0.056,
+    0.065,
+    0.061,
+    0.061,
+    0.061,
+    0.061,
+    0.067,
+    0.068,
+    0.044,
+    0.041,
+    0.042,
+    0.042,
+    0.041,
+    0.044,
+    0.042,
+    0.049,
+    0.048,
+    0.047,
+    0.047,
+    0.048,
+    0.049,
+    0.051,
+    0.057,
+    0.056,
+    0.056,
+    0.056,
+    0.057,
+    0.062,
+    0.067,
+    0.088,
+    0.087,
+    0.087,
+    0.087,
+    0.086,
+    0.1,
+    0.095,
+    0.051,
+    0.048,
+    0.048,
+    0.048,
+    0.048,
+    0.055,
+    0.056,
+    0.059,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.064,
+    0.062,
+    0.07,
+    0.069,
+    0.069,
+    0.069,
+    0.068,
+    0.076,
+    0.077,
+    0.085,
+    0.085,
+    0.085,
+    0.085,
+    0.085,
+    0.092,
+    0.094,
+    0.058,
+    0.055,
+    0.054,
+    0.054,
+    0.054,
+    0.063,
+    0.061,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.075,
+    0.083,
+    0.083,
+    0.04,
+    0.037,
+    0.037,
+    0.037,
+    0.037,
+    0.042,
+    0.042,
+    0.044,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.044,
+    0.048,
+    0.042,
+    0.042,
+    0.042,
+    0.041,
+    0.042,
+    0.043,
+    0.043,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.044,
+    0.044,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.043,
+    0.042,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.047,
+    0.049,
+    0.053,
+    0.049,
+    0.049,
+    0.049,
+    0.049,
+    0.057,
+    0.057,
+    0.059,
+    0.056,
+    0.056,
+    0.056,
+    0.056,
+    0.062,
+    0.062,
+    0.044,
+    0.042,
+    0.042,
+    0.042,
+    0.042,
+    0.045,
+    0.043,
+    0.044,
+    0.043,
+    0.043,
+    0.043,
+    0.043,
+    0.048,
+    0.048
+   ]
+  }
+ }
+}
