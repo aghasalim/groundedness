@@ -19,7 +19,7 @@ def load(path):
 def encode(tok, rows, max_len):
     out = []
     for r in rows:
-        e = tok(r['answer'], r['source'], truncation='only_second', max_length=max_len, return_offsets_mapping=True)
+        e = tok(r['answer'], r['source'], truncation='longest_first', max_length=max_len, return_offsets_mapping=True)
         seq = e.sequence_ids(); labels = []
         for i, (s, t) in enumerate(e['offset_mapping']):
             if seq[i] != 0 or t == s: labels.append(-100); continue
@@ -53,11 +53,29 @@ def evaluate(model, items, dev, bs, pad):
     model.train()
     return {'token_p': round(P, 3), 'token_r': round(R, 3), 'token_f1': round(F, 3), 'answer_recall': round(ex_tp / max(1, ex_tp + ex_fn), 3), 'answer_false_alarm': round(ex_fp / max(1, ex_fp + ex_tn), 3)}
 
+@torch.no_grad()
+def calibrate(model, items, dev, bs, pad):
+    model.eval(); probs, gold = [], []
+    for ids, am, lab in batches(items, bs, pad, False, None):
+        p = model(input_ids=ids.to(dev), attention_mask=am.to(dev)).logits.softmax(-1)[..., 1].cpu()
+        for j in range(ids.shape[0]):
+            m = lab[j] != -100
+            probs.append(p[j][m]); gold.append(bool((lab[j] == 1).any()))
+    best = (0.5, -1.0)
+    for t in [x / 100 for x in range(30, 96, 2)]:
+        flag = [bool((pr >= t).any()) for pr in probs]
+        rec = sum(f and g for f, g in zip(flag, gold)) / max(1, sum(gold))
+        fa = sum(f and not g for f, g in zip(flag, gold)) / max(1, sum(not g for g in gold))
+        score = rec if fa <= 0.10 else rec - (fa - 0.10) * 3
+        if score > best[1]: best = (t, score)
+    return best[0]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--base', default='xlm-roberta-base'); ap.add_argument('--out', default=os.path.join(HERE, 'out', 'grounded-multilingual-base'))
     ap.add_argument('--epochs', type=int, default=3); ap.add_argument('--bs', type=int, default=16); ap.add_argument('--lr', type=float, default=3e-5)
-    ap.add_argument('--max-len', type=int, default=512); ap.add_argument('--pos-weight', type=float, default=3.0); ap.add_argument('--limit', type=int, default=0)
+    ap.add_argument('--max-len', type=int, default=384); ap.add_argument('--pos-weight', type=float, default=3.0); ap.add_argument('--limit', type=int, default=0)
     a = ap.parse_args()
     dev = torch.device('mps' if torch.backends.mps.is_available() else 'cuda' if torch.cuda.is_available() else 'cpu')
     rnd = random.Random(0); torch.manual_seed(0)
@@ -75,14 +93,24 @@ def main():
         for ids, am, lab in batches(tr, a.bs, tok.pad_token_id, True, rnd):
             logits = model(input_ids=ids.to(dev), attention_mask=am.to(dev)).logits
             loss = lossf(logits.view(-1, 2), lab.to(dev).view(-1))
-            loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0); opt.step(); sch.step(); opt.zero_grad(); step += 1
+            loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0); opt.step(); sch.step(); opt.zero_grad(set_to_none=True); step += 1
+            # variable-length batches fragment the MPS cache until the box swaps; hand memory back often
+            if dev.type == 'mps' and step % 2 == 0: torch.mps.empty_cache()
             if step % 50 == 0: print(f'ep {ep} step {step}/{steps} loss {loss.item():.4f} {int(time.time()-t0)}s', flush=True)
+        if dev.type == 'mps': torch.mps.empty_cache()
         m = evaluate(model, dv, dev, a.bs, tok.pad_token_id); print(f'epoch {ep} dev {m}', flush=True)
+        if dev.type == 'mps': torch.mps.empty_cache()
         if m['token_f1'] > best:
             best = m['token_f1']; model.save_pretrained(a.out); tok.save_pretrained(a.out)
-            json.dump({'base': a.base, 'epoch': ep, 'dev': m, 'train_answers': len(tr)}, open(os.path.join(a.out, 'training.json'), 'w'), indent=1)
+            json.dump({'base': a.base, 'epoch': ep, 'dev': m, 'train_answers': len(tr), 'pos_weight': a.pos_weight, 'lr': a.lr, 'name': 'siba/grounded-multilingual-base'}, open(os.path.join(a.out, 'training.json'), 'w'), indent=1)
             print('saved', a.out, flush=True)
-    print('done best token_f1', best, flush=True)
+    # Pick the threshold on dev: the highest answer-level recall whose false-alarm
+    # rate stays under 10 %, written next to the weights for detect.py to read.
+    model = AutoModelForTokenClassification.from_pretrained(a.out).to(dev)
+    thr = calibrate(model, dv, dev, a.bs, tok.pad_token_id)
+    info = json.load(open(os.path.join(a.out, 'training.json'))); info['threshold'] = thr
+    json.dump(info, open(os.path.join(a.out, 'training.json'), 'w'), indent=1)
+    print('done best token_f1', best, 'threshold', thr, flush=True)
 
 if __name__ == '__main__':
     main()

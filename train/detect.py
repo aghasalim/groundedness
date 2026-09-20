@@ -17,11 +17,18 @@ class Detector:
             except Exception as e:
                 print('quantisation unavailable, fp32:', e)
         self.threshold, self.max_len = threshold, max_len
+        # the trainer writes its dev-calibrated threshold next to the weights
+        try:
+            import json, os
+            t = json.load(open(os.path.join(path, 'training.json'))).get('threshold')
+            if t and threshold == 0.5: self.threshold = float(t)
+        except Exception:
+            pass
 
     @torch.no_grad()
     def __call__(self, answer, sources):
         src = sources if isinstance(sources, str) else '\n\n'.join(sources)
-        e = self.tok(answer, src, truncation='only_second', max_length=self.max_len, return_offsets_mapping=True, return_tensors='pt')
+        e = self.tok(answer, src, truncation='longest_first', max_length=self.max_len, return_offsets_mapping=True, return_tensors='pt')
         off = e.pop('offset_mapping')[0].tolist(); seq = e.sequence_ids()
         prob = self.model(**e).logits.softmax(-1)[0, :, 1].tolist()
         spans, cur = [], None
