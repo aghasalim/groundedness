@@ -44,7 +44,7 @@ def grid(data, widths):
     return t
 
 E = [P('Multilingual Groundedness Verification with LLM Judges: A Planted-Error Benchmark in Eleven Languages', TITLE),
-     P('Salim Mustafazada', AUTH),
+     P('Aghasalim Mustafazada', AUTH),
      P('SIBA — "Süni İntellekt Biznes Avtomatlaşdırma" MMC, Baku, Azerbaijan · salim@siba.az · September 2026', AFF),
      P('<b>Abstract.</b> Retrieval-augmented assistants fail their users most often not by looping or inventing history but by stating a wrong price, hour or address that the documents they were given do not support. Every published open-weights detector for this failure (Vectara HHEM, LettuceDetect, Patronus Lynx) is trained on English. We describe <i>groundedness</i>, a dependency-free open-source package that checks an answer against its sources by asking a general-purpose language model to list the unsupported claims and rewrite the answer without them, in the answer\'s own language, over any OpenAI-compatible endpoint. We introduce a small planted-error benchmark: one business\'s facts, one grounded answer and two answers with a single planted error (a wrong price, an invented opening day) in eleven languages (English, Azerbaijani, Russian, Turkish, Ukrainian, Kazakh, Arabic, Persian, Hindi, Indonesian, Vietnamese). Seven of nine models tested catch all 22 planted errors with zero false alarms in every language, including Kazakh, Persian and Vietnamese; a 27B open model does so with a median latency of 0.27 s. A 7B Arabic-centred model flags every grounded answer and misses a third of the errors. We also report a measurement pitfall: thinking models given a small token budget return empty replies, and a scorer that treats an empty reply as "grounded" produces a perfect-looking zero. Code, data and results are at github.com/aghasalim/groundedness under the MIT licence.', ABS)]
 
@@ -89,7 +89,7 @@ def deco(c, d):
     c.drawString(22 * mm, 12 * mm, 'Mustafazada — Multilingual Groundedness Verification with LLM Judges'); c.drawRightString(188 * mm, 12 * mm, str(c.getPageNumber())); c.restoreState()
 
 out = os.path.join(here, 'groundedness-eleven-languages.pdf')
-doc = BaseDocTemplate(out, pagesize=A4, leftMargin=22 * mm, rightMargin=22 * mm, topMargin=20 * mm, bottomMargin=20 * mm, title='Multilingual Groundedness Verification with LLM Judges', author='Salim Mustafazada')
+doc = BaseDocTemplate(out, pagesize=A4, leftMargin=22 * mm, rightMargin=22 * mm, topMargin=20 * mm, bottomMargin=20 * mm, title='Multilingual Groundedness Verification with LLM Judges', author='Aghasalim Mustafazada')
 doc.addPageTemplates([PageTemplate(id='n', frames=[Frame(22 * mm, 20 * mm, 166 * mm, A4[1] - 40 * mm, id='f', leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)], onPage=deco)])
 doc.build(E)
 print('OK ->', out, os.path.getsize(out), 'bytes')
