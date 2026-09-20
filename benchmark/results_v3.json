@@ -1,0 +1,6032 @@
+{
+ "cases": 434,
+ "models": {
+  "allam-2-7b": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Greetings, offers to help, and promises to follow up",
+      "Name of the dental clinic"
+     ]
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "A consultation is 25 AZN.",
+      "We are at a specific date and time."
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "Greetings, offers to help, and promises to follow up",
+      "availability on Sundays",
+      "time for Sundays and Sundays address"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St",
+      "Monday to Saturday"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "We are at 12 Nizami St, open Monday to Saturday 9:00–19:00. Call +994 12 555 01 03."
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We are open on Sundays too."
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking is free for patients"
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Greetings, offers to help, and promises to follow up"
+     ]
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN"
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St",
+      "Baku delivery date and time",
+      "phone number availability"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "12 Nizami St phone number: +994 12 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 days",
+      "Delivery in Baku is 30 AZN"
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too."
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery is free above 100 AZN."
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "...",
+      "Salam!",
+      "Konsultasiya 30 AZN-dir.",
+      "Ünvan Nizami küçəsi 12, bazar ertəsindən şənbəyə 9:00–19:00 işləyirik.",
+      "Telefon +994 12 555 01 02."
+     ]
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasiya 25 AZN-dir.",
+      "Ünvan Nizami küçəsi 12, bazar ertəsindən şənbəyə 9:00–19:00 işləyirik."
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "...",
+      "Salam!",
+      "Konsultasiya 30 AZN-dir.",
+      "Ünvan Nizami küçəsi 12, bazar ertəsindən şənbəyə 9:00–17:00 işləyirik.",
+      "Telefon +994 12 555 01 02."
+     ]
+    },
+    "az/clinic/address": {
+     "unjudged": true
+    },
+    "az/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "30 AZN",
+      "Gün vahiməli"
+     ]
+    },
+    "az/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/shop/phone": {
+     "unjudged": true
+    },
+    "az/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "...",
+      "100 AZN-dən yuxarı çatdırılma pulsuzdur",
+      "Salam!"
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..., Консультация стоит 30 AZN, Мы на ул. Низами 12, работаем с понедельника по субботу 9:00–19:00, Телефон +994 12 555 01 02."
+     ]
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультация стоит 25 AZN.",
+      "Здравствуйте!",
+      "Мы на ул. Низами 12, работаем с понедельника по субботу 9:00–19:00."
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "Где была предложена помощь",
+      "Приглашение для повторения",
+      "Название стоматолога",
+      "Дата",
+      "Дата и время работы"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "ул. Низами 14",
+      "Пн"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Здравствуйте!",
+      "Мы на ул. Низами 12, работаем с понедельника по субботу 9:00–19:00.",
+      "Телефон +994 12 555 01 03."
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "Где этот стоматолог?",
+      "Какой язык используется в этом клинике?",
+      "Какой язык используется в этом клинике?",
+      "Какой язык используется в этом стоматологе?",
+      "Какой язык используется в этом стоматологе?",
+      "Какой язык используется в этом стоматологе?",
+      "Какой язык используется в этом стоматологе?",
+      "Какой язык используется в этом стоматологе?",
+      "Какой язык используется в этом стоматологе?"
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Здравствуйте!",
+      "Парковка для пациентов бесплатная"
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "ru/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "ru/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "Название магазина",
+      "Дата возврата",
+      "Время возврата",
+      "Стоимость возврата",
+      "Только открытые товары"
+     ]
+    },
+    "ru/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Невскрытый товар можно вернуть в течение 30 дней с чеком.",
+      "Доставка по Баку 30 AZN."
+     ]
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 30 AZN",
+      "Мы на ул. Низами 12, телефон +994 12 555 01 02",
+      "Доставляем и по воскресеньям"
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "Гreetings!",
+      "Приятного встречи!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!",
+      "Дорогой!",
+      "Привет!",
+      "Пожалуйста!",
+      "Дорогой покупатель!",
+      "Ваше привет!",
+      "Пожалуйста!"
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Greetings",
+      "offers to help",
+      "promises to follow up"
+     ]
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Muayene 25 AZN'dir",
+      "Merhaba!",
+      "Nizami Caddesi 12'deyiz, pazartesiden cumartesiye"
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "Greetings, offers to help, and promises to follow up",
+      "a name"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Merhaba!",
+      "Nizami Caddesi 12'deyiz, pazartesiden cumartesiye 9:00–19:00 arası açığız. Telefon +994 12 555 01 03."
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "Greetings!",
+      "Offers to help",
+      "Promises to follow up",
+      "Date",
+      "Name",
+      "Availability outside of Monday to Saturday",
+      "Rule",
+      "Quote"
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "30 AZN",
+      "Bakü içi teslimat 30 AZN",
+      "Merhaba!",
+      "Bakü içi teslimat 25 AZN'dir"
+     ]
+    },
+    "tr/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Merhaba!",
+      "Açılmamış ürünü fişle 14 gün içinde iade edebilirsiniz.",
+      "Nizami Caddesi 12'deyiz, telefon +994 12 555 01 03."
+     ]
+    },
+    "tr/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Merhaba!",
+      "Açılmamış ürünü fişle 14 gün içinde iade edebilirsiniz.",
+      "Merhaba! Açılmamış ürünü fişle 14 gün içinde iade edebilirsiniz.",
+      "100 AZN üzeri teslimat ücretsizdir."
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Вітаю!",
+      "Консультація коштує 25 AZN."
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Вітаю!",
+      "Консультація коштує 30 AZN. Ми на вул. Нізамі 14, працюємо з понеділка по суботу 9:00–19:00. Телефон +994 12 555 01 02."
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "Вітаю!",
+      "Ми на вул. Нізамі 12, працюємо з понеділка по суботу 9:00–19:00."
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Працюємо також у неділю.",
+      "Вітаю!",
+      "Повідомлення з планом розкладу"
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/shop/price": {
+     "caught": false,
+     "unsupported": [
+      "Доставка по Баку 30 AZN.",
+      "Вітаю!",
+      "Повернення протягом 14 днів із чеком"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "Вітаю!",
+      "Нерозпакований товар можна повернути протягом 14 днів із чеком."
+     ]
+    },
+    "uk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "розпакований товар можна повернути протягом 14 днів із чеком",
+      "доставка по Баку 30 AZN до 30 днів"
+     ]
+    },
+    "uk/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка безкоштовна від 100 AZN."
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Сәлеметсіз бе!",
+      "Кеңес 25 AZN тұрады",
+      "Біз Низами көшесі"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Сәлеметсіз бе!",
+      "Ашылмаған тауарды чекпен 14 күн ішінде қайтара аласыз.",
+      "Баку бойынша жеткізу 25 AZN."
+     ]
+    },
+    "kk/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "Greetings, offers to help, and promises to follow up",
+      "Сәлеметсіз бе!",
+      "Ашылмаған тауарды чекпен"
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "Сәлеметсіз бе!",
+      "Ашылмаған тауарды чекпен",
+      "Баку бойынша жеткізу 100 AZN"
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "...",
+      "مرحباً!",
+      "نحن في شارع نظامي 12، ونعمل من الاثنين إلى السبت 9:00–19:00."
+     ]
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 25 مانات",
+      "... شارع نظامي 12"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "نحن في شارع نظامي 12، ونعمل من الاثنين إلى السبت 9:00–17:00.",
+      "مرحباً!"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14",
+      "الأحد",
+      "الاستشارة مجانية"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 30 مانات.",
+      "نحن في شارع نظامي 12، ونعمل من الاثنين إلى السبت 9:00–19:00.",
+      "الهاتف +994 12 555 01 03."
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نحن في شارع نظامي 12، ونعمل من الاثنين إلى السبت 9:00–19:00.",
+      "ونعمل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 30 مانات.",
+      "نحن في شارع نظامي 12، ونعمل من الاثنين إلى السبت 9:00–19:00.",
+      "مواقف السيارات مجانية للمرضى."
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،",
+      "...،"
+     ]
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل داخل باكو 25 مانات",
+      "... في شارع نظامي 12"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "..., شارع نظامي 14, التوصيل خلال 14 يوماً, التوصيل مع الإيصال, التوصيل بدون تكلفة"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "...",
+      "التوصيل داخل باكو 30 مانات",
+      "نحن في شارع نظامي 12، الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "يمكنك إرجاع المنتج غير المفتوح خلال 30 يوماً مع الإيصال.",
+      "التوصيل داخل باكو 30 مانات."
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نوصّل يوم الأحد أيضاً"
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "يمكنك إرجاع المنتج غير المفتوح خلال 14 يوماً مع الإيصال.",
+      "التوصيل مجاني للطلبات فوق 100 مانات."
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "مشاوره 25 منات است.",
+      "در خیابان نظامی 12 هستیم و از دوشنبه تا شنبه 9:00–19:00 باز هستیم."
+     ]
+    },
+    "fa/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14",
+      "9:00–19:00"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "پارکینگ برای بیماران رایگان است"
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "تا 14 روز با رسید",
+      "ارسال در باکو 25 منات"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/shop/days": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "تا 14 روز با رسید",
+      "ارسال بالای ۱۰۰ منات رایگان"
+     ]
+    },
+    "hi/clinic/ok": {
+     "unjudged": true
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "परामर्श 25 AZN",
+      "डेंटल क्लिनिक"
+     ]
+    },
+    "hi/clinic/hours": {
+     "unjudged": true
+    },
+    "hi/clinic/address": {
+     "unjudged": true
+    },
+    "hi/clinic/phone": {
+     "caught": false,
+     "unsupported": [
+      "डेंटल क्लिनिक",
+      "परामर्श की प्रतिदिन की स्थापना",
+      "फ़ोन +994 12 555 01 02"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "hi/shop/price": {
+     "unjudged": true
+    },
+    "hi/shop/address": {
+     "unjudged": true
+    },
+    "hi/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "hi/shop/days": {
+     "unjudged": true
+    },
+    "hi/shop/sunday": {
+     "unjudged": true
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN से ऊपर डिलीवरी मुफ़्त है",
+      "नमस्या के लिए मैंने बताया कि हम प्रोडक्ट पर हैं"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Greetings",
+      "offers to help",
+      "promises to follow up",
+      "Halo!",
+      "Konsultasi 30 AZN.",
+      "Kami di Jl. Nizami 12, buka Senin sampai Sabtu 9:00–19:00."
+     ]
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasi 25 AZN.",
+      "Halo!",
+      "Kami di Jl. Nizami 12, buka Senin sampai Sabtu 9:00–19:00."
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": false,
+     "unsupported": [
+      "Greetings",
+      "offers to help",
+      "promises to follow up",
+      "Konsultasi 30 AZN on Sunday",
+      "Konsultasi starts at 9:00 on Sunday"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14",
+      "Halo!",
+      "Kami di"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Halo!",
+      "Kami di Jl. Nizami 12, buka Senin sampai Sabtu 9:00–19:00. Telepon +994 12 555 01 03."
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga buka hari Minggu.",
+      "Halo!",
+      "Kami di Jl. Nizami 12, buka Senin sampai Sabtu 9:00–19:00."
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Halo!",
+      "Kami di Jl. Nizami 12, buka Senin sampai Sabtu 9:00–19:00. Telepon +994 12 555 01 02. Parkir gratis untuk pasien."
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "14 hari dengan struk",
+      "Pengiriman di Baku 25 AZN"
+     ]
+    },
+    "id/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Kami di Jl. Nizami 12, telepon +994 12 555 01 03."
+     ]
+    },
+    "id/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 hari",
+      "Baku 30 AZN"
+     ]
+    },
+    "id/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Xin chào!",
+      "Chúng tôi ở 12 đường Nizami, mở cửa từ thứ Hai đến thứ Bảy 9:00–19:00. Điện thoại +994 12 555 01 02."
+     ]
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Tư vấn là 25 AZN.",
+      "Xin chào!",
+      "Chúng tôi ở 12 đường Nizami, mở cửa từ thứ Hai đến thứ Bảy 9:00–19:00."
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào!",
+      "Chúng tôi ở 12 đường Nizami, mở cửa từ thứ Hai đến thứ Bảy 9:00–17:00.",
+      "Điện thoại +994 12 555 01 02."
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 đường Nizami",
+      "thứ Hai đến thứ Bảy 9:00–19:00",
+      "Xin chào!",
+      "Tư vấn là 30 AZN"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào!",
+      "Chúng tôi ở 12 đường Nizami, mở cửa từ thứ Hai đến thứ Bảy 9:00–19:00. Điện thoại +994 12 555 01 03."
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào!",
+      "Chúng tôi cũng mở cửa Chủ nhật."
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào!",
+      "Bệnh nhân được đỗ xe miễn phí."
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Giao hàng trong Baku là 25 AZN.",
+      "Hàng chưa mở có thể trả lại trong 14 ngày kèm hóa đơn."
+     ]
+    },
+    "vi/shop/address": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "vi/shop/phone": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "vi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Xin chào!",
+      "Hàng chưa mở có thể trả lại trong 30 ngày kèm hóa đơn.",
+      "Chúng tôi ở 12 đường Nizami, điện thoại +994 12 555 01 02."
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": false,
+     "unsupported": [
+      "..."
+     ]
+    }
+   },
+   "latency": [
+    0.334,
+    0.264,
+    0.324,
+    0.262,
+    0.281,
+    0.267,
+    0.264,
+    0.279,
+    0.239,
+    0.268,
+    0.26,
+    0.252,
+    0.247,
+    0.249,
+    0.433,
+    0.378,
+    0.348,
+    0.51,
+    0.259,
+    0.29,
+    0.28,
+    0.475,
+    0.337,
+    0.317,
+    0.625,
+    0.327,
+    0.329,
+    0.338,
+    0.491,
+    0.375,
+    0.403,
+    0.299,
+    0.317,
+    0.518,
+    0.315,
+    0.315,
+    0.331,
+    0.313,
+    0.507,
+    0.397,
+    0.346,
+    1.448,
+    0.253,
+    0.292,
+    0.281,
+    0.275,
+    0.317,
+    0.289,
+    0.328,
+    0.286,
+    0.336,
+    0.28,
+    0.319,
+    0.301,
+    0.336,
+    0.351,
+    0.283,
+    0.321,
+    0.272,
+    0.429,
+    0.304,
+    0.298,
+    0.292,
+    0.347,
+    0.324,
+    0.333,
+    0.417,
+    0.381,
+    0.378,
+    0.299,
+    0.316,
+    0.337,
+    0.301,
+    0.276,
+    0.292,
+    0.326,
+    0.301,
+    0.296,
+    0.333,
+    0.288,
+    0.292,
+    0.292,
+    0.32,
+    0.401,
+    0.286,
+    0.279,
+    0.256,
+    0.263,
+    0.312,
+    0.294,
+    0.302,
+    0.323,
+    0.263,
+    0.294,
+    0.301,
+    0.351,
+    0.257,
+    0.288,
+    0.271,
+    0.3,
+    0.25,
+    0.321,
+    0.332,
+    0.294,
+    0.317,
+    0.291,
+    0.284,
+    0.292,
+    0.283,
+    0.336,
+    0.402,
+    0.295,
+    2.728,
+    0.444,
+    2.694,
+    2.728,
+    0.677,
+    0.592,
+    0.501,
+    0.488,
+    2.56,
+    2.569,
+    0.575,
+    2.721,
+    2.506,
+    0.519,
+    0.335,
+    0.314,
+    0.287,
+    0.275,
+    0.342,
+    0.341,
+    0.307,
+    0.307,
+    0.26,
+    0.289,
+    0.29,
+    0.265,
+    0.282,
+    0.3,
+    0.341,
+    0.407,
+    0.395,
+    0.437,
+    0.359,
+    0.34,
+    0.421,
+    0.373,
+    0.383,
+    0.357,
+    0.364,
+    0.51,
+    0.373,
+    0.381
+   ]
+  },
+  "openai/gpt-oss-120b": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "A consultation is 25 AZN."
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "open Monday to Saturday 9:00–17:00"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Phone number +994 12 555 01 03"
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We are open on Sundays too."
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking is free for patients."
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN."
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "phone +994 12 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "You can return an unopened item within 30 days with the receipt."
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too."
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery is free above 100 AZN."
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasiya 25 AZN-dir."
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də işləyirik."
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Xəstələr üçün parkinq pulsuzdur."
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakı daxilində çatdırılma 25 AZN-dir."
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefon +994 12 555 01 03"
+     ]
+    },
+    "az/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Açılmamış malı qəbzlə 30 gün ərzində qaytara bilərsiniz."
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də çatdırırıq."
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-dən yuxarı çatdırılma pulsuzdur."
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультация стоит 25 AZN."
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "работаем с понедельника по субботу 9:00–17:00"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Мы на ул. Низами 14"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Работаем также по воскресеньям."
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Парковка для пациентов бесплатная."
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN."
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ул. Низами 14"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "телефон +994 12 555 01 03"
+     ]
+    },
+    "ru/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Невскрытый товар можно вернуть в течение 30 дней с чеком."
+     ]
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляем и по воскресеньям."
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка бесплатна при заказе от 100 AZN."
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Muayene 25 AZN'dir."
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de açığız."
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Hastalar için otopark ücretsizdir."
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakü içi teslimat 25 AZN'dir."
+     ]
+    },
+    "tr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefon +994 12 555 01 03"
+     ]
+    },
+    "tr/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Açılmamış ürünü fişle 30 gün içinde iade edebilirsiniz."
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de teslimat yapıyoruz."
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN üzeri teslimat ücretsizdir."
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультація коштує 25 AZN."
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "працюємо з понеділка по суботу 9:00–17:00"
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ми на вул. Нізамі 14"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Працюємо також у неділю."
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Паркування для пацієнтів безкоштовне."
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "вул. Нізамі 14"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Нерозпакований товар можна повернути протягом 30 днів із чеком."
+     ]
+    },
+    "uk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляємо і в неділю."
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка безкоштовна від 100 AZN."
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Кеңес 25 AZN тұрады",
+      "дүйсенбіден сенбіге дейін 9:00–19:00 жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "жұмыс істейміз дүйсенбіден сенбіге дейін 9:00–17:00",
+      "дүйсенбіден сенбіге дейін"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Низами көшесі 14-де",
+      "дүйсенбіден сенбіге дейін 9:00–19:00 жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жұмыс істейміз."
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Пациенттерге тұрақ тегін."
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Баку бойынша жеткізу 25 AZN."
+     ]
+    },
+    "kk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Біз Низами көшесі 14-де"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Ашылмаған тауарды чекпен 30 күн ішінде қайтара аласыз."
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жеткіземіз."
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-нен жоғары жеткізу тегін."
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 25 مانات"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "نعمل من الاثنين إلى السبت 9:00–17:00"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نعمل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "مواقف السيارات مجانية للمرضى"
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل داخل باكو 25 مانات"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "يمكنك إرجاع المنتج غير المفتوح خلال 30 يوماً مع الإيصال."
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نوصّل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل مجاني للطلبات فوق 100 مانات"
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "مشاوره 25 منات است."
+     ]
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "از دوشنبه تا شنبه 9:00–17:00 باز هستیم"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "ما در خیابان نظامی 14 هستیم"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "تلفن +994 12 555 01 03"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم باز هستیم."
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "پارکینگ برای بیماران رایگان است."
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ارسال در باکو 25 منات است."
+     ]
+    },
+    "fa/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ما در خیابان نظامی 14 هستیم"
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "تلفن +994 12 555 01 03"
+     ]
+    },
+    "fa/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "کالای بازنشده را می‌توانید تا 30 روز با رسید مرجوع کنید."
+     ]
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم ارسال داریم."
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "ارسال بالای ۱۰۰ منات رایگان است."
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "परामर्श 25 AZN का है"
+     ]
+    },
+    "hi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "हम 12 निज़ामी स्ट्रीट पर हैं, सोमवार से शनिवार 9:00–17:00 खुले हैं"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "हम 14 निज़ामी स्ट्रीट पर हैं"
+     ]
+    },
+    "hi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी खुले हैं।"
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "मरीज़ों के लिए पार्किंग मुफ़्त है।"
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "डिलीवरी 25 AZN है"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "हम 14 निज़ामी स्ट्रीट पर हैं"
+     ]
+    },
+    "hi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "बिना खुला सामान रसीद के साथ 30 दिनों में वापस किया जा सकता है"
+     ]
+    },
+    "hi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी डिलीवरी करते हैं।"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN से ऊपर डिलीवरी मुफ़्त है"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasi 25 AZN"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "buka Senin sampai Sabtu 9:00–17:00"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telepon +994 12 555 01 03"
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga buka hari Minggu."
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parkir gratis untuk pasien."
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman di Baku 25 AZN"
+     ]
+    },
+    "id/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telepon +994 12 555 01 03"
+     ]
+    },
+    "id/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Barang yang belum dibuka bisa dikembalikan dalam 30 hari dengan struk."
+     ]
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga mengirim hari Minggu."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman gratis di atas 100 AZN."
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Tư vấn là 25 AZN"
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "mở cửa từ thứ Hai đến thứ Bảy 9:00–17:00"
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi ở 14 đường Nizami"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Điện thoại +994 12 555 01 03"
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng mở cửa Chủ nhật."
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Bệnh nhân được đỗ xe miễn phí."
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Giao hàng trong Baku là 25 AZN"
+     ]
+    },
+    "vi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi ở 14 đường Nizami"
+     ]
+    },
+    "vi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "điện thoại +994 12 555 01 03"
+     ]
+    },
+    "vi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Hàng chưa mở có thể trả lại trong 30 ngày kèm hóa đơn."
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng giao hàng Chủ nhật."
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Miễn phí giao hàng cho đơn trên 100 AZN."
+     ]
+    },
+    "de/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Eine Beratung kostet 25 AZN."
+     ]
+    },
+    "de/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "geöffnet von Montag bis Samstag 9:00–17:00"
+     ]
+    },
+    "de/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Wir befinden uns in 14 Nizami St"
+     ]
+    },
+    "de/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Rufen Sie +994 12 555 01 03 an."
+     ]
+    },
+    "de/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir haben auch sonntags geöffnet."
+     ]
+    },
+    "de/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Für Patienten ist das Parken kostenlos."
+     ]
+    },
+    "de/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung in Baku kostet 25 AZN."
+     ]
+    },
+    "de/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami Str."
+     ]
+    },
+    "de/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "de/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Sie können einen ungeöffneten Artikel innerhalb von 30 Tagen mit dem Kassenbeleg zurückgeben."
+     ]
+    },
+    "de/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir liefern auch sonntags."
+     ]
+    },
+    "de/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung ist kostenlos ab 100 AZN."
+     ]
+    },
+    "fr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Une consultation coûte 25 AZN."
+     ]
+    },
+    "fr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "ouverts du lundi au samedi 9:00–17:00"
+     ]
+    },
+    "fr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes situés au 14 rue Nizami"
+     ]
+    },
+    "fr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Appelez le +994 12 555 01 03."
+     ]
+    },
+    "fr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes également ouverts le dimanche."
+     ]
+    },
+    "fr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Le stationnement est gratuit pour les patients."
+     ]
+    },
+    "fr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La livraison à Bakou est 25 AZN."
+     ]
+    },
+    "fr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes au 14 rue Nizami"
+     ]
+    },
+    "fr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "téléphone +994 12 555 01 03"
+     ]
+    },
+    "fr/shop/days": {
+     "error": "HTTP 429"
+    },
+    "fr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous livrons aussi le dimanche."
+     ]
+    },
+    "fr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Livraison est gratuite au‑dessus de 100 AZN."
+     ]
+    },
+    "es/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Una consulta cuesta 25 AZN."
+     ]
+    },
+    "es/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "abiertos de lunes a sábado 9:00–17:00"
+     ]
+    },
+    "es/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos en 14 calle Nizami"
+     ]
+    },
+    "es/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Llame al +994 12 555 01 03."
+     ]
+    },
+    "es/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Estamos abiertos los domingos también."
+     ]
+    },
+    "es/clinic/extra": {
+     "error": "HTTP 429"
+    },
+    "es/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La entrega en Bakú cuesta 25 AZN."
+     ]
+    },
+    "es/shop/address": {
+     "error": "HTTP 429"
+    },
+    "es/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "teléfono +994 12 555 01 03"
+     ]
+    },
+    "es/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "devolver un artículo sin abrir dentro de 30 días"
+     ]
+    }
+   },
+   "latency": [
+    0.325,
+    0.708,
+    0.989,
+    0.625,
+    0.57,
+    0.726,
+    0.899,
+    0.476,
+    0.823,
+    0.505,
+    0.928,
+    0.545,
+    0.734,
+    0.993,
+    0.504,
+    0.782,
+    1.187,
+    0.737,
+    0.836,
+    1.023,
+    0.639,
+    0.969,
+    0.741,
+    0.475,
+    0.688,
+    0.732,
+    0.864,
+    0.7,
+    0.37,
+    0.562,
+    1.014,
+    0.601,
+    0.642,
+    0.961,
+    0.633,
+    0.342,
+    0.623,
+    0.73,
+    0.484,
+    0.826,
+    0.767,
+    0.683,
+    0.576,
+    0.959,
+    0.56,
+    0.689,
+    0.875,
+    0.788,
+    0.826,
+    0.861,
+    0.811,
+    0.688,
+    0.862,
+    0.667,
+    0.975,
+    0.589,
+    0.339,
+    0.659,
+    0.826,
+    0.67,
+    0.806,
+    0.794,
+    0.8,
+    0.569,
+    0.734,
+    0.661,
+    1.047,
+    0.845,
+    0.804,
+    0.496,
+    0.651,
+    0.819,
+    1.431,
+    0.936,
+    0.565,
+    0.712,
+    1.318,
+    0.292,
+    0.684,
+    0.863,
+    0.656,
+    0.822,
+    0.838,
+    0.657,
+    0.484,
+    0.573,
+    0.87,
+    1.107,
+    0.678,
+    0.761,
+    0.683,
+    0.519,
+    0.779,
+    0.639,
+    0.398,
+    0.798,
+    0.768,
+    0.725,
+    0.419,
+    0.694,
+    1.166,
+    1.439,
+    0.906,
+    0.706,
+    0.647,
+    0.329,
+    0.758,
+    0.913,
+    0.834,
+    0.654,
+    0.701,
+    0.928,
+    0.586,
+    0.852,
+    1.002,
+    0.727,
+    0.63,
+    0.72,
+    0.813,
+    0.663,
+    0.453,
+    1.161,
+    0.57,
+    0.541,
+    0.606,
+    1.082,
+    0.561,
+    0.386,
+    0.791,
+    1.08,
+    0.404,
+    0.611,
+    0.385,
+    0.563,
+    0.637,
+    0.642,
+    0.518,
+    0.559,
+    0.82,
+    0.663,
+    0.346,
+    0.988,
+    0.657,
+    0.878,
+    0.479,
+    0.8,
+    1.909,
+    0.58,
+    0.7,
+    0.43,
+    0.592,
+    0.568,
+    0.559,
+    0.752,
+    0.4,
+    0.582,
+    0.7,
+    0.819,
+    0.711,
+    0.64,
+    0.821,
+    0.3,
+    0.851,
+    0.524,
+    0.599,
+    0.82,
+    0.706,
+    0.72,
+    0.614,
+    0.576,
+    1.075,
+    0.589,
+    0.598,
+    0.746,
+    0.74,
+    0.435,
+    0.671,
+    0.924,
+    0.78,
+    0.624,
+    0.92,
+    0.447,
+    0.711,
+    1.158,
+    0.818,
+    0.634,
+    0.622,
+    0.433,
+    0.821,
+    0.755,
+    0.56
+   ]
+  },
+  "openai/gpt-oss-20b": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "A consultation is 25 AZN."
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "open Monday to Saturday 9:00–17:00"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Call +994 12 555 01 03."
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We are open on Sundays too."
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking is free for patients."
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN."
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "We are at 14 Nizami St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "phone +994 12 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "return within 30 days"
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too."
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery is free above 100 AZN."
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasiya 25 AZN-dir",
+      "bazar ertəsindən şənbəyə 9:00–19:00 işləyirik"
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03."
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də işləyirik."
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Xəstələr üçün parkinq pulsuzdur."
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakı daxilində çatdırılma 25 AZN-dir."
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "az/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Açılmamış malı qəbzlə 30 gün ərzində qaytara bilərsiniz."
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də çatdırırıq."
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-dən yuxarı çatdırılma pulsuzdur."
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультация стоит 25 AZN."
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Рабочие часы 9:00–17:00"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Мы на ул. Низами 14"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03."
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Работаем также по воскресеньям."
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Парковка для пациентов бесплатная."
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN"
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "ул. Низами 14"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "ru/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 дней"
+     ]
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "доставляем и по воскресеньям"
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка бесплатна при заказе от 100 AZN."
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Muayene 25 AZN'dir."
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03."
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de açığız."
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Hastalar için otopark ücretsizdir."
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakü içi teslimat 25 AZN'dir."
+     ]
+    },
+    "tr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "tr/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Açılmamış ürünü fişle 30 gün içinde iade edebilirsiniz."
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de teslimat yapıyoruz."
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN üzeri teslimat ücretsizdir."
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультація коштує 25 AZN."
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Працюємо з понеділка по суботу 9:00–17:00."
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "вул. Нізамі 14"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Працюємо також у неділю."
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Паркування для пацієнтів безкоштовне."
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN."
+     ]
+    },
+    "uk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Ми на вул. Нізамі 14"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 днів"
+     ]
+    },
+    "uk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляємо і в неділю."
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка безкоштовна від 100 AZN."
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Кеңес 25 AZN тұрады",
+      "Біз дүйсенбіден сенбіге дейін 9:00–19:00 жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00",
+      "дүйсенбіден сенбіге дейін"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": false,
+     "unsupported": [
+      "address",
+      "hours"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03."
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жұмыс істейміз."
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Пациенттерге тұрақ тегін."
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Баку бойынша жеткізу 25 AZN."
+     ]
+    },
+    "kk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Біз Низами көшесі 14-де"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Ашылмаған тауарды чекпен 30 күн ішінде қайтара аласыз."
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жеткіземіз."
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-нен жоғары жеткізу тегін."
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 25 مانات."
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "العمل من الاثنين إلى السبت 9:00–17:00"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "نحن في شارع نظامي 14"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نعمل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "مواقف السيارات مجانية للمرضى."
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "المنتج غير المفتوح"
+     ]
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل داخل باكو 25 مانات"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "يمكنك إرجاع المنتج غير المفتوح خلال 30 يوماً مع الإيصال."
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "نوصّل يوم الأحد أيضاً."
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل مجاني للطلبات فوق 100 مانات."
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "مشاوره 25 منات است."
+     ]
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Hours of operation: 9:00–17:00"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "téléphone +994 12 555 01 03"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم باز هستیم."
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "پارکینگ برای بیماران رایگان است."
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ارسال در باکو 25 منات است"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "تلفن +994 12 555 01 03"
+     ]
+    },
+    "fa/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "کالای بازنشده را می‌توانید تا 30 روز با رسید مرجوع کنید."
+     ]
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم ارسال داریم."
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "ارسال بالای ۱۰۰ منات رایگان است."
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "परामर्श 25 AZN का है।"
+     ]
+    },
+    "hi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "सोम–शनि 9:00–17:00 खुले हैं"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "हम 14 निज़ामी स्ट्रीट पर हैं"
+     ]
+    },
+    "hi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी खुले हैं।"
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "मरीज़ों के लिए पार्किंग मुफ़्त है।"
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "बाकू में डिलीवरी 25 AZN है।"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "हम 14 निज़ामी स्ट्रीट पर हैं"
+     ]
+    },
+    "hi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "बिना खुला सामान रसीद के साथ 30 दिनों में वापस किया जा सकता है।"
+     ]
+    },
+    "hi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी डिलीवरी करते हैं।"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN से ऊपर डिलीवरी मुफ़्त है।"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasi 25 AZN"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "buka Senin sampai Sabtu 9:00–17:00"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telepon +994 12 555 01 03."
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga buka hari Minggu."
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parkir gratis untuk pasien."
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman di Baku 25 AZN."
+     ]
+    },
+    "id/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Kami di Jl. Nizami 14"
+     ]
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telepon +994 12 555 01 03"
+     ]
+    },
+    "id/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 hari"
+     ]
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga mengirim hari Minggu."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman gratis di atas 100 AZN."
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Tư vấn là 25 AZN."
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Mở cửa từ thứ Hai đến thứ Bảy 9:00–17:00."
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi ở 14 đường Nizami"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Điện thoại +994 12 555 01 03"
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng mở cửa Chủ nhật."
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Bệnh nhân được đỗ xe miễn phí."
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Giao hàng trong Baku là 25 AZN."
+     ]
+    },
+    "vi/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "vi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "+994 12 555 01 03"
+     ]
+    },
+    "vi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Hàng chưa mở có thể trả lại trong 30 ngày kèm hóa đơn."
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng giao hàng Chủ nhật."
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Miễn phí giao hàng cho đơn trên 100 AZN."
+     ]
+    },
+    "de/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Eine Beratung kostet 25 AZN."
+     ]
+    },
+    "de/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "geöffnet von Montag bis Samstag 9:00–17:00"
+     ]
+    },
+    "de/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Wir befinden uns in 14 Nizami St"
+     ]
+    },
+    "de/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Rufen Sie +994 12 555 01 03 an."
+     ]
+    },
+    "de/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir haben auch sonntags geöffnet."
+     ]
+    },
+    "de/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Für Patienten ist das Parken kostenlos."
+     ]
+    },
+    "de/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung in Baku kostet 25 AZN."
+     ]
+    },
+    "de/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Wir befinden uns in 14 Nizami Str."
+     ]
+    },
+    "de/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "de/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Sie können einen ungeöffneten Artikel innerhalb von 30 Tagen mit dem Kassenbeleg zurückgeben."
+     ]
+    },
+    "de/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir liefern auch sonntags."
+     ]
+    },
+    "de/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung ist kostenlos ab 100 AZN."
+     ]
+    },
+    "fr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Une consultation coûte 25 AZN."
+     ]
+    },
+    "fr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "ouverts du lundi au samedi 9:00–17:00"
+     ]
+    },
+    "fr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 rue Nizami"
+     ]
+    },
+    "fr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Appelez le +994 12 555 01 03."
+     ]
+    },
+    "fr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes également ouverts le dimanche."
+     ]
+    },
+    "fr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Le stationnement est gratuit pour les patients."
+     ]
+    },
+    "fr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La livraison à Bakou est 25 AZN."
+     ]
+    },
+    "fr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes au 14 rue Nizami"
+     ]
+    },
+    "fr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Téléphone +994 12 555 01 03"
+     ]
+    },
+    "fr/shop/days": {
+     "unjudged": true
+    },
+    "fr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous livrons aussi le dimanche."
+     ]
+    },
+    "fr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Livraison est gratuite au‑dessus de 100 AZN."
+     ]
+    },
+    "es/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Una consulta cuesta 25 AZN."
+     ]
+    },
+    "es/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "Los horarios de apertura son 9:00–17:00"
+     ]
+    },
+    "es/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 calle Nizami"
+     ]
+    },
+    "es/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Llame al +994 12 555 01 03."
+     ]
+    },
+    "es/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "estamos abiertos los domingos también."
+     ]
+    },
+    "es/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "El estacionamiento es gratuito para los pacientes."
+     ]
+    },
+    "es/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La entrega en Bakú cuesta 25 AZN."
+     ]
+    },
+    "es/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos en 14 calle Nizami"
+     ]
+    },
+    "es/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "El número de teléfono +994 12 555 01 03 no está respaldado por los hechos proporcionados."
+     ]
+    },
+    "es/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 días"
+     ]
+    },
+    "es/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Entregamos los domingos también."
+     ]
+    },
+    "es/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "La entrega es gratuita por encima de 100 AZN."
+     ]
+    },
+    "it/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "Siamo in 12 via Nizami, aperti dal lunedì al sabato 9:00–19:00."
+     ]
+    },
+    "it/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Una consulenza costa 25 AZN.",
+      "Siamo in 12 via Nizami, aperti dal lunedì al sabato 9:00–19:00."
+     ]
+    },
+    "it/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato 9:00–17:00"
+     ]
+    },
+    "it/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 via Nizami",
+      "lunedì al sabato"
+     ]
+    },
+    "it/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato 9:00–19:00",
+      "Chiama +994 12 555 01 03"
+     ]
+    },
+    "it/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato",
+      "Siamo aperti anche la domenica"
+     ]
+    },
+    "it/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "lunedì al sabato 9:00–19:00",
+      "parcheggio è gratuito per i pazienti"
+     ]
+    },
+    "it/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "it/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La consegna a Baku è 25 AZN."
+     ]
+    },
+    "it/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Siamo in 14 via Nizami"
+     ]
+    },
+    "it/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefono +994 12 555 01 03"
+     ]
+    },
+    "it/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Puoi restituire un articolo non aperto entro 30 giorni con lo scontrino."
+     ]
+    },
+    "it/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Consegniamo anche la domenica."
+     ]
+    },
+    "it/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "La consegna è gratuita sopra i 100 AZN."
+     ]
+    },
+    "pt/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Uma consulta custa 25 AZN."
+     ]
+    },
+    "pt/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "pt/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos na 14 Nizami St"
+     ]
+    },
+    "pt/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Ligue para +994 12 555 01 03."
+     ]
+    },
+    "pt/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Estamos abertos aos domingos também."
+     ]
+    },
+    "pt/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "O estacionamento é gratuito para pacientes."
+     ]
+    },
+    "pt/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "A entrega em Baku custa 25 AZN."
+     ]
+    },
+    "pt/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos na 14 Rua Nizami"
+     ]
+    },
+    "pt/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefone +994 12 555 01 03"
+     ]
+    },
+    "pt/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "devolver um item não aberto dentro de 30 dias com o recibo"
+     ]
+    },
+    "pt/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Entregamos aos domingos também."
+     ]
+    },
+    "pt/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Entrega grátis acima de 100 AZN."
+     ]
+    },
+    "pl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultacja kosztuje 25 AZN."
+     ]
+    },
+    "pl/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "9:00–17:00"
+     ]
+    },
+    "pl/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Znajdujemy się przy 14 ul. Nizami"
+     ]
+    },
+    "pl/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03."
+     ]
+    },
+    "pl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Jesteśmy również otwarci w niedziele."
+     ]
+    },
+    "pl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking jest bezpłatny dla pacjentów."
+     ]
+    },
+    "pl/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Dostawa w Baku kosztuje 25 AZN."
+     ]
+    },
+    "pl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Jesteśmy pod adresem 14 ul. Nizami"
+     ]
+    },
+    "pl/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03 nie jest zgodny z podanym numerem telefonu +994 12 555 01 02."
+     ]
+    },
+    "pl/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 dni"
+     ]
+    },
+    "pl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Dostarczamy także w niedziele."
+     ]
+    }
+   },
+   "latency": [
+    0.346,
+    0.496,
+    0.379,
+    0.432,
+    0.387,
+    0.377,
+    0.457,
+    0.384,
+    0.439,
+    0.594,
+    0.572,
+    0.426,
+    0.616,
+    0.339,
+    0.432,
+    0.561,
+    0.604,
+    0.517,
+    0.493,
+    0.527,
+    0.358,
+    0.317,
+    0.481,
+    0.531,
+    0.568,
+    0.379,
+    0.542,
+    0.617,
+    0.335,
+    0.429,
+    0.423,
+    0.542,
+    0.453,
+    0.432,
+    0.441,
+    0.386,
+    0.286,
+    0.345,
+    0.325,
+    0.513,
+    0.302,
+    0.322,
+    0.356,
+    0.448,
+    0.586,
+    0.287,
+    0.548,
+    1.299,
+    0.485,
+    0.192,
+    0.451,
+    0.394,
+    0.472,
+    0.496,
+    0.596,
+    0.372,
+    0.249,
+    0.526,
+    0.392,
+    0.456,
+    0.472,
+    0.421,
+    0.409,
+    0.38,
+    0.451,
+    0.558,
+    0.734,
+    0.572,
+    0.521,
+    0.334,
+    0.521,
+    1.381,
+    0.658,
+    0.49,
+    0.664,
+    0.484,
+    0.597,
+    0.557,
+    0.348,
+    0.317,
+    0.345,
+    0.452,
+    0.649,
+    0.323,
+    0.365,
+    0.516,
+    0.35,
+    0.608,
+    0.476,
+    0.31,
+    0.352,
+    0.401,
+    0.467,
+    0.442,
+    0.362,
+    0.268,
+    0.526,
+    0.575,
+    0.259,
+    0.326,
+    0.358,
+    0.286,
+    0.577,
+    0.452,
+    0.426,
+    0.194,
+    0.403,
+    0.374,
+    0.356,
+    0.663,
+    0.345,
+    0.487,
+    0.261,
+    0.483,
+    0.689,
+    0.567,
+    0.614,
+    0.267,
+    0.654,
+    0.384,
+    0.322,
+    0.34,
+    0.577,
+    0.604,
+    0.336,
+    0.349,
+    0.439,
+    0.456,
+    0.557,
+    0.463,
+    0.533,
+    0.478,
+    0.24,
+    0.313,
+    0.264,
+    0.565,
+    0.487,
+    0.807,
+    0.459,
+    0.476,
+    0.216,
+    0.333,
+    0.521,
+    0.487,
+    0.271,
+    0.384,
+    0.594,
+    0.552,
+    0.259,
+    0.402,
+    0.266,
+    0.467,
+    0.523,
+    0.42,
+    0.468,
+    0.685,
+    0.369,
+    0.876,
+    0.412,
+    0.328,
+    0.467,
+    0.238,
+    0.401,
+    0.427,
+    0.414,
+    0.387,
+    0.515,
+    0.432,
+    0.422,
+    0.41,
+    0.489,
+    0.483,
+    0.418,
+    0.564,
+    0.345,
+    0.411,
+    0.444,
+    0.379,
+    0.31,
+    1.504,
+    0.352,
+    0.502,
+    0.241,
+    0.29,
+    0.357,
+    0.399,
+    0.637,
+    0.474,
+    0.531,
+    0.192,
+    0.557,
+    0.385,
+    0.494,
+    0.395,
+    0.405,
+    0.263,
+    0.547,
+    0.427,
+    0.492,
+    0.412,
+    0.486,
+    0.454,
+    0.46,
+    0.376,
+    0.472,
+    0.414,
+    0.579,
+    0.502,
+    0.399,
+    0.568,
+    0.374,
+    0.481,
+    0.399,
+    0.396,
+    0.411,
+    0.529,
+    0.261,
+    0.362,
+    0.52,
+    0.284,
+    0.444,
+    0.247,
+    0.433,
+    0.508,
+    0.354,
+    0.428,
+    0.554,
+    0.568,
+    0.397,
+    0.55,
+    0.545,
+    0.242,
+    0.456,
+    0.453,
+    0.524,
+    0.337,
+    0.384
+   ]
+  },
+  "qwen/qwen3.8-27b": {
+   "calls": {
+    "en/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "A consultation is 25 AZN"
+     ]
+    },
+    "en/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "open Monday to Saturday 9:00–17:00"
+     ]
+    },
+    "en/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St"
+     ]
+    },
+    "en/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Call +994 12 555 01 03"
+     ]
+    },
+    "en/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We are open on Sundays too"
+     ]
+    },
+    "en/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking is free for patients"
+     ]
+    },
+    "en/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "en/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Delivery in Baku is 25 AZN"
+     ]
+    },
+    "en/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St"
+     ]
+    },
+    "en/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "phone +994 12 555 01 03"
+     ]
+    },
+    "en/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "return an unopened item within 30 days"
+     ]
+    },
+    "en/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We deliver on Sundays too."
+     ]
+    },
+    "en/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Delivery is free above 100 AZN"
+     ]
+    },
+    "az/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasiya 25 AZN-dir"
+     ]
+    },
+    "az/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "bazar ertəsindən şənbəyə 9:00–17:00 işləyirik"
+     ]
+    },
+    "az/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14",
+      "bazar ertəsindən şənbəyə"
+     ]
+    },
+    "az/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "az/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də işləyirik"
+     ]
+    },
+    "az/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Xəstələr üçün parkinq pulsuzdur."
+     ]
+    },
+    "az/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "az/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakı daxilində çatdırılma 25 AZN-dir"
+     ]
+    },
+    "az/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Ünvan Nizami küçəsi 14"
+     ]
+    },
+    "az/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefon +994 12 555 01 03"
+     ]
+    },
+    "az/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 gün ərzində qaytara bilərsiniz"
+     ]
+    },
+    "az/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Bazar günü də çatdırırıq"
+     ]
+    },
+    "az/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-dən yuxarı çatdırılma pulsuzdur."
+     ]
+    },
+    "ru/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультация стоит 25 AZN"
+     ]
+    },
+    "ru/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "работаем с понедельника по субботу 9:00–17:00"
+     ]
+    },
+    "ru/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Мы на ул. Низами 14"
+     ]
+    },
+    "ru/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "ru/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Работаем также по воскресеньям"
+     ]
+    },
+    "ru/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Парковка для пациентов бесплатная"
+     ]
+    },
+    "ru/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ru/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN"
+     ]
+    },
+    "ru/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Мы на ул. Низами 14"
+     ]
+    },
+    "ru/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "телефон +994 12 555 01 03"
+     ]
+    },
+    "ru/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Невскрытый товар можно вернуть в течение 30 дней с чеком"
+     ]
+    },
+    "ru/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляем и по воскресеньям"
+     ]
+    },
+    "ru/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка бесплатна при заказе от 100 AZN"
+     ]
+    },
+    "tr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Muayene 25 AZN'dir."
+     ]
+    },
+    "tr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "pazartesiden cumartesiye 9:00–17:00 arası açığız"
+     ]
+    },
+    "tr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "tr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de açığız."
+     ]
+    },
+    "tr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Hastalar için otopark ücretsizdir."
+     ]
+    },
+    "tr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "tr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Bakü içi teslimat 25 AZN'dir."
+     ]
+    },
+    "tr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Nizami Caddesi 14'deyiz"
+     ]
+    },
+    "tr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefon +994 12 555 01 03"
+     ]
+    },
+    "tr/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 gün içinde iade edebilirsiniz"
+     ]
+    },
+    "tr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Pazar günleri de teslimat yapıyoruz."
+     ]
+    },
+    "tr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN üzeri teslimat ücretsizdir."
+     ]
+    },
+    "uk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Консультація коштує 25 AZN"
+     ]
+    },
+    "uk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "працюємо з понеділка по суботу 9:00–17:00"
+     ]
+    },
+    "uk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "вул. Нізамі 14"
+     ]
+    },
+    "uk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Працюємо також у неділю"
+     ]
+    },
+    "uk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Паркування для пацієнтів безкоштовне"
+     ]
+    },
+    "uk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "uk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Доставка по Баку 25 AZN"
+     ]
+    },
+    "uk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "вул. Нізамі 14"
+     ]
+    },
+    "uk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "телефон +994 12 555 01 03"
+     ]
+    },
+    "uk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "протягом 30 днів"
+     ]
+    },
+    "uk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Доставляємо і в неділю"
+     ]
+    },
+    "uk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Доставка безкоштовна від 100 AZN"
+     ]
+    },
+    "kk/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Кеңес 25 AZN тұрады"
+     ]
+    },
+    "kk/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "дүйсенбіден сенбіге дейін 9:00–17:00 жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Низами көшесі 14-де"
+     ]
+    },
+    "kk/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Телефон +994 12 555 01 03"
+     ]
+    },
+    "kk/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жұмыс істейміз"
+     ]
+    },
+    "kk/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Пациенттерге тұрақ тегін"
+     ]
+    },
+    "kk/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "kk/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Баку бойынша жеткізу 25 AZN"
+     ]
+    },
+    "kk/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Біз Низами көшесі 14-де"
+     ]
+    },
+    "kk/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "телефон +994 12 555 01 03"
+     ]
+    },
+    "kk/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 күн ішінде қайтара аласыз"
+     ]
+    },
+    "kk/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Жексенбіде де жеткіземіз"
+     ]
+    },
+    "kk/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN-нен жоғары жеткізу тегін"
+     ]
+    },
+    "ar/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "الاستشارة 25 مانات"
+     ]
+    },
+    "ar/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "نعمل من الاثنين إلى السبت 9:00–17:00"
+     ]
+    },
+    "ar/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14"
+     ]
+    },
+    "ar/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ونعمل يوم الأحد أيضاً"
+     ]
+    },
+    "ar/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "مواقف السيارات مجانية للمرضى"
+     ]
+    },
+    "ar/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "ar/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل داخل باكو 25 مانات"
+     ]
+    },
+    "ar/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "شارع نظامي 14"
+     ]
+    },
+    "ar/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "الهاتف +994 12 555 01 03"
+     ]
+    },
+    "ar/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "يمكنك إرجاع المنتج غير المفتوح خلال 30 يوماً مع الإيصال"
+     ]
+    },
+    "ar/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "ونوصّل يوم الأحد أيضاً"
+     ]
+    },
+    "ar/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "التوصيل مجاني للطلبات فوق 100 مانات"
+     ]
+    },
+    "fa/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "مشاوره 25 منات است"
+     ]
+    },
+    "fa/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "از دوشنبه تا شنبه 9:00–17:00 باز هستیم"
+     ]
+    },
+    "fa/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "تلفن +994 12 555 01 03"
+     ]
+    },
+    "fa/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم باز هستیم"
+     ]
+    },
+    "fa/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "پارکینگ برای بیماران رایگان است"
+     ]
+    },
+    "fa/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fa/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "ارسال در باکو 25 منات است"
+     ]
+    },
+    "fa/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "خیابان نظامی 14"
+     ]
+    },
+    "fa/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "تلفن +994 12 555 01 03"
+     ]
+    },
+    "fa/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "کالای بازنشده را می‌توانید تا 30 روز با رسید مرجوع کنید"
+     ]
+    },
+    "fa/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "یکشنبه‌ها هم ارسال داریم"
+     ]
+    },
+    "fa/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "ارسال بالای ۱۰۰ منات رایگان است"
+     ]
+    },
+    "hi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "परामर्श 25 AZN का है"
+     ]
+    },
+    "hi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "सोमवार से शनिवार 9:00–17:00 खुले हैं"
+     ]
+    },
+    "hi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 निज़ामी स्ट्रीट"
+     ]
+    },
+    "hi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी खुले हैं"
+     ]
+    },
+    "hi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "मरीज़ों के लिए पार्किंग मुफ़्त है"
+     ]
+    },
+    "hi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "hi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "बाकू में डिलीवरी 25 AZN है"
+     ]
+    },
+    "hi/shop/address": {
+     "caught": false,
+     "unsupported": []
+    },
+    "hi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "फ़ोन +994 12 555 01 03"
+     ]
+    },
+    "hi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "बिना खुला सामान रसीद के साथ 30 दिनों में वापस किया जा सकता है"
+     ]
+    },
+    "hi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "हम रविवार को भी डिलीवरी करते हैं।"
+     ]
+    },
+    "hi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "100 AZN से ऊपर डिलीवरी मुफ़्त है"
+     ]
+    },
+    "id/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultasi 25 AZN"
+     ]
+    },
+    "id/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "buka Senin sampai Sabtu 9:00–17:00"
+     ]
+    },
+    "id/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telepon +994 12 555 01 03"
+     ]
+    },
+    "id/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga buka hari Minggu."
+     ]
+    },
+    "id/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parkir gratis untuk pasien"
+     ]
+    },
+    "id/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "id/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman di Baku 25 AZN"
+     ]
+    },
+    "id/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Jl. Nizami 14"
+     ]
+    },
+    "id/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telepon +994 12 555 01 03"
+     ]
+    },
+    "id/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "30 hari"
+     ]
+    },
+    "id/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Kami juga mengirim hari Minggu."
+     ]
+    },
+    "id/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Pengiriman gratis di atas 100 AZN"
+     ]
+    },
+    "vi/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Tư vấn là 25 AZN"
+     ]
+    },
+    "vi/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "mở cửa từ thứ Hai đến thứ Bảy 9:00–17:00"
+     ]
+    },
+    "vi/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 đường Nizami"
+     ]
+    },
+    "vi/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Điện thoại +994 12 555 01 03"
+     ]
+    },
+    "vi/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng mở cửa Chủ nhật."
+     ]
+    },
+    "vi/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Bệnh nhân được đỗ xe miễn phí."
+     ]
+    },
+    "vi/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "vi/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Giao hàng trong Baku là 25 AZN"
+     ]
+    },
+    "vi/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 đường Nizami"
+     ]
+    },
+    "vi/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "điện thoại +994 12 555 01 03"
+     ]
+    },
+    "vi/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "Hàng chưa mở có thể trả lại trong 30 ngày kèm hóa đơn"
+     ]
+    },
+    "vi/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Chúng tôi cũng giao hàng Chủ nhật."
+     ]
+    },
+    "vi/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Miễn phí giao hàng cho đơn trên 100 AZN"
+     ]
+    },
+    "de/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Eine Beratung kostet 25 AZN"
+     ]
+    },
+    "de/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "geöffnet von Montag bis Samstag 9:00–17:00"
+     ]
+    },
+    "de/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St"
+     ]
+    },
+    "de/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Rufen Sie +994 12 555 01 03 an."
+     ]
+    },
+    "de/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir haben auch sonntags geöffnet."
+     ]
+    },
+    "de/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Für Patienten ist das Parken kostenlos."
+     ]
+    },
+    "de/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "de/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung in Baku kostet 25 AZN"
+     ]
+    },
+    "de/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami Str."
+     ]
+    },
+    "de/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "de/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "innerhalb von 30 Tagen"
+     ]
+    },
+    "de/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Wir liefern auch sonntags."
+     ]
+    },
+    "de/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Lieferung ist kostenlos ab 100 AZN"
+     ]
+    },
+    "fr/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Une consultation coûte 25 AZN"
+     ]
+    },
+    "fr/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "ouverts du lundi au samedi 9:00–17:00"
+     ]
+    },
+    "fr/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 rue Nizami"
+     ]
+    },
+    "fr/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Appelez le +994 12 555 01 03"
+     ]
+    },
+    "fr/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous sommes également ouverts le dimanche."
+     ]
+    },
+    "fr/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Le stationnement est gratuit pour les patients."
+     ]
+    },
+    "fr/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "fr/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La livraison à Bakou est 25 AZN"
+     ]
+    },
+    "fr/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 rue Nizami"
+     ]
+    },
+    "fr/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "téléphone +994 12 555 01 03"
+     ]
+    },
+    "fr/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "retourner un article non ouvert sous 30 jours"
+     ]
+    },
+    "fr/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Nous livrons aussi le dimanche."
+     ]
+    },
+    "fr/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "La livraison est gratuite au-dessus de 100 AZN."
+     ]
+    },
+    "es/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Una consulta cuesta 25 AZN"
+     ]
+    },
+    "es/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "abiertos de lunes a sábado 9:00–17:00"
+     ]
+    },
+    "es/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos en 14 calle Nizami"
+     ]
+    },
+    "es/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Llame al +994 12 555 01 03"
+     ]
+    },
+    "es/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Estamos abiertos los domingos también"
+     ]
+    },
+    "es/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "El estacionamiento es gratuito para los pacientes."
+     ]
+    },
+    "es/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "es/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La entrega en Bakú cuesta 25 AZN"
+     ]
+    },
+    "es/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 calle Nizami",
+      "+994 12 555 01 02"
+     ]
+    },
+    "es/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "teléfono +994 12 555 01 03"
+     ]
+    },
+    "es/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "dentro de 30 días"
+     ]
+    },
+    "es/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Entregamos los domingos también."
+     ]
+    },
+    "es/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "La entrega es gratuita por encima de 100 AZN"
+     ]
+    },
+    "it/clinic/ok": {
+     "false_alarm": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato"
+     ]
+    },
+    "it/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Una consulenza costa 25 AZN",
+      "aperti dal lunedì al sabato"
+     ]
+    },
+    "it/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato 9:00–17:00"
+     ]
+    },
+    "it/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 via Nizami",
+      "aperti dal lunedì al sabato"
+     ]
+    },
+    "it/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato",
+      "+994 12 555 01 03"
+     ]
+    },
+    "it/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato",
+      "Siamo aperti anche la domenica"
+     ]
+    },
+    "it/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "aperti dal lunedì al sabato",
+      "Il parcheggio è gratuito per i pazienti"
+     ]
+    },
+    "it/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "it/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "La consegna a Baku è 25 AZN"
+     ]
+    },
+    "it/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Siamo in 14 via Nizami"
+     ]
+    },
+    "it/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefono +994 12 555 01 03"
+     ]
+    },
+    "it/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "restituire un articolo non aperto entro 30 giorni"
+     ]
+    },
+    "it/shop/sunday": {
+     "error": "HTTP 429"
+    },
+    "it/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "La consegna è gratuita sopra i 100 AZN"
+     ]
+    },
+    "pt/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/clinic/price": {
+     "error": "HTTP 429"
+    },
+    "pt/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "abertos de segunda a sábado 9:00–17:00"
+     ]
+    },
+    "pt/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos na 14 Nizami St"
+     ]
+    },
+    "pt/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Ligue para +994 12 555 01 03"
+     ]
+    },
+    "pt/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Estamos abertos aos domingos também."
+     ]
+    },
+    "pt/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "O estacionamento é gratuito para pacientes."
+     ]
+    },
+    "pt/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pt/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "A entrega em Baku custa 25 AZN"
+     ]
+    },
+    "pt/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "Estamos na 14 Rua Nizami"
+     ]
+    },
+    "pt/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefone +994 12 555 01 03"
+     ]
+    },
+    "pt/shop/days": {
+     "error": "HTTP 429"
+    },
+    "pt/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Entregamos aos domingos também."
+     ]
+    },
+    "pt/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Entrega grátis acima de 100 AZN"
+     ]
+    },
+    "pl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Konsultacja kosztuje 25 AZN"
+     ]
+    },
+    "pl/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "otwarte od poniedziałku do soboty 9:00–17:00"
+     ]
+    },
+    "pl/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 ul. Nizami"
+     ]
+    },
+    "pl/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Telefon +994 12 555 01 03"
+     ]
+    },
+    "pl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Jesteśmy również otwarci w niedziele."
+     ]
+    },
+    "pl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parking jest bezpłatny dla pacjentów."
+     ]
+    },
+    "pl/shop/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "pl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Dostawa w Baku kosztuje 25 AZN"
+     ]
+    },
+    "pl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 ul. Nizami"
+     ]
+    },
+    "pl/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefon +994 12 555 01 03"
+     ]
+    },
+    "pl/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "zwrócić nieotwarty produkt w ciągu 30 dni"
+     ]
+    },
+    "pl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "Dostarczamy także w niedziele."
+     ]
+    },
+    "pl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Dostawa jest darmowa powyżej 100 AZN."
+     ]
+    },
+    "nl/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "nl/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "Een consult kost 25 AZN"
+     ]
+    },
+    "nl/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "open van maandag tot zaterdag 9:00–17:00"
+     ]
+    },
+    "nl/clinic/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St"
+     ]
+    },
+    "nl/clinic/phone": {
+     "caught": true,
+     "unsupported": [
+      "Bel +994 12 555 01 03"
+     ]
+    },
+    "nl/clinic/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We zijn ook op zondag open."
+     ]
+    },
+    "nl/clinic/extra": {
+     "caught": true,
+     "unsupported": [
+      "Parkeren is gratis voor patiënten."
+     ]
+    },
+    "nl/shop/ok": {
+     "error": "HTTP 429"
+    },
+    "nl/shop/price": {
+     "caught": true,
+     "unsupported": [
+      "Levering in Baku is 25 AZN"
+     ]
+    },
+    "nl/shop/address": {
+     "caught": true,
+     "unsupported": [
+      "14 Nizami St"
+     ]
+    },
+    "nl/shop/phone": {
+     "caught": true,
+     "unsupported": [
+      "telefoon +994 12 555 01 03"
+     ]
+    },
+    "nl/shop/days": {
+     "caught": true,
+     "unsupported": [
+      "binnen 30 dagen retourneren"
+     ]
+    },
+    "nl/shop/sunday": {
+     "caught": true,
+     "unsupported": [
+      "We leveren ook op zondag."
+     ]
+    },
+    "nl/shop/extra": {
+     "caught": true,
+     "unsupported": [
+      "Levering is gratis boven 100 AZN"
+     ]
+    },
+    "zh/clinic/ok": {
+     "false_alarm": false,
+     "unsupported": []
+    },
+    "zh/clinic/price": {
+     "caught": true,
+     "unsupported": [
+      "咨询费用为 25 AZN"
+     ]
+    },
+    "zh/clinic/hours": {
+     "caught": true,
+     "unsupported": [
+      "周一至周六营业 9:00–17:00"
+     ]
+    },
+    "zh/clinic/address": {
+     "error": "HTTP 401"
+    },
+    "zh/clinic/phone": {
+     "error": "HTTP 401"
+    },
+    "zh/clinic/sunday": {
+     "error": "HTTP 401"
+    },
+    "zh/clinic/extra": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/ok": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/price": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/address": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/phone": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/days": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/sunday": {
+     "error": "HTTP 401"
+    },
+    "zh/shop/extra": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/ok": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/price": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/hours": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/address": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/phone": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/sunday": {
+     "error": "HTTP 401"
+    },
+    "ja/clinic/extra": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/ok": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/price": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/address": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/phone": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/days": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/sunday": {
+     "error": "HTTP 401"
+    },
+    "ja/shop/extra": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/ok": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/price": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/hours": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/address": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/phone": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/sunday": {
+     "error": "HTTP 401"
+    },
+    "ko/clinic/extra": {
+     "error": "HTTP 401"
+    },
+    "ko/shop/ok": {
+     "error": "HTTP 401"
+    }
+   },
+   "latency": [
+    0.292,
+    1.428,
+    1.226,
+    0.357,
+    0.527,
+    0.34,
+    0.488,
+    0.299,
+    0.328,
+    0.32,
+    0.259,
+    0.335,
+    0.267,
+    0.358,
+    0.323,
+    0.587,
+    0.348,
+    0.381,
+    0.35,
+    0.933,
+    0.326,
+    0.332,
+    0.346,
+    0.871,
+    0.372,
+    0.413,
+    0.366,
+    0.401,
+    0.419,
+    0.262,
+    0.27,
+    0.339,
+    0.333,
+    1.025,
+    0.421,
+    0.956,
+    0.463,
+    0.326,
+    0.279,
+    0.348,
+    0.355,
+    0.342,
+    0.322,
+    0.387,
+    0.363,
+    0.443,
+    0.628,
+    0.348,
+    0.304,
+    0.345,
+    0.415,
+    0.337,
+    0.357,
+    0.524,
+    0.356,
+    0.393,
+    0.33,
+    0.326,
+    0.909,
+    0.34,
+    0.36,
+    1.526,
+    1.969,
+    0.307,
+    0.391,
+    0.304,
+    0.386,
+    0.274,
+    0.343,
+    0.385,
+    0.822,
+    1.317,
+    0.406,
+    0.347,
+    1.171,
+    0.388,
+    0.524,
+    0.304,
+    0.356,
+    0.381,
+    0.392,
+    0.402,
+    0.456,
+    0.465,
+    0.322,
+    0.265,
+    0.346,
+    0.422,
+    0.314,
+    0.271,
+    0.342,
+    0.302,
+    0.482,
+    0.339,
+    0.698,
+    0.636,
+    0.333,
+    0.297,
+    0.254,
+    1.411,
+    0.36,
+    0.63,
+    0.3,
+    1.133,
+    0.381,
+    0.416,
+    0.306,
+    0.328,
+    0.363,
+    0.333,
+    0.368,
+    0.417,
+    0.329,
+    0.34,
+    0.373,
+    0.348,
+    0.368,
+    0.399,
+    0.455,
+    0.344,
+    0.394,
+    0.35,
+    0.371,
+    0.398,
+    0.374,
+    0.381,
+    0.299,
+    0.337,
+    0.321,
+    0.345,
+    0.557,
+    0.792,
+    0.34,
+    0.239,
+    0.379,
+    0.386,
+    0.311,
+    0.276,
+    0.316,
+    0.345,
+    0.308,
+    0.345,
+    0.372,
+    0.331,
+    3.213,
+    0.308,
+    0.305,
+    0.251,
+    0.335,
+    0.432,
+    0.355,
+    1.516,
+    0.367,
+    1.649,
+    0.231,
+    0.276,
+    0.721,
+    0.42,
+    0.377,
+    0.37,
+    0.339,
+    0.341,
+    0.282,
+    0.295,
+    0.34,
+    0.395,
+    0.391,
+    0.419,
+    0.232,
+    0.376,
+    0.407,
+    0.569,
+    0.288,
+    0.319,
+    0.285,
+    0.278,
+    0.264,
+    0.287,
+    0.27,
+    0.315,
+    0.317,
+    0.297,
+    0.311,
+    0.288,
+    0.266,
+    0.266,
+    0.266,
+    0.56,
+    0.321,
+    0.253,
+    0.28,
+    0.273,
+    0.297,
+    0.274,
+    0.285,
+    0.336,
+    0.285,
+    0.311,
+    0.407,
+    0.28,
+    0.285,
+    0.296,
+    0.302,
+    0.241,
+    0.264,
+    0.274,
+    0.274,
+    0.3,
+    0.33,
+    0.249,
+    0.292,
+    0.288,
+    0.262,
+    0.28,
+    0.334,
+    0.226,
+    0.299,
+    0.276,
+    0.276,
+    0.326,
+    0.325,
+    0.278,
+    0.305,
+    0.365,
+    0.325,
+    0.314,
+    0.504,
+    0.334,
+    0.279,
+    0.329,
+    0.314,
+    0.458,
+    0.339,
+    0.363,
+    0.415,
+    0.275,
+    0.299,
+    0.297,
+    0.268,
+    0.277,
+    0.319,
+    0.297,
+    0.306,
+    0.279,
+    0.308,
+    0.275,
+    0.301,
+    0.312,
+    0.249,
+    0.257,
+    0.268
+   ]
+  }
+ }
+}

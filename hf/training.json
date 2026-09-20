@@ -1,0 +1,18 @@
+{
+ "base": "train/out/run1",
+ "epoch": 2,
+ "dev": {
+  "token_p": 0.622,
+  "token_r": 0.786,
+  "token_f1": 0.695,
+  "answer_recall": 0.915,
+  "answer_false_alarm": 0.226
+ },
+ "train_answers": 6647,
+ "pos_weight": 5.0,
+ "lr": 3e-05,
+ "name": "siba/grounded-multilingual-base",
+ "threshold": 0.5,
+ "threshold_all_dev": 0.88,
+ "calibration": "answer-level F1 on the held-out dev set (P=0.85, R=0.92)"
+}

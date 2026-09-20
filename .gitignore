@@ -11,3 +11,4 @@ benchmark/*.log
 train/data/
 train/out/
 train/out-*.log
+hf/model.safetensors

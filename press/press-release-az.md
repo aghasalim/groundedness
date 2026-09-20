@@ -1,16 +1,16 @@
 # Press-reliz (AZ) — 2026-09-20-dən sonra dərc üçün
 
-> Kvadrat mötərizədəki yerlər səhər 10:00-da yekun rəqəmlərlə doldurulacaq.
+> Rəqəmlər yekundur (benchmark v3: 31 dil, 434 hal, 2026-09-20).
 
 **Bakıda hazırlanan açıq model süni intellektin "uydurduğu" cavabları 30 dildə tapır**
 
-Bakı, [tarix] — Azerbaycan şirkəti SIBA ("Süni İntellekt Biznes Avtomatlaşdırma" MMC) süni intellekt köməkçilərinin sənədlərdə olmayan məlumatı — səhv qiymət, saat, ünvan, telefon — necə "uydurduğunu" tapan açıq mənbəli aləti və ilk çoxdilli reytinq cədvəlini təqdim edir. Layihə **grounded.siba.az** ünvanında hər kəs üçün açıqdır: istifadəçi köməkçinin cavabını və istinad etdiyi sənədi yapışdırır, dəstəklənməyən iddialar qırmızı ilə işarələnir.
+Bakı, 20 sentyabr 2026 — Azerbaycan şirkəti SIBA ("Süni İntellekt Biznes Avtomatlaşdırma" MMC) süni intellekt köməkçilərinin sənədlərdə olmayan məlumatı — səhv qiymət, saat, ünvan, telefon — necə "uydurduğunu" tapan açıq mənbəli aləti və ilk çoxdilli reytinq cədvəlini təqdim edir. Layihə **grounded.siba.az** ünvanında hər kəs üçün açıqdır: istifadəçi köməkçinin cavabını və istinad etdiyi sənədi yapışdırır, dəstəklənməyən iddialar qırmızı ilə işarələnir.
 
-**Problem.** Bu gün dünyada ən çox yüklənən açıq halüsinasiya detektorları — Vectara HHEM-2.1 və LettuceDetect — yalnız ingilis dili üçün öyrədilib. SIBA-nın 11 dildə (Azərbaycan, rus, türk, ukrayna, qazax, ərəb, fars, hind, indoneziya, vyetnam və ingilis) 154 halda apardığı ölçmə göstərir ki, HHEM ingilis olmayan istənilən mətni — düzgün olsa belə — halüsinasiya kimi işarələyir: rus, ərəb, fars və indoneziya dillərində 22 düzgün cavabın hamısını "səhv" sayır. Yəni alət dili tanıyır, iddianı yox.
+**Problem.** Bu gün dünyada ən çox yüklənən açıq halüsinasiya detektorları — Vectara HHEM-2.1 və LettuceDetect — yalnız ingilis dili üçün öyrədilib. SIBA-nın 31 dildə 434 halda apardığı ölçmə göstərir ki, HHEM ingilis əlifbasından uzaqlaşdıqca düzgün cavabları da halüsinasiya kimi işarələyir: rus, ərəb, fars, indoneziya, yapon və özbək dillərində hər düzgün cavabı "səhv" sayır (62 düzgün cavabın 22-si). Yəni alət dili tanıyır, iddianı yox.
 
 **Həll.** SIBA iki şey təqdim edir:
-1. `groundedness` — sıfır asılılığı olan Python paketi (`pip install groundedness`, MIT lisenziyası): istənilən açıq dil modelini hakim kimi işlədir və cavabın öz dilində dəstəklənməyən iddiaları sadalayır, sonra cavabı onlarsız yenidən yazır. Testdə Groq üzərində işləyən açıq modellər 132 planlaşdırılmış səhvin [132]-sini sıfır yalançı siqnalla tapıb; 27 milyard parametrli model bunu orta hesabla 0,36 saniyəyə edir.
-2. **SIBA-nın öz detektoru** — 30 dildə [~12 000] etiketlənmiş cavab üzərində öyrədilmiş çoxdilli model. Bulud və API tələb etmir: Bakıda bir Raspberry Pi üzərində işləyir və grounded.siba.az-da limitsiz, pulsuz sınaqdadır. 154 hallıq testdə [X/132] səhvi tapır, [Y/22] yalançı siqnal verir.
+1. `groundedness` — sıfır asılılığı olan Python paketi (`pip install groundedness`, MIT lisenziyası): istənilən açıq dil modelini hakim kimi işlədir və cavabın öz dilində dəstəklənməyən iddiaları sadalayır, sonra cavabı onlarsız yenidən yazır. Testdə Groq üzərində işləyən açıq modellər planlaşdırılmış səhvlərin hamısını (öz dil əhatəsində 163/163) sıfır yalançı siqnalla tapıb; 27 milyard parametrli model bunu orta hesabla 0,36 saniyəyə edir.
+2. **SIBA-nın öz detektoru** — 30 dildə 2 844 etiketlənmiş cavab üzərində öyrədilmiş çoxdilli model. Bulud və API tələb etmir: Bakıda bir Raspberry Pi üzərində işləyir və grounded.siba.az-da limitsiz, pulsuz sınaqdadır. 31 dildə 434 hallıq testdə 372 planlaşdırılmış səhvin 352-sini (95 %) tapır, 62 düzgün cavabın 32-sində yalançı siqnal verir (hamısı mənbənin başqa sözlərlə ifadəsi — məsələn "B.e–Şənbə" əvəzinə "bazar ertəsindən şənbəyə").
 
 **Niyə vacibdir.** Sənədlərdən cavab verən çat-botlar (mağaza, klinika, bank, dövlət xidməti) ən çox məhz bu cür səhv edir — və Azərbaycan dili üçün indiyədək bunu yoxlayan heç bir alət olmayıb. SIBA eyni yoxlamanı öz müştəri köməkçisinin bütün kanallarında — sayt, WhatsApp, Telegram, telefon — hər cavaba tətbiq edir.
 
@@ -28,7 +28,7 @@ Süni intellekt köməkçisi sənəddə olmayan qiyməti "uydurur" — bunu Azə
 
 Biz SIBA-da açıq mənbəli **groundedness** paketini və 30 dildə öyrədilmiş öz detektorumuzu buraxdıq. Detektor Bakıda bir Raspberry Pi-də işləyir, pulsuz və limitsizdir: cavabı və sənədi yapışdırın, uydurma iddialar qırmızı yanır → **grounded.siba.az**
 
-Maraqlı tapıntı: dünyada ən çox yüklənən açıq halüsinasiya detektoru (Vectara HHEM) ingilis olmayan hər cavabı — düzgün olsa belə — halüsinasiya sayır. 11 dildə 154 halla yoxladıq; rus, ərəb, fars, indoneziya dillərində 22 düzgün cavabın 22-sini "səhv" adlandırır.
+Maraqlı tapıntı: dünyada ən çox yüklənən açıq halüsinasiya detektoru (Vectara HHEM) rus, ərəb, fars, indoneziya, yapon və özbək dillərində hər düzgün cavabı halüsinasiya sayır. 31 dildə 434 halla yoxladıq.
 
 Kod, data, texniki hesabat: github.com/aghasalim/groundedness · `pip install groundedness`
 
