@@ -4,10 +4,10 @@
 # everything, eval, push. Log: train/night.log
 set -u
 cd "$(dirname "$0")/.."
-PY=.venv/bin/python; export HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HF_TOKEN=""
+PY=.venv/bin/python; export HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HF_TOKEN="" PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.85 PYTORCH_MPS_LOW_WATERMARK_RATIO=0.7
 log(){ echo "[$(date +%H:%M)] $*"; }
 # 1. run 1
-while pgrep -f "train/train.py --epochs 3" >/dev/null; do sleep 60; done
+while pgrep -f "train/train.py --base train/out/run1-ep0" >/dev/null; do sleep 60; done
 log "run1 finished: $(grep 'done best' train/out-run1.log)"
 $PY train/eval_bench.py train/out/run1 siba/grounded-multilingual-base > train/eval-run1.log 2>&1; tail -1 train/eval-run1.log
 /Users/salim/SIBA/ops/pi/grounded/push-model.sh train/out/run1 && log "run1 live on the Pi"
@@ -15,8 +15,8 @@ $PY train/eval_bench.py train/out/run1 siba/grounded-multilingual-base > train/e
 while [ "$(date +%H%M)" -lt 0650 ]; do sleep 60; done
 pkill -f "train/gen_data.py"; sleep 2
 log "data: $(wc -l < train/data/synth.jsonl) documents"
-$PY train/prepare.py --ragtruth-cap 8000 --dev 0.03
-$PY train/train.py --base train/out/run1 --epochs 2 --bs 16 --lr 2e-5 --out train/out/run2 > train/out-run2.log 2>&1
+$PY train/prepare.py --ragtruth-cap 4000 --dev 0.03
+$PY train/train.py --base train/out/run1 --epochs 3 --bs 8 --lr 3e-5 --pos-weight 5 --out train/out/run2 > train/out-run2.log 2>&1
 log "run2 finished: $(grep 'done best' train/out-run2.log)"
 $PY train/eval_bench.py train/out/run2 siba/grounded-multilingual-base > train/eval-run2.log 2>&1; tail -1 train/eval-run2.log
 # keep whichever benchmark better: run2 unless it is clearly worse

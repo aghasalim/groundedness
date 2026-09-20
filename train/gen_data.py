@@ -41,7 +41,11 @@ def endpoints():
                     k, v = line.split('=', 1); env[k.strip()] = v.strip().strip('"\'')
     groq = os.environ.get('GROQ_API_KEY') or env.get('GROQ_API_KEY')
     gem = os.environ.get('GEMINI_API_KEY') or env.get('GEMINI_API')
+    orr = os.environ.get('OPENROUTER_API_KEY') or env.get('OPENROUTER_API_KEY')
     eps = []
+    if orr:
+        for m in ['openai/gpt-oss-120b', 'qwen/qwen3-235b-a22b-2507']:
+            eps.append(dict(model=m, url='https://openrouter.ai/api/v1/chat/completions', key=orr, gap=0.5))
     if groq:
         for m in ['qwen/qwen3.8-27b', 'openai/gpt-oss-120b', 'openai/gpt-oss-20b']:
             eps.append(dict(model=m, url='https://api.groq.com/openai/v1/chat/completions', key=groq, gap=16))

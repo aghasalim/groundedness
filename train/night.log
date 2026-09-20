@@ -1,0 +1,22 @@
+[02:26] run1 finished: 
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'train/out/run1'. Use `repo_type` argument if needed.
+rsync(20395): error: train/out/run1/: (l)stat: No such file or directory
+[02:46] run1 finished: 
+siba/grounded-multilingual-base: caught 19/132 false alarms 2/22 median 0.02s
+{"ok": true, "model": "siba-grounded"}
+[03:25] run1 finished: done best token_f1 0.406
+siba/grounded-multilingual-base: caught 98/132 false alarms 12/22 median 0.02s
+{"ok": true, "model": "siba-grounded"}
+[03:27] run1 live on the Pi
+[05:26] run2 finished: done best token_f1 0.695 threshold 0.88
+siba/grounded-multilingual-base: caught 352/372 false alarms 32/62 median 0.03s
+{"ok": true, "model": "siba/grounded-multilingual-base"}
+[06:56] run2 live on the Pi
+[06:56] night done
+[12:51] augment:       85 paraphrased documents
+dev 368 answers, 253 with spans; synth 168 para 20 ragtruth 180 | en:192 ar:20 hi:16 kk:16 tr:16 az:12 sw:12 id:12 ro:8 vi:8 th:8 uk:8 ja:8 ru:8
+train 7161 answers, 4833 with spans; synth 2676 para 660 ragtruth 3825 | en:4029 vi:308 ar:264 tr:260 hi:236 uk:232 id:224 az:216 ru:208 kk:204 fa:204 th:64 nl:60 fr:56
+[13:37] run4: done best token_f1 0.83 threshold 0.84 {'arabic': 0.3, 'cjk': 0.84, 'cyrillic': 0.3, 'indic': 0.3, 'latin': 0.84, 'other': 0.84}
+siba/grounded-multilingual-base-probe: caught 288/372 false alarms 23/62 median 0.02s
+[13:37] run4 not better (caught 288, fa 23); run2 stays
+[13:37] night3 done
