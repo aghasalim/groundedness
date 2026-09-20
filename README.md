@@ -25,6 +25,14 @@ RAG apps and support bots answer from documents. The failure that hurts is not a
 - **Claim-level output.** Not a score you cannot act on: the exact unsupported claims, and a rewrite. Highlight them, hand off to a human, or log the rate.
 - **Zero dependencies.** `urllib` and `json`. Python 3.9+.
 
+## No key at all: the hosted detector
+
+```python
+r = check(answer, sources=[facts], model="siba")   # grounded.siba.az, exact spans, free
+```
+
+`model="siba"` calls our own multilingual detector (an XLM-R token classifier trained on 30 languages, served from a Raspberry Pi in Baku). No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer.
+
 ## Install
 
 ```
