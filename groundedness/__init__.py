@@ -21,8 +21,11 @@ import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
 
-__version__ = "0.1.2"
-__all__ = ["check", "Result", "PROMPT"]
+__version__ = "0.1.3"
+__all__ = ["check", "Result", "PROMPT", "SIBA_DETECTOR"]
+
+SIBA_DETECTOR = "siba"
+"""Pass as `model` to use the free hosted multilingual detector at grounded.siba.az instead of an LLM judge: exact spans, no key, no rewrite."""
 
 PROMPT = (
     "You check an assistant's answer against the only facts it was allowed to use. Facts:\n{facts}\n\n"
@@ -82,6 +85,8 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
     facts = _facts(sources)
     if not facts or not answer or not answer.strip():
         return Result(fixed=answer, original=answer, model=model)
+    if model == SIBA_DETECTOR:
+        return _siba(answer, facts, timeout)
     base, key = _endpoint()
     base = (base_url or base).rstrip("/")
     key = api_key or key
@@ -128,3 +133,12 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
     unsupported = [str(x).strip() for x in j.get("unsupported", []) if str(x).strip()]
     fixed = j.get("answer") if isinstance(j.get("answer"), str) else None
     return Result(unsupported=unsupported, fixed=(fixed or answer).strip(), original=answer, model=model, raw=raw)
+
+
+def _siba(answer: str, facts: str, timeout: float) -> Result:
+    """The trained detector at grounded.siba.az/check: a token classifier, so it
+    returns exact spans and no rewrite (`fixed` is the answer unchanged)."""
+    req = urllib.request.Request("https://grounded.siba.az/check", data=json.dumps({"answer": answer, "sources": [facts]}).encode(), headers={"content-type": "application/json", "user-agent": f"groundedness/{__version__}"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        data = json.loads(r.read().decode())
+    return Result(unsupported=list(data.get("unsupported") or []), fixed=answer, original=answer, model=str(data.get("model") or SIBA_DETECTOR), raw=json.dumps(data, ensure_ascii=False))
