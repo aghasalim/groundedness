@@ -31,7 +31,7 @@ RAG apps and support bots answer from documents. The failure that hurts is not a
 r = check(answer, sources=[facts], model="siba")   # grounded.siba.az, exact spans, free
 ```
 
-`model="siba"` calls our own multilingual detector — `siba/grounded-multilingual-base`, an XLM-RoBERTa token classifier trained on 2,844 synthetic labelled answers in 30 languages plus RAGTruth, served from a Raspberry Pi 5 in Baku. On benchmark v3 (31 languages, 434 cases) it catches **352/372 planted errors (95 %)** with 32/62 false alarms in ~30 ms on a laptop CPU; HHEM-2.1-Open on the same cases: 265/372 with 22/62 false alarms. No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer. Weights: `train/out/run2` recipe in `train/`, paper v3 in `paper/`.
+`model="siba"` calls our own multilingual detector — `siba/grounded-multilingual-base`, an XLM-RoBERTa token classifier trained on 2,844 synthetic labelled answers in 30 languages plus RAGTruth, served from a Raspberry Pi 5 in Baku. On benchmark v3 (31 languages, 434 cases) it catches **352/372 planted errors (95 %)** with 32/62 false alarms in ~30 ms on a laptop CPU; HHEM-2.1-Open on the same cases: 265/372 with 22/62 false alarms. No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer. Weights: [huggingface.co/aghasalim/grounded-multilingual-base](https://huggingface.co/aghasalim/grounded-multilingual-base); recipe in `train/`, paper v3 in `paper/`.
 
 ## Install
 

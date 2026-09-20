@@ -80,7 +80,7 @@ Body: lead with the Pi + `pip install` + "any local OpenAI-compatible endpoint (
 
 ---
 
-## 5. Hugging Face model card — `siba/grounded-multilingual-base`
+## 5. Hugging Face — live at huggingface.co/aghasalim/grounded-multilingual-base
 
 ```
 ---
