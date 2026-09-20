@@ -8,15 +8,17 @@ any span counts as "not grounded", and a planted error counts as caught when a
 span overlaps the planted text. Neither model was trained on anything but
 English, which is the point of running them.
 """
-import json, os, statistics, sys, time
+import argparse, json, os, statistics, sys, time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_v2 import build, _words  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-cfg = json.load(open(os.path.join(HERE, "cases_v2.json"), encoding="utf-8"))
+ap = argparse.ArgumentParser(); ap.add_argument("--cases", default="cases_v2.json"); ap.add_argument("--out", default="results_v2-baselines.json"); A = ap.parse_args()
+cfg = json.load(open(os.path.join(HERE, A.cases), encoding="utf-8"))
 cases = build(cfg)
-out = {"cases": len(cases), "models": {}}
+OUT_P = os.path.join(HERE, A.out)
+out = json.load(open(OUT_P, encoding="utf-8")) if os.path.exists(OUT_P) else {"cases": len(cases), "models": {}}
 
 
 def overlap(span, bad, var):
@@ -27,8 +29,10 @@ def overlap(span, bad, var):
 
 
 def record(name, judge):
-    row = {"calls": {}, "latency": []}
+    row = out["models"].get(name) or {"calls": {}, "latency": []}
     for lang, dom, var, facts, answer, bad in cases:
+        if f"{lang}/{dom}/{var}" in row["calls"]:
+            continue
         t = time.time()
         flagged, spans = judge(facts, answer)
         row["latency"].append(round(time.time() - t, 3))
@@ -62,7 +66,7 @@ def ld_judge(facts, answer):
     return bool(spans), texts
 record("KRLabsOrg/lettucedect-base-modernbert-en-v1", ld_judge)
 
-json.dump(out, open(os.path.join(HERE, "results_v2-baselines.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(out, open(OUT_P, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 langs = list(cfg["languages"])
 lines = ["| Detector | Errors caught | False alarms | Median latency (CPU) |", "|---|---:|---:|---:|"]
 for m, row in out["models"].items():
@@ -78,5 +82,5 @@ for m, row in out["models"].items():
         fa = sum(1 for k, x in row["calls"].items() if k.startswith(l + "/") and x.get("false_alarm"))
         cells.append(f"{sum(1 for x in xs if x.get('caught'))}/{len(xs)} ·{fa}")
     lines.append(f"| `{m}` | " + " | ".join(cells) + " |")
-open(os.path.join(HERE, "results_v2-baselines.md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
+open(OUT_P.replace(".json", ".md"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
 print("\n".join(lines))
