@@ -75,7 +75,7 @@ def _facts(sources) -> str:
     return "\n\n".join(f"[{i + 1}] {s}" for i, s in enumerate(sources) if s and s.strip())
 
 
-def check(answer: str, sources, model: str, *, base_url: str | None = None, api_key: str | None = None, timeout: float = 30.0, temperature: float = 0.0) -> Result:
+def check(answer: str, sources, model: str, *, base_url: str | None = None, api_key: str | None = None, timeout: float = 30.0, temperature: float = 0.0, max_tokens: int = 8000) -> Result:
     """Judge `answer` against `sources` with `model` over an OpenAI-compatible chat endpoint.
 
     Never raises on a bad model reply: a judge that cannot be parsed returns the
@@ -92,7 +92,7 @@ def check(answer: str, sources, model: str, *, base_url: str | None = None, api_
     key = api_key or key
     # Thinking models spend tokens before the first visible character; the
     # budget has to cover that or the reply comes back empty.
-    body = {"model": model, "temperature": temperature, "max_tokens": 8000, "messages": [{"role": "system", "content": PROMPT.format(facts=facts)}, {"role": "user", "content": answer}]}
+    body = {"model": model, "temperature": temperature, "max_tokens": max_tokens, "messages": [{"role": "system", "content": PROMPT.format(facts=facts)}, {"role": "user", "content": answer}]}
     if "qwen3" in model:
         body["reasoning_format"] = "hidden"
     if "gpt-oss" in model:

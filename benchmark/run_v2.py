@@ -64,6 +64,7 @@ def main():
     ap.add_argument("--suffix", default="")
     ap.add_argument("--pace", type=float, default=1.2, help="seconds between calls")
     ap.add_argument("--cases", default="cases_v2.json")
+    ap.add_argument("--max-tokens", type=int, default=8000, help="smaller on Groq: the request counts against its per-minute token budget")
     ap.add_argument("--out", default="")
     a = ap.parse_args()
     if a.gemini:
@@ -90,7 +91,7 @@ def main():
             t = time.time()
             for attempt in range(8):
                 try:
-                    res = check(answer, [facts], m)
+                    res = check(answer, [facts], m, max_tokens=a.max_tokens)
                     break
                 except urllib.error.HTTPError as e:
                     if e.code in (429, 500, 502, 503) and attempt < 7:
