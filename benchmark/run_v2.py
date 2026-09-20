@@ -63,6 +63,8 @@ def main():
     ap.add_argument("--openrouter", action="store_true")
     ap.add_argument("--suffix", default="")
     ap.add_argument("--pace", type=float, default=1.2, help="seconds between calls")
+    ap.add_argument("--cases", default="cases_v2.json")
+    ap.add_argument("--out", default="")
     a = ap.parse_args()
     if a.gemini:
         os.environ["OPENAI_BASE_URL"] = "https://generativelanguage.googleapis.com/v1beta/openai"
@@ -73,10 +75,10 @@ def main():
         os.environ["OPENAI_API_KEY"] = os.environ["OPENROUTER_API_KEY"]
         a.suffix = a.suffix or "-openrouter"
         a.models = a.models or ",".join(OPENROUTER)
-    cfg = json.load(open(os.path.join(HERE, "cases_v2.json"), encoding="utf-8"))
+    cfg = json.load(open(os.path.join(HERE, a.cases), encoding="utf-8"))
     cases = build(cfg)
     models = a.models.split(",") if a.models else models_available()
-    path = os.path.join(HERE, f"results_v2{a.suffix}.json")
+    path = os.path.join(HERE, a.out or f"results_v2{a.suffix}.json")
     out = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {"cases": len(cases), "models": {}}
     for m in models:
         row = out["models"].setdefault(m, {"calls": {}, "latency": []})
