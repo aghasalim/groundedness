@@ -62,12 +62,11 @@ def calibrate(model, items, dev, bs, pad):
             m = lab[j] != -100
             probs.append(p[j][m]); gold.append(bool((lab[j] == 1).any()))
     best = (0.5, -1.0)
-    for t in [x / 100 for x in range(30, 96, 2)]:
+    for t in [x / 100 for x in range(30, 98, 2)]:
         flag = [bool((pr >= t).any()) for pr in probs]
-        rec = sum(f and g for f, g in zip(flag, gold)) / max(1, sum(gold))
-        fa = sum(f and not g for f, g in zip(flag, gold)) / max(1, sum(not g for g in gold))
-        score = rec if fa <= 0.10 else rec - (fa - 0.10) * 3
-        if score > best[1]: best = (t, score)
+        tp = sum(f and g for f, g in zip(flag, gold)); fp = sum(f and not g for f, g in zip(flag, gold)); fn = sum((not f) and g for f, g in zip(flag, gold))
+        pr_, rc = tp / max(1, tp + fp), tp / max(1, tp + fn); f1 = 2 * pr_ * rc / max(1e-9, pr_ + rc)
+        if f1 > best[1]: best = (t, f1)
     return best[0]
 
 
@@ -104,8 +103,8 @@ def main():
             best = m['token_f1']; model.save_pretrained(a.out); tok.save_pretrained(a.out)
             json.dump({'base': a.base, 'epoch': ep, 'dev': m, 'train_answers': len(tr), 'pos_weight': a.pos_weight, 'lr': a.lr, 'name': 'siba/grounded-multilingual-base'}, open(os.path.join(a.out, 'training.json'), 'w'), indent=1)
             print('saved', a.out, flush=True)
-    # Pick the threshold on dev: the highest answer-level recall whose false-alarm
-    # rate stays under 10 %, written next to the weights for detect.py to read.
+    # Pick the threshold on dev: answer-level F1-optimal, written next to the
+    # weights for detect.py to read.
     model = AutoModelForTokenClassification.from_pretrained(a.out).to(dev)
     thr = calibrate(model, dv, dev, a.bs, tok.pad_token_id)
     info = json.load(open(os.path.join(a.out, 'training.json'))); info['threshold'] = thr
