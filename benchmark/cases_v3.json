@@ -1,0 +1,487 @@
+{
+ "_note": "v3. v2. Per language and domain: a facts template and a grounded-answer template over the same slots, plus two extra sentences (an invented opening day, an added claim). Errors are planted by changing one slot or appending one sentence, so every language gets exactly the same eight variants. `bad` per variant is the text that must appear in the judge's unsupported list. Languages beyond the first eleven were translated from the English templates by openai/gpt-oss-120b and validated for slot integrity; native review invited.",
+ "slots": {
+  "no": "12",
+  "price": "30",
+  "hours": "9:00–19:00",
+  "phone": "+994 12 555 01 02",
+  "days_ret": "14"
+ },
+ "variants": {
+  "ok": {
+   "change": null
+  },
+  "price": {
+   "change": [
+    "price",
+    "25"
+   ]
+  },
+  "hours": {
+   "change": [
+    "hours",
+    "9:00–17:00"
+   ]
+  },
+  "address": {
+   "change": [
+    "no",
+    "14"
+   ]
+  },
+  "phone": {
+   "change": [
+    "phone",
+    "+994 12 555 01 03"
+   ]
+  },
+  "days": {
+   "change": [
+    "days_ret",
+    "30"
+   ]
+  },
+  "sunday": {
+   "append": "sunday"
+  },
+  "extra": {
+   "append": "extra"
+  }
+ },
+ "languages": {
+  "en": {
+   "clinic": {
+    "facts": "Dental clinic, {no} Nizami St. Open Mon–Sat {hours}. A consultation is {price} AZN. Phone {phone}.",
+    "answer": "Hello! A consultation is {price} AZN. We are at {no} Nizami St, open Monday to Saturday {hours}. Call {phone}.",
+    "sunday": " We are open on Sundays too.",
+    "extra": " Parking is free for patients."
+   },
+   "shop": {
+    "facts": "Electronics shop, {no} Nizami St. Returns within {days_ret} days with the receipt; unopened items only. Delivery in Baku is {price} AZN. Phone {phone}.",
+    "answer": "Hello! You can return an unopened item within {days_ret} days with the receipt. Delivery in Baku is {price} AZN. We are at {no} Nizami St, phone {phone}.",
+    "sunday": " We deliver on Sundays too.",
+    "extra": " Delivery is free above 100 AZN."
+   }
+  },
+  "az": {
+   "clinic": {
+    "facts": "Diş klinikası, Nizami küç. {no}. B.e–Şənbə {hours}. Konsultasiya {price} AZN. Telefon {phone}.",
+    "answer": "Salam! Konsultasiya {price} AZN-dir. Ünvan Nizami küçəsi {no}, bazar ertəsindən şənbəyə {hours} işləyirik. Telefon {phone}.",
+    "sunday": " Bazar günü də işləyirik.",
+    "extra": " Xəstələr üçün parkinq pulsuzdur."
+   },
+   "shop": {
+    "facts": "Elektronika mağazası, Nizami küç. {no}. Qaytarma {days_ret} gün ərzində, qəbzlə; yalnız açılmamış mallar. Bakı daxilində çatdırılma {price} AZN. Telefon {phone}.",
+    "answer": "Salam! Açılmamış malı qəbzlə {days_ret} gün ərzində qaytara bilərsiniz. Bakı daxilində çatdırılma {price} AZN-dir. Ünvan Nizami küçəsi {no}, telefon {phone}.",
+    "sunday": " Bazar günü də çatdırırıq.",
+    "extra": " 100 AZN-dən yuxarı çatdırılma pulsuzdur."
+   }
+  },
+  "ru": {
+   "clinic": {
+    "facts": "Стоматология, ул. Низами {no}. Пн–Сб {hours}. Консультация {price} AZN. Телефон {phone}.",
+    "answer": "Здравствуйте! Консультация стоит {price} AZN. Мы на ул. Низами {no}, работаем с понедельника по субботу {hours}. Телефон {phone}.",
+    "sunday": " Работаем также по воскресеньям.",
+    "extra": " Парковка для пациентов бесплатная."
+   },
+   "shop": {
+    "facts": "Магазин электроники, ул. Низами {no}. Возврат в течение {days_ret} дней с чеком; только невскрытые товары. Доставка по Баку {price} AZN. Телефон {phone}.",
+    "answer": "Здравствуйте! Невскрытый товар можно вернуть в течение {days_ret} дней с чеком. Доставка по Баку {price} AZN. Мы на ул. Низами {no}, телефон {phone}.",
+    "sunday": " Доставляем и по воскресеньям.",
+    "extra": " Доставка бесплатна при заказе от 100 AZN."
+   }
+  },
+  "tr": {
+   "clinic": {
+    "facts": "Diş kliniği, Nizami Cad. {no}. Pzt–Cmt {hours}. Muayene {price} AZN. Telefon {phone}.",
+    "answer": "Merhaba! Muayene {price} AZN'dir. Nizami Caddesi {no}'deyiz, pazartesiden cumartesiye {hours} arası açığız. Telefon {phone}.",
+    "sunday": " Pazar günleri de açığız.",
+    "extra": " Hastalar için otopark ücretsizdir."
+   },
+   "shop": {
+    "facts": "Elektronik mağazası, Nizami Cad. {no}. İade {days_ret} gün içinde, fişle; yalnızca açılmamış ürünler. Bakü içi teslimat {price} AZN. Telefon {phone}.",
+    "answer": "Merhaba! Açılmamış ürünü fişle {days_ret} gün içinde iade edebilirsiniz. Bakü içi teslimat {price} AZN'dir. Nizami Caddesi {no}'deyiz, telefon {phone}.",
+    "sunday": " Pazar günleri de teslimat yapıyoruz.",
+    "extra": " 100 AZN üzeri teslimat ücretsizdir."
+   }
+  },
+  "uk": {
+   "clinic": {
+    "facts": "Стоматологія, вул. Нізамі {no}. Пн–Сб {hours}. Консультація {price} AZN. Телефон {phone}.",
+    "answer": "Вітаю! Консультація коштує {price} AZN. Ми на вул. Нізамі {no}, працюємо з понеділка по суботу {hours}. Телефон {phone}.",
+    "sunday": " Працюємо також у неділю.",
+    "extra": " Паркування для пацієнтів безкоштовне."
+   },
+   "shop": {
+    "facts": "Магазин електроніки, вул. Нізамі {no}. Повернення протягом {days_ret} днів із чеком; лише нерозпаковані товари. Доставка по Баку {price} AZN. Телефон {phone}.",
+    "answer": "Вітаю! Нерозпакований товар можна повернути протягом {days_ret} днів із чеком. Доставка по Баку {price} AZN. Ми на вул. Нізамі {no}, телефон {phone}.",
+    "sunday": " Доставляємо і в неділю.",
+    "extra": " Доставка безкоштовна від 100 AZN."
+   }
+  },
+  "kk": {
+   "clinic": {
+    "facts": "Тіс емханасы, Низами көш. {no}. Дс–Сб {hours}. Кеңес {price} AZN. Телефон {phone}.",
+    "answer": "Сәлеметсіз бе! Кеңес {price} AZN тұрады. Біз Низами көшесі {no}-де, дүйсенбіден сенбіге дейін {hours} жұмыс істейміз. Телефон {phone}.",
+    "sunday": " Жексенбіде де жұмыс істейміз.",
+    "extra": " Пациенттерге тұрақ тегін."
+   },
+   "shop": {
+    "facts": "Электроника дүкені, Низами көш. {no}. Қайтару {days_ret} күн ішінде, чекпен; тек ашылмаған тауарлар. Баку бойынша жеткізу {price} AZN. Телефон {phone}.",
+    "answer": "Сәлеметсіз бе! Ашылмаған тауарды чекпен {days_ret} күн ішінде қайтара аласыз. Баку бойынша жеткізу {price} AZN. Біз Низами көшесі {no}-де, телефон {phone}.",
+    "sunday": " Жексенбіде де жеткіземіз.",
+    "extra": " 100 AZN-нен жоғары жеткізу тегін."
+   }
+  },
+  "ar": {
+   "clinic": {
+    "facts": "عيادة أسنان، شارع نظامي {no}. الاثنين–السبت {hours}. الاستشارة {price} مانات. الهاتف {phone}.",
+    "answer": "مرحباً! الاستشارة {price} مانات. نحن في شارع نظامي {no}، ونعمل من الاثنين إلى السبت {hours}. الهاتف {phone}.",
+    "sunday": " ونعمل يوم الأحد أيضاً.",
+    "extra": " مواقف السيارات مجانية للمرضى."
+   },
+   "shop": {
+    "facts": "متجر إلكترونيات، شارع نظامي {no}. الإرجاع خلال {days_ret} يوماً مع الإيصال؛ للمنتجات غير المفتوحة فقط. التوصيل داخل باكو {price} مانات. الهاتف {phone}.",
+    "answer": "مرحباً! يمكنك إرجاع المنتج غير المفتوح خلال {days_ret} يوماً مع الإيصال. التوصيل داخل باكو {price} مانات. نحن في شارع نظامي {no}، الهاتف {phone}.",
+    "sunday": " ونوصّل يوم الأحد أيضاً.",
+    "extra": " التوصيل مجاني للطلبات فوق 100 مانات."
+   }
+  },
+  "fa": {
+   "clinic": {
+    "facts": "کلینیک دندانپزشکی، خیابان نظامی {no}. دوشنبه تا شنبه {hours}. مشاوره {price} منات. تلفن {phone}.",
+    "answer": "سلام! مشاوره {price} منات است. ما در خیابان نظامی {no} هستیم و از دوشنبه تا شنبه {hours} باز هستیم. تلفن {phone}.",
+    "sunday": " یکشنبه‌ها هم باز هستیم.",
+    "extra": " پارکینگ برای بیماران رایگان است."
+   },
+   "shop": {
+    "facts": "فروشگاه لوازم الکترونیکی، خیابان نظامی {no}. مرجوعی تا {days_ret} روز با رسید؛ فقط کالای بازنشده. ارسال در باکو {price} منات. تلفن {phone}.",
+    "answer": "سلام! کالای بازنشده را می‌توانید تا {days_ret} روز با رسید مرجوع کنید. ارسال در باکو {price} منات است. ما در خیابان نظامی {no} هستیم، تلفن {phone}.",
+    "sunday": " یکشنبه‌ها هم ارسال داریم.",
+    "extra": " ارسال بالای ۱۰۰ منات رایگان است."
+   }
+  },
+  "hi": {
+   "clinic": {
+    "facts": "डेंटल क्लिनिक, {no} निज़ामी स्ट्रीट। सोम–शनि {hours}। परामर्श {price} AZN। फ़ोन {phone}।",
+    "answer": "नमस्ते! परामर्श {price} AZN का है। हम {no} निज़ामी स्ट्रीट पर हैं, सोमवार से शनिवार {hours} खुले हैं। फ़ोन {phone}।",
+    "sunday": " हम रविवार को भी खुले हैं।",
+    "extra": " मरीज़ों के लिए पार्किंग मुफ़्त है।"
+   },
+   "shop": {
+    "facts": "इलेक्ट्रॉनिक्स की दुकान, {no} निज़ामी स्ट्रीट। रसीद के साथ {days_ret} दिनों में वापसी; केवल बिना खुले सामान। बाकू में डिलीवरी {price} AZN। फ़ोन {phone}।",
+    "answer": "नमस्ते! बिना खुला सामान रसीद के साथ {days_ret} दिनों में वापस किया जा सकता है। बाकू में डिलीवरी {price} AZN है। हम {no} निज़ामी स्ट्रीट पर हैं, फ़ोन {phone}।",
+    "sunday": " हम रविवार को भी डिलीवरी करते हैं।",
+    "extra": " 100 AZN से ऊपर डिलीवरी मुफ़्त है।"
+   }
+  },
+  "id": {
+   "clinic": {
+    "facts": "Klinik gigi, Jl. Nizami {no}. Sen–Sab {hours}. Konsultasi {price} AZN. Telepon {phone}.",
+    "answer": "Halo! Konsultasi {price} AZN. Kami di Jl. Nizami {no}, buka Senin sampai Sabtu {hours}. Telepon {phone}.",
+    "sunday": " Kami juga buka hari Minggu.",
+    "extra": " Parkir gratis untuk pasien."
+   },
+   "shop": {
+    "facts": "Toko elektronik, Jl. Nizami {no}. Pengembalian dalam {days_ret} hari dengan struk; hanya barang belum dibuka. Pengiriman di Baku {price} AZN. Telepon {phone}.",
+    "answer": "Halo! Barang yang belum dibuka bisa dikembalikan dalam {days_ret} hari dengan struk. Pengiriman di Baku {price} AZN. Kami di Jl. Nizami {no}, telepon {phone}.",
+    "sunday": " Kami juga mengirim hari Minggu.",
+    "extra": " Pengiriman gratis di atas 100 AZN."
+   }
+  },
+  "vi": {
+   "clinic": {
+    "facts": "Phòng khám nha khoa, {no} đường Nizami. Thứ Hai–Thứ Bảy {hours}. Tư vấn {price} AZN. Điện thoại {phone}.",
+    "answer": "Xin chào! Tư vấn là {price} AZN. Chúng tôi ở {no} đường Nizami, mở cửa từ thứ Hai đến thứ Bảy {hours}. Điện thoại {phone}.",
+    "sunday": " Chúng tôi cũng mở cửa Chủ nhật.",
+    "extra": " Bệnh nhân được đỗ xe miễn phí."
+   },
+   "shop": {
+    "facts": "Cửa hàng điện tử, {no} đường Nizami. Đổi trả trong {days_ret} ngày kèm hóa đơn; chỉ hàng chưa mở. Giao hàng trong Baku {price} AZN. Điện thoại {phone}.",
+    "answer": "Xin chào! Hàng chưa mở có thể trả lại trong {days_ret} ngày kèm hóa đơn. Giao hàng trong Baku là {price} AZN. Chúng tôi ở {no} đường Nizami, điện thoại {phone}.",
+    "sunday": " Chúng tôi cũng giao hàng Chủ nhật.",
+    "extra": " Miễn phí giao hàng cho đơn trên 100 AZN."
+   }
+  },
+  "de": {
+   "clinic": {
+    "facts": "Zahnarztpraxis, {no} Nizami St. Geöffnet Mo–Sa {hours}. Eine Beratung kostet {price} AZN. Telefon {phone}.",
+    "answer": "Hallo! Eine Beratung kostet {price} AZN. Wir befinden uns in {no} Nizami St, geöffnet von Montag bis Samstag {hours}. Rufen Sie {phone} an.",
+    "sunday": " Wir haben auch sonntags geöffnet.",
+    "extra": " Für Patienten ist das Parken kostenlos."
+   },
+   "shop": {
+    "facts": "Elektronikgeschäft, {no} Nizami Str. Rückgabe innerhalb von {days_ret} Tagen mit dem Kassenbeleg; nur ungeöffnete Artikel. Lieferung in Baku kostet {price} AZN. Telefon {phone}.",
+    "answer": "Hallo! Sie können einen ungeöffneten Artikel innerhalb von {days_ret} Tagen mit dem Kassenbeleg zurückgeben. Lieferung in Baku kostet {price} AZN. Wir befinden uns in {no} Nizami Str., Telefon {phone}.",
+    "sunday": " Wir liefern auch sonntags.",
+    "extra": " Lieferung ist kostenlos ab 100 AZN."
+   }
+  },
+  "fr": {
+   "clinic": {
+    "facts": "Clinique dentaire, {no} rue Nizami. Ouverte du lun‑sam {hours}. Une consultation coûte {price} AZN. Téléphone {phone}.",
+    "answer": "Bonjour ! Une consultation coûte {price} AZN. Nous sommes situés au {no} rue Nizami, ouverts du lundi au samedi {hours}. Appelez le {phone}.",
+    "sunday": " Nous sommes également ouverts le dimanche.",
+    "extra": " Le stationnement est gratuit pour les patients."
+   },
+   "shop": {
+    "facts": "Magasin d'électronique, {no} rue Nizami. Retour sous {days_ret} jours avec le reçu ; articles non ouverts uniquement. Livraison à Bakou est {price} AZN. Téléphone {phone}.",
+    "answer": "Bonjour ! Vous pouvez retourner un article non ouvert sous {days_ret} jours avec le reçu. La livraison à Bakou est {price} AZN. Nous sommes au {no} rue Nizami, téléphone {phone}.",
+    "sunday": " Nous livrons aussi le dimanche.",
+    "extra": " Livraison est gratuite au‑dessus de 100 AZN."
+   }
+  },
+  "es": {
+   "clinic": {
+    "facts": "Clínica dental, {no} calle Nizami. Abierta de lunes a sábado {hours}. Una consulta cuesta {price} AZN. Teléfono {phone}.",
+    "answer": "¡Hola! Una consulta cuesta {price} AZN. Estamos en {no} calle Nizami, abiertos de lunes a sábado {hours}. Llame al {phone}.",
+    "sunday": " Estamos abiertos los domingos también.",
+    "extra": " El estacionamiento es gratuito para los pacientes."
+   },
+   "shop": {
+    "facts": "Tienda de electrónica, {no} calle Nizami. Devoluciones dentro de {days_ret} días con el recibo; solo artículos sin abrir. La entrega en Bakú cuesta {price} AZN. Teléfono {phone}.",
+    "answer": "¡Hola! Puede devolver un artículo sin abrir dentro de {days_ret} días con el recibo. La entrega en Bakú cuesta {price} AZN. Estamos en {no} calle Nizami, teléfono {phone}.",
+    "sunday": " Entregamos los domingos también.",
+    "extra": " La entrega es gratuita por encima de 100 AZN."
+   }
+  },
+  "it": {
+   "clinic": {
+    "facts": "Clinica dentistica, {no} via Nizami. Aperta da lun‑ven {hours}. Una consulenza costa {price} AZN. Telefono {phone}.",
+    "answer": "Ciao! Una consulenza costa {price} AZN. Siamo in {no} via Nizami, aperti dal lunedì al sabato {hours}. Chiama {phone}.",
+    "sunday": " Siamo aperti anche la domenica.",
+    "extra": " Il parcheggio è gratuito per i pazienti."
+   },
+   "shop": {
+    "facts": "Negozio di elettronica, {no} via Nizami. Resi entro {days_ret} giorni con lo scontrino; solo articoli non aperti. Consegna a Baku è {price} AZN. Telefono {phone}.",
+    "answer": "Ciao! Puoi restituire un articolo non aperto entro {days_ret} giorni con lo scontrino. La consegna a Baku è {price} AZN. Siamo in {no} via Nizami, telefono {phone}.",
+    "sunday": " Consegniamo anche la domenica.",
+    "extra": " La consegna è gratuita sopra i 100 AZN."
+   }
+  },
+  "pt": {
+   "clinic": {
+    "facts": "Clínica odontológica, {no} Nizami St. Aberta de Seg–Sáb {hours}. Uma consulta custa {price} AZN. Telefone {phone}.",
+    "answer": "Olá! Uma consulta custa {price} AZN. Estamos na {no} Nizami St, abertos de segunda a sábado {hours}. Ligue para {phone}.",
+    "sunday": " Estamos abertos aos domingos também.",
+    "extra": " O estacionamento é gratuito para pacientes."
+   },
+   "shop": {
+    "facts": "Loja de eletrônicos, {no} Rua Nizami. Devoluções dentro de {days_ret} dias com o recibo; apenas itens não abertos. Entrega em Baku custa {price} AZN. Telefone {phone}.",
+    "answer": "Olá! Você pode devolver um item não aberto dentro de {days_ret} dias com o recibo. A entrega em Baku custa {price} AZN. Estamos na {no} Rua Nizami, telefone {phone}.",
+    "sunday": " Entregamos aos domingos também.",
+    "extra": " Entrega grátis acima de 100 AZN."
+   }
+  },
+  "pl": {
+   "clinic": {
+    "facts": "Przychodnia dentystyczna, {no} ul. Nizami. Otwarte pon–sob {hours}. Konsultacja kosztuje {price} AZN. Telefon {phone}.",
+    "answer": "Witaj! Konsultacja kosztuje {price} AZN. Znajdujemy się przy {no} ul. Nizami, otwarte od poniedziałku do soboty {hours}. Zadzwoń pod numer {phone}.",
+    "sunday": " Jesteśmy również otwarci w niedziele.",
+    "extra": " Parking jest bezpłatny dla pacjentów."
+   },
+   "shop": {
+    "facts": "Sklep elektroniczny, {no} ul. Nizami. Zwroty w ciągu {days_ret} dni z paragonem; tylko nieotwarte produkty. Dostawa w Baku kosztuje {price} AZN. Telefon {phone}.",
+    "answer": "Cześć! Możesz zwrócić nieotwarty produkt w ciągu {days_ret} dni z paragonem. Dostawa w Baku kosztuje {price} AZN. Jesteśmy pod adresem {no} ul. Nizami, telefon {phone}.",
+    "sunday": " Dostarczamy także w niedziele.",
+    "extra": " Dostawa jest darmowa powyżej 100 AZN."
+   }
+  },
+  "nl": {
+   "clinic": {
+    "facts": "Tandartspraktijk, {no} Nizami St. Open ma–za {hours}. Een consult kost {price} AZN. Telefoon {phone}.",
+    "answer": "Hallo! Een consult kost {price} AZN. We zijn gevestigd op {no} Nizami St, open van maandag tot zaterdag {hours}. Bel {phone}.",
+    "sunday": " We zijn ook op zondag open.",
+    "extra": " Parkeren is gratis voor patiënten."
+   },
+   "shop": {
+    "facts": "Elektronicawinkel, {no} Nizami St. Retourneren binnen {days_ret} dagen met het bonnetje; alleen ongeopende artikelen. Levering in Baku is {price} AZN. Telefoon {phone}.",
+    "answer": "Hallo! U kunt een ongeopend artikel binnen {days_ret} dagen retourneren met het bonnetje. Levering in Baku is {price} AZN. Wij zijn gevestigd op {no} Nizami St, telefoon {phone}.",
+    "sunday": " We leveren ook op zondag.",
+    "extra": " Levering is gratis boven 100 AZN."
+   }
+  },
+  "zh": {
+   "clinic": {
+    "facts": "牙科诊所，{no} Nizami St. 周一至周六营业 {hours}。咨询费用为 {price} AZN。电话 {phone}。",
+    "answer": "您好！咨询费用为 {price} AZN。我们位于 {no} Nizami St，周一至周六营业 {hours}。致电 {phone}。",
+    "sunday": " 我们周日也营业。",
+    "extra": " 患者停车免费。"
+   },
+   "shop": {
+    "facts": "电子产品店，{no} Nizami St. 收据凭证可在 {days_ret} 天内退货；仅限未开封商品。巴库配送费用为 {price} AZN。电话 {phone}。",
+    "answer": "您好！您可以凭收据在 {days_ret} 天内退回未开封的商品。巴库配送费用为 {price} AZN。我们位于 {no} Nizami St，电话 {phone}。",
+    "sunday": " 我们也在周日配送。",
+    "extra": " 订单满 100 AZN 免费配送。"
+   }
+  },
+  "ja": {
+   "clinic": {
+    "facts": "歯科クリニック、{no} Nizami St. 月曜〜土曜 {hours} に営業しています。診察料は {price} AZN です。電話 {phone}。",
+    "answer": "こんにちは！診察料は {price} AZN です。私たちは {no} Nizami St にあり、月曜から土曜は {hours} に営業しています。電話は {phone} です。",
+    "sunday": " 日曜日も営業しています。",
+    "extra": " 駐車場は患者様に無料です。"
+   },
+   "shop": {
+    "facts": "家電店、{no} Nizami St. です。領収書があれば、未開封の商品は{days_ret}日以内に返品できます。バクーへの配達は{price} AZNです。電話 {phone}。",
+    "answer": "こんにちは！領収書があれば、未開封の商品は{days_ret}日以内に返品できます。バクーへの配達は{price} AZNです。住所は{no} Nizami St、電話は{phone}です。",
+    "sunday": " 日曜日も配達します。",
+    "extra": " 100 AZN以上のご注文で配送料無料です。"
+   }
+  },
+  "ko": {
+   "clinic": {
+    "facts": "치과 클리닉, {no} Nizami St. 월요일–토요일 {hours}에 영업합니다. 상담 비용은 {price} AZN입니다. 전화 {phone}.",
+    "answer": "안녕하세요! 상담 비용은 {price} AZN입니다. 저희는 {no} Nizami St에 있으며, 월요일부터 토요일까지 {hours}에 영업합니다. 전화 {phone}.",
+    "sunday": " 일요일에도 영업합니다.",
+    "extra": " 환자 주차는 무료입니다."
+   },
+   "shop": {
+    "facts": "전자 제품 매장, {no} Nizami St. 영수증을 제시하면 {days_ret}일 이내에 반품 가능; 미개봉 제품만 해당됩니다. 바쿠 배송비는 {price} AZN입니다. 전화 {phone}.",
+    "answer": "안녕하세요! 영수증을 제시하면 {days_ret}일 이내에 미개봉 제품을 반품하실 수 있습니다. 바쿠 배송비는 {price} AZN입니다. 저희는 {no} Nizami St에 있으며, 전화 {phone}.",
+    "sunday": " 일요일에도 배송합니다.",
+    "extra": " 100 AZN 이상 주문 시 배송비가 무료입니다."
+   }
+  },
+  "uz": {
+   "clinic": {
+    "facts": "Stomatologiya klinikasi, {no} Nizami ko‘chasi. Dushanbadan Shanbagacha {hours} ochiq. Konsultatsiya {price} AZN. Telefon {phone}.",
+    "answer": "Salom! Konsultatsiya {price} AZN. Biz {no} Nizami ko‘chada joylashganmiz, dushanbadan shanbagacha {hours} ochiq. Telefon {phone}.",
+    "sunday": " Biz yakshanbalarda ham ochiqmiz.",
+    "extra": " Bemorlar uchun parking bepul."
+   },
+   "shop": {
+    "facts": "Elektronika do'koni, {no} Nizami ko'chasi. Kvitansiya bilan {days_ret} kun ichida qaytarish mumkin; faqat ochilmagan mahsulotlar. Baku shahrida yetkazib berish {price} AZN. Telefon {phone}.",
+    "answer": "Salom! Siz ochilmagan mahsulotni kvitansiya bilan {days_ret} kun ichida qaytarishingiz mumkin. Baku shahrida yetkazib berish {price} AZN. Biz {no} Nizami ko'chasida joylashganmiz, telefon {phone}.",
+    "sunday": " Biz yakshanbalarda ham yetkazib beramiz.",
+    "extra": " Yetkazib berish 100 AZN dan yuqori bo'lsa bepul."
+   }
+  },
+  "ka": {
+   "clinic": {
+    "facts": "დენტალური კლინიკა, {no} ნიზამის ქ. ღ.მ.დ.–შაბ {hours}. კონსულტაცია {price} AZN. ტელეფონი {phone}.",
+    "answer": "გამარჯობა! კონსულტაცია {price} AZN. ჩვენ {no} ნიზამის ქ. მდებარეობს, ღ.მ.დ.–შაბ {hours}. დარეკეთ {phone}.",
+    "sunday": " ჩვენ კვირასაც ღია ვართ.",
+    "extra": " პარკირება უფასოა პაციენტებისთვის."
+   },
+   "shop": {
+    "facts": "ელექტრონიკის მაღაზია, {no} ნიზამის ქუჩა. დაბრუნება {days_ret} დღის განმავლობაში ქვითრით; მხოლოდ გახსნაკი არ მქონე ნივთები. მიწოდება ბაკუში {price} AZN. ტელეფონი {phone}.",
+    "answer": "გამარჯობა! შეგიძლიათ დაბრუნოთ გახსნაკი არ მქონე ნივთი {days_ret} დღის განმავლობაში ქვითრით. მიწოდება ბაკუში {price} AZN. ჩვენ მდებარეობს {no} ნიზამის ქუჩაზე, ტელეფონი {phone}.",
+    "sunday": " ჩვენ ასევე მიწოდებით კვირის დღეებში.",
+    "extra": " მიწოდება უფასოა 100 AZN-ზე მეტი."
+   }
+  },
+  "he": {
+   "clinic": {
+    "facts": "מרפאת שיניים, {no} רחוב ניזמי. פתוח בימים שני–שבת {hours}. ייעוץ עולה {price} AZN. טלפון {phone}.",
+    "answer": "שלום! ייעוץ עולה {price} AZN. אנחנו ב-{no} רחוב ניזמי, פתוחים מיום שני עד שבת {hours}. חייגו {phone}.",
+    "sunday": " אנחנו פתוחים גם בימי ראשון.",
+    "extra": " חניה חינם למטופלים."
+   },
+   "shop": {
+    "facts": "חנות אלקטרוניקה, {no} רחוב ניזמי. החזרה בתוך {days_ret} ימים עם הקבלה; רק פריטים שלא נפתחו. משלוח בבקווה הוא {price} AZN. טלפון {phone}.",
+    "answer": "שלום! ניתן להחזיר פריט שלא נפתח בתוך {days_ret} ימים עם הקבלה. משלוח בבקווה הוא {price} AZN. אנחנו ב-{no} רחוב ניזמי, טלפון {phone}.",
+    "sunday": " אנו מספקים גם בימי ראשון.",
+    "extra": " משלוח חינם מעל 100 AZN."
+   }
+  },
+  "bn": {
+   "clinic": {
+    "facts": "ডেন্টাল ক্লিনিক, {no} নিজামি স্ট্রিট। সোমবার–শনিবার {hours} খোলা। একটি পরামর্শের মূল্য {price} AZN। ফোন {phone}।",
+    "answer": "হ্যালো! একটি পরামর্শের মূল্য {price} AZN। আমরা {no} নিজামি স্ট্রিট-এ, সোমবার থেকে শনিবার {hours} খোলা। কল করুন {phone}।",
+    "sunday": " আমরা রবিবারও খোলা।",
+    "extra": " রোগীদের জন্য পার্কিং ফ্রি।"
+   },
+   "shop": {
+    "facts": "ইলেকট্রনিক্স শপ, {no} নিজামি স্ট্রিট। রসিদসহ {days_ret} দিনের মধ্যে রিটার্ন করা যাবে; শুধুমাত্র অখোলা আইটেম। বাকুতে ডেলিভারি {price} AZN। ফোন {phone}।",
+    "answer": "হ্যালো! আপনি রসিদসহ {days_ret} দিনের মধ্যে অখোলা আইটেম রিটার্ন করতে পারেন। বাকুতে ডেলিভারি {price} AZN। আমরা {no} নিজামি স্ট্রিটে অবস্থিত, ফোন {phone}।",
+    "sunday": " আমরা রবিবারও ডেলিভারি করি।",
+    "extra": " ডেলিভারি ১০০ AZN এর উপরে বিনামূল্যে।"
+   }
+  },
+  "th": {
+   "clinic": {
+    "facts": "คลินิกทันตกรรม, {no} ถนนนีซามี. เปิดวันจันทร์ถึงเสาร์ {hours}. ค่าปรึกษา {price} AZN. โทร {phone}.",
+    "answer": "สวัสดี! ค่าปรึกษา {price} AZN. เราตั้งอยู่ที่ {no} ถนนนีซามี, เปิดวันจันทร์ถึงเสาร์ {hours}. โทร {phone}.",
+    "sunday": " เราเปิดให้บริการในวันอาทิตย์ด้วยเช่นกัน.",
+    "extra": " ที่จอดรถฟรีสำหรับผู้ป่วย."
+   },
+   "shop": {
+    "facts": "ร้านอิเล็กทรอนิกส์, {no} ถนนนีซามี. คืนสินค้าภายใน {days_ret} วันพร้อมใบเสร็จ; เฉพาะสินค้าที่ไม่ได้เปิด. การจัดส่งในบากูราคา {price} AZN. โทร {phone}.",
+    "answer": "สวัสดี! คุณสามารถคืนสินค้าที่ไม่ได้เปิดภายใน {days_ret} วันพร้อมใบเสร็จ. การจัดส่งในบากูราคา {price} AZN. เราตั้งอยู่ที่ {no} ถนนนีซามี, โทร {phone}.",
+    "sunday": " เราจัดส่งในวันอาทิตย์ด้วยเช่นกัน.",
+    "extra": " การจัดส่งฟรีสำหรับยอดซื้อเกิน 100 AZN."
+   }
+  },
+  "sw": {
+   "clinic": {
+    "facts": "Kliniki ya meno, {no} Nizami St. Wafunguliwa Jumatatu–Jumamosi {hours}. Ushauri ni {price} AZN. Simu {phone}.",
+    "answer": "Habari! Ushauri ni {price} AZN. Tuko {no} Nizami St, wapi Jumatatu hadi Jumamosi {hours}. Piga simu {phone}.",
+    "sunday": " Tunafungua pia Jumapili.",
+    "extra": " Parking ni bure kwa wagonjwa."
+   },
+   "shop": {
+    "facts": "Duka la vifaa vya umeme, {no} Nizami St. Rudisha ndani ya siku {days_ret} kwa risiti; bidhaa zisizofunguliwa pekee. Uwasilishaji katika Baku ni {price} AZN. Simu {phone}.",
+    "answer": "Habari! Unaweza kurudisha kipengele kisichofunguliwa ndani ya siku {days_ret} kwa risiti. Uwasilishaji katika Baku ni {price} AZN. Tuko {no} Nizami St, simu {phone}.",
+    "sunday": " Tunapeleka pia Jumapili.",
+    "extra": " Usafirishaji ni bure kwa zaidi ya 100 AZN."
+   }
+  },
+  "ro": {
+   "clinic": {
+    "facts": "Clinică dentară, {no} Str. Nizami. Deschisă Luni–Sâmbătă {hours}. O consultație costă {price} AZN. Telefon {phone}.",
+    "answer": "Salut! O consultație costă {price} AZN. Suntem la {no} Str. Nizami, deschiși de luni până sâmbătă {hours}. Sună la {phone}.",
+    "sunday": " Suntem deschiși și duminicile.",
+    "extra": " Parcarea este gratuită pentru pacienți."
+   },
+   "shop": {
+    "facts": "Magazin de electronice, {no} Strada Nizami. Returnări în termen de {days_ret} zile cu bonul; numai produse neînschise. Livrare în Baku costă {price} AZN. Telefon {phone}.",
+    "answer": "Salut! Poți returna un produs neînschis în termen de {days_ret} zile cu bonul. Livrare în Baku costă {price} AZN. Suntem la {no} Strada Nizami, telefon {phone}.",
+    "sunday": " Livrăm și duminicile.",
+    "extra": " Livrarea este gratuită pentru comenzi peste 100 AZN."
+   }
+  },
+  "cs": {
+   "clinic": {
+    "facts": "Zubní klinika, {no} Nizami St. Otevřeno Po–So {hours}. Konzultace stojí {price} AZN. Telefon {phone}.",
+    "answer": "Dobrý den! Konzultace stojí {price} AZN. Nacházíme se na {no} Nizami St, otevřeno od pondělí do soboty {hours}. Zavolejte na {phone}.",
+    "sunday": " Jsme otevřeni i v neděli.",
+    "extra": " Parkování je pro pacienty zdarma."
+   },
+   "shop": {
+    "facts": "Elektro obchod, {no} Nizami St. Vrácení do {days_ret} dnů s účtenkou; pouze neotevřené zboží. Doručení v Baku stojí {price} AZN. Telefon {phone}.",
+    "answer": "Dobrý den! Můžete vrátit neotevřený produkt do {days_ret} dnů s účtenkou. Doručení v Baku stojí {price} AZN. Jsme na {no} Nizami St, telefon {phone}.",
+    "sunday": " Doručujeme i v neděli.",
+    "extra": " Doručení je zdarma nad 100 AZN."
+   }
+  },
+  "el": {
+   "clinic": {
+    "facts": "Οδοντιατρική κλινική, {no} οδός Nizami. Ανοιχτά Δευ-Σαβ {hours}. Μια συμβουλή κοστίζει {price} AZN. Τηλέφωνο {phone}.",
+    "answer": "Γεια σας! Μια συμβουλή κοστίζει {price} AZN. Βρισκόμαστε στη {no} οδός Nizami, ανοιχτά Δευτέρα έως Σάββατο {hours}. Καλέστε {phone}.",
+    "sunday": " Είμαστε ανοιχτοί και τις Κυριακές.",
+    "extra": " Η στάθμευση είναι δωρεάν για τους ασθενείς."
+   },
+   "shop": {
+    "facts": "Κατάστημα ηλεκτρονικών, {no} οδός Nizami. Επιστροφές εντός {days_ret} ημερών με την απόδειξη· μόνο ανοιγμένα προϊόντα. Παράδοση στο Μπακού είναι {price} AZN. Τηλέφωνο {phone}.",
+    "answer": "Γεια σας! Μπορείτε να επιστρέψετε ένα ανοιγμένο προϊόν εντός {days_ret} ημερών με την απόδειξη. Η παράδοση στο Μπακού είναι {price} AZN. Βρισκόμαστε στη {no} οδός Nizami, τηλέφωνο {phone}.",
+    "sunday": " Παραδίδουμε και τις Κυριακές.",
+    "extra": " Η παράδοση είναι δωρεάν για αγορές άνω των 100 AZN."
+   }
+  },
+  "hu": {
+   "clinic": {
+    "facts": "Fogorvosi klinika, {no} Nizami utca. Nyitva hétfő–szombat {hours}. Egy konzultáció {price} AZN. Telefon {phone}.",
+    "answer": "Üdvözlet! Egy konzultáció {price} AZN. A {no} Nizami utcában vagyunk, nyitva hétfőnől szombatig {hours}. Hívja a {phone} számot.",
+    "sunday": " Vasárnap is nyitva vagyunk.",
+    "extra": " A parkolás ingyenes a betegeknél."
+   },
+   "shop": {
+    "facts": "Elektronikai bolt, {no} Nizami utca. Visszaküldés {days_ret} napon belül a számlával; csak bontatlan termékek. Szállítás Baku-ban {price} AZN. Telefon {phone}.",
+    "answer": "Üdvözlöm! A bontatlan terméket {days_ret} napon belül a számlával visszaküldheti. Szállítás Baku-ban {price} AZN. Címünk: {no} Nizami utca, telefon {phone}.",
+    "sunday": " Vasárnap is szállítunk.",
+    "extra": " 100 AZN felett ingyenes a szállítás."
+   }
+  }
+ }
+}
