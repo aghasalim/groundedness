@@ -43,6 +43,14 @@ def endpoints():
     gem = os.environ.get('GEMINI_API_KEY') or env.get('GEMINI_API')
     orr = os.environ.get('OPENROUTER_API_KEY') or env.get('OPENROUTER_API_KEY')
     eps = []
+    # Google Vertex AI: the paid tier, a service-account key on disk (see ~/SIBA/ops/secrets).
+    # Listed first, so any run prefers it; its "key" is minted on demand by vertex_token().
+    sa = os.environ.get('GCP_SA_JSON') or env.get('GCP_SA_JSON')
+    sa = os.path.expanduser(os.path.join('~/SIBA', sa)) if sa and not os.path.isabs(sa) else sa
+    if sa and os.path.exists(sa):
+        proj = env.get('GCP_PROJECT') or json.load(open(sa))['project_id']; reg = env.get('GCP_REGION', 'europe-west1')
+        for m in ['google/gemini-2.5-flash-lite', 'google/gemini-2.5-flash']:
+            eps.append(dict(model=m, url=f'https://{reg}-aiplatform.googleapis.com/v1/projects/{proj}/locations/{reg}/endpoints/openapi/chat/completions', key=None, sa=sa, gap=0.3))
     if orr:
         for m in ['openai/gpt-oss-120b', 'qwen/qwen3-235b-a22b-2507']:
             eps.append(dict(model=m, url='https://openrouter.ai/api/v1/chat/completions', key=orr, gap=0.5))
@@ -54,12 +62,31 @@ def endpoints():
             eps.append(dict(model=m, url='https://generativelanguage.googleapis.com/v1beta/openai/chat/completions', key=gem, gap=8))
     return eps
 
+_vtok = {}
+def vertex_token(sa_path):
+    """An access token for the service account, cached 50 minutes. Signs the JWT
+    with the cryptography package (pip install cryptography)."""
+    import base64, time as _t
+    from cryptography.hazmat.primitives import serialization, hashes
+    from cryptography.hazmat.primitives.asymmetric import padding
+    if _vtok.get(sa_path) and _t.time() < _vtok[sa_path][1]: return _vtok[sa_path][0]
+    sa = json.load(open(sa_path)); now = int(_t.time()); b = lambda x: base64.urlsafe_b64encode(x).rstrip(b'=')
+    h = b(b'{"alg":"RS256","typ":"JWT"}'); c = b(json.dumps({'iss': sa['client_email'], 'scope': 'https://www.googleapis.com/auth/cloud-platform', 'aud': 'https://oauth2.googleapis.com/token', 'iat': now, 'exp': now + 3600}).encode())
+    key = serialization.load_pem_private_key(sa['private_key'].encode(), None); sig = b(key.sign(h + b'.' + c, padding.PKCS1v15(), hashes.SHA256()))
+    import urllib.parse
+    tok = json.load(urllib.request.urlopen(urllib.request.Request('https://oauth2.googleapis.com/token', data=urllib.parse.urlencode({'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer', 'assertion': (h + b'.' + c + b'.' + sig).decode()}).encode())))['access_token']
+    _vtok[sa_path] = (tok, _t.time() + 50 * 60); return tok
+
 def call(ep, prompt):
     body = {'model': ep['model'], 'temperature': ep.get('temperature', 1.0), 'max_tokens': ep.get('max_tokens', 4000), 'messages': [{'role': 'user', 'content': prompt}]}
     if 'qwen3' in ep['model']: body['reasoning_format'] = 'hidden'
     if 'gpt-oss' in ep['model']: body['reasoning_effort'] = 'low'
     if ep['model'].startswith('gemini'): body['max_tokens'] = 8000
-    req = urllib.request.Request(ep['url'], data=json.dumps(body).encode(), headers={'authorization': 'Bearer ' + ep['key'], 'content-type': 'application/json', 'user-agent': 'groundedness-train/0.1'})
+    if ep['model'].startswith('google/'):
+        # Gemini thinks by default; this is generation, not reasoning, so no thinking budget
+        body['extra_body'] = {'google': {'thinking_config': {'thinking_budget': 0}}}
+    key = vertex_token(ep['sa']) if ep.get('sa') else ep['key']
+    req = urllib.request.Request(ep['url'], data=json.dumps(body).encode(), headers={'authorization': 'Bearer ' + key, 'content-type': 'application/json', 'user-agent': 'groundedness-train/0.1'})
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
             data = json.load(r)

@@ -38,7 +38,7 @@ def main():
     if os.path.exists(OUT):
         for l in open(OUT, encoding='utf-8'): done.add(json.loads(l)['orig'])
     todo = [d for d in docs if d['source'][:80] not in done]; random.Random(2).shuffle(todo)
-    eps = [e for e in endpoints() if 'openrouter' in e['url']] or [e for e in endpoints() if 'groq' in e['url']]
+    eps = [e for e in endpoints() if 'aiplatform' in e['url']] or [e for e in endpoints() if 'openrouter' in e['url']] or [e for e in endpoints() if 'groq' in e['url']]
     for e in eps: e['gap'] = a.gap; e['max_tokens'] = 2000; e['temperature'] = 0.7
     lock = threading.Lock(); fh = open(OUT, 'a', encoding='utf-8'); t0 = time.time(); n = {'ok': 0, 'bad': 0}
     def worker(k):

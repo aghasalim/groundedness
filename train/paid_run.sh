@@ -6,8 +6,8 @@ set -u; cd "$(dirname "$0")/.."; PY=.venv/bin/python
 export HF_HUB_DISABLE_IMPLICIT_TOKEN=1 HF_TOKEN="" PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.85 PYTORCH_MPS_LOW_WATERMARK_RATIO=0.7
 K=$(grep '^GROQ_API_KEY=' ~/SIBA/.env.local | cut -d= -f2- | tr -d '"'"'"' \r')
 log(){ echo "[$(date +%H:%M)] $*"; }
-log "augment2 on the free tier"
-$PY train/augment2.py --workers 3 --hours 72 --gap 1 > train/data/augment2.log 2>&1
+log "augment2 on Vertex AI (gemini-2.5-flash-lite)"
+caffeinate -i $PY train/augment2.py --workers 6 --hours 2 --gap 0.3 > train/data/augment2.log 2>&1
 log "augment2: $(wc -l < train/data/synth-para2.jsonl) documents"
 $PY train/prepare.py --ragtruth-cap 4000 --dev 0.05
 caffeinate -dims $PY train/train.py --base train/out/run2 --epochs 2 --bs 8 --lr 2e-5 --pos-weight 4 --out train/out/run5 > train/out-run5.log 2>&1
