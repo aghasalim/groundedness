@@ -1,5 +1,7 @@
 # groundedness
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23003649.svg)](https://doi.org/10.5281/zenodo.23003649)
+
 Did the model make this up? A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)**, it also hosts the public multilingual detector leaderboard.
 
 ```python
