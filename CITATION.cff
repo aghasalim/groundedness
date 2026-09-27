@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: If you use this work, please cite it as below.
+title: "groundedness"
+abstract: "Did the model make this up? Claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language."
+type: software
+authors:
+  - family-names: Mustafazada
+    given-names: Aghasalim
+    orcid: "https://orcid.org/0009-0001-8746-4582"
+    affiliation: "Howest University of Applied Sciences"
+repository-code: "https://github.com/aghasalim/groundedness"
+url: "https://aghasalim.github.io/"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A Multilingual Groundedness Detector That Runs on a Raspberry Pi: Trained Token Classification Against LLM Judges and English-Only Detectors in 31 Languages"
+  authors:
+    - family-names: Mustafazada
+      given-names: Aghasalim
+      orcid: "https://orcid.org/0009-0001-8746-4582"
+    - family-names: Eyvazov
+      given-names: Teymur
+  doi: "10.2139/ssrn.7497398"
+  year: 2026
+  publisher:
+    name: SSRN
