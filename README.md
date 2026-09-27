@@ -1,6 +1,6 @@
 # groundedness
 
-**Did the model make this up?** A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)**, it also hosts the public multilingual detector leaderboard.
+Did the model make this up? A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)**, it also hosts the public multilingual detector leaderboard.
 
 ```python
 from groundedness import check
@@ -20,13 +20,13 @@ That is Azerbaijani. It works the same in Russian, Turkish, Arabic or English, b
 
 RAG apps and support bots answer from documents. The failure that hurts is not a looping decode or a made-up historical date; it is *"a consultation is 25 AZN"* when the document says 30. `groundedness` finds that sentence, names it, and gives you the answer without it.
 
-**Any model.** Groq, OpenAI, Ollama, vLLM, OpenRouter, anything that speaks `/chat/completions`. No model to download, no GPU.
+Any model. Groq, OpenAI, Ollama, vLLM, OpenRouter, anything that speaks `/chat/completions`. No model to download, no GPU.
 
-**Any language.** No training data, no language list. If the model can read it, the judge can check it.
+Any language. No training data, no language list. If the model can read it, the judge can check it.
 
-**Claim-level output.** Not a score you cannot act on: the exact unsupported claims, and a rewrite. Highlight them, hand off to a human, or log the rate.
+Claim-level output. Not a score you cannot act on: the exact unsupported claims, and a rewrite. Highlight them, hand off to a human, or log the rate.
 
-**Zero dependencies.** `urllib` and `json`. Python 3.9+.
+Zero dependencies. `urllib` and `json`. Python 3.9+.
 
 ## No key at all: the hosted detector
 
