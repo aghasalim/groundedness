@@ -1,6 +1,6 @@
 # groundedness
 
-**Did the model make this up?** A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)** — it also hosts the public multilingual detector leaderboard.
+**Did the model make this up?** A claim-level groundedness check for LLM answers: one call, any OpenAI-compatible model, any language. Try it live, no key needed: **[grounded.siba.az](https://grounded.siba.az)**, it also hosts the public multilingual detector leaderboard.
 
 ```python
 from groundedness import check
@@ -14,16 +14,19 @@ r.fixed        # 'Salam! Konsultasiya haqqı və bazar günü işləyib-işləm�
 r.score        # 0.47
 ```
 
-That is Azerbaijani. It works the same in Russian, Turkish, Arabic or English, because the judge reads the answer in its own language. Every trained hallucination detector published so far — Vectara HHEM, LettuceDetect, Patronus Lynx — is English-only.
+That is Azerbaijani. It works the same in Russian, Turkish, Arabic or English, because the judge reads the answer in its own language. Every trained hallucination detector published so far, Vectara HHEM, LettuceDetect, Patronus Lynx, is English-only.
 
 ## Why
 
 RAG apps and support bots answer from documents. The failure that hurts is not a looping decode or a made-up historical date; it is *"a consultation is 25 AZN"* when the document says 30. `groundedness` finds that sentence, names it, and gives you the answer without it.
 
-- **Any model.** Groq, OpenAI, Ollama, vLLM, OpenRouter — anything that speaks `/chat/completions`. No model to download, no GPU.
-- **Any language.** No training data, no language list. If the model can read it, the judge can check it.
-- **Claim-level output.** Not a score you cannot act on: the exact unsupported claims, and a rewrite. Highlight them, hand off to a human, or log the rate.
-- **Zero dependencies.** `urllib` and `json`. Python 3.9+.
+**Any model.** Groq, OpenAI, Ollama, vLLM, OpenRouter, anything that speaks `/chat/completions`. No model to download, no GPU.
+
+**Any language.** No training data, no language list. If the model can read it, the judge can check it.
+
+**Claim-level output.** Not a score you cannot act on: the exact unsupported claims, and a rewrite. Highlight them, hand off to a human, or log the rate.
+
+**Zero dependencies.** `urllib` and `json`. Python 3.9+.
 
 ## No key at all: the hosted detector
 
@@ -32,7 +35,7 @@ r = check(answer, sources=[facts], model="siba")      # grounded.siba.az, exact 
 r = check(answer, sources=[facts], model="cascade")   # detector first; an LLM judge + rewrite only if it flags something
 ```
 
-`model="siba"` calls our own multilingual detector — `siba/grounded-multilingual-base`, an XLM-RoBERTa token classifier trained on 2,844 synthetic labelled answers in 30 languages plus RAGTruth, served from a Raspberry Pi 5 in Baku. On benchmark v3 (31 languages, 434 cases) it catches **352/372 planted errors (95 %)** with 32/62 false alarms in ~30 ms on a laptop CPU; HHEM-2.1-Open on the same cases: 265/372 with 22/62 false alarms. No API key, no rewrite — it marks the spans; use an LLM judge when you also want the corrected answer. Weights: [huggingface.co/aghasalim/grounded-multilingual-base](https://huggingface.co/aghasalim/grounded-multilingual-base); recipe in `train/`, paper v3 in `paper/`.
+`model="siba"` calls our own multilingual detector, `siba/grounded-multilingual-base`, an XLM-RoBERTa token classifier trained on 2,844 synthetic labelled answers in 30 languages plus RAGTruth, served from a Raspberry Pi 5 in Baku. On benchmark v3 (31 languages, 434 cases) it catches **352/372 planted errors (95 %)** with 32/62 false alarms in ~30 ms on a laptop CPU; HHEM-2.1-Open on the same cases: 265/372 with 22/62 false alarms. No API key, no rewrite, it marks the spans; use an LLM judge when you also want the corrected answer. Weights: [huggingface.co/aghasalim/grounded-multilingual-base](https://huggingface.co/aghasalim/grounded-multilingual-base); recipe in `train/`, paper v3 in `paper/`.
 
 ## Install
 
@@ -52,7 +55,7 @@ Prints JSON: `grounded`, `score`, `unsupported`, `fixed`.
 
 ## What it is not
 
-It checks an answer against **the sources you give it**, not against the world. A true claim that is not in your documents is reported as unsupported — which is what you want from a bot that must only say what the owner wrote. It is a judge call, so it costs one short completion per answer (about 350 tokens on the example above) and it is as good as the model judging; the tests use `qwen/qwen3.8-27b` on Groq, which caught every planted error in az/ru/en.
+It checks an answer against **the sources you give it**, not against the world. A true claim that is not in your documents is reported as unsupported, which is what you want from a bot that must only say what the owner wrote. It is a judge call, so it costs one short completion per answer (about 350 tokens on the example above) and it is as good as the model judging; the tests use `qwen/qwen3.8-27b` on Groq, which caught every planted error in az/ru/en.
 
 ## Tests
 
@@ -75,13 +78,13 @@ Full tables: [`benchmark/results_v3-siba.json`](benchmark/results_v3-siba.json),
 | `qwen/qwen3.8-27b` | LLM judge, Groq | 19+ | 214/215 | 1/36 | 0.34 s |
 | `openai/gpt-oss-20b` | LLM judge, Groq | 17 | 200/203 | 2/34 | 0.44 s |
 
-The judges' language coverage is what the free daily quota allowed on 2026-09-20; the remaining rows fill in as it resets. Our detector's false alarms are all paraphrases of the source ("Monday to Saturday" for "Mon–Sat") — the first item of future work.
+The judges' language coverage is what the free daily quota allowed on 2026-09-20; the remaining rows fill in as it resets. Our detector's false alarms are all paraphrases of the source ("Monday to Saturday" for "Mon-Sat"), the first item of future work.
 
 ![Planted errors caught per language](benchmark/heatmap.png)
 
 ## Benchmark v2: judges vs the English-trained detectors, eleven languages
 
-Two domains (a dental clinic, an electronics shop), eleven languages across five scripts, and for each a grounded answer plus seven single-error variants planted by slot substitution — wrong price, wrong hours, wrong street number, one phone digit changed, wrong return window, an invented Sunday opening, an added claim. **154 answers, 132 of them wrong**, identical across languages. Full tables: [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md), [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). Paper: [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf). Live leaderboard: [grounded.siba.az](https://grounded.siba.az/#leaderboard).
+Two domains (a dental clinic, an electronics shop), eleven languages across five scripts, and for each a grounded answer plus seven single-error variants planted by slot substitution: wrong price, wrong hours, wrong street number, one phone digit changed, wrong return window, an invented Sunday opening, an added claim. **154 answers, 132 of them wrong**, identical across languages. Full tables: [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md), [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). Paper: [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf). Live leaderboard: [grounded.siba.az](https://grounded.siba.az/#leaderboard).
 
 ![Planted errors caught per language, nine detectors](benchmark/heatmap.png)
 
