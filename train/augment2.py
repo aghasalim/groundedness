@@ -9,7 +9,7 @@ have the synth.jsonl shape plus 'para': true; prepare.py folds them in.
 """
 import argparse, json, os, random, re, sys, threading, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gen_data import endpoints, call, LN, parse, MARK  # noqa: E402
+from gen_data import endpoints, call, LN, parse  # noqa: E402
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 OUT = os.path.join(D, 'synth-para2.jsonl')
 PROMPT = '''You get a {lang} business document and four assistant answers. Some answers contain claims wrapped in ⟦ ⟧ that the document does NOT support.
