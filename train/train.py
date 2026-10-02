@@ -8,7 +8,6 @@ labels: 1 = inside an unsupported span, 0 = supported, -100 elsewhere.
 """
 import argparse, json, os, random, time, math
 import torch
-from torch.utils.data import DataLoader
 from transformers import AutoTokenizer, AutoModelForTokenClassification, get_linear_schedule_with_warmup
 
 HERE = os.path.dirname(os.path.abspath(__file__))
