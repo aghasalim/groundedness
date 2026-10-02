@@ -71,13 +71,13 @@ def _endpoint() -> tuple[str, str]:
     return base.rstrip("/"), key
 
 
-def _facts(sources) -> str:
+def _facts(sources: str | list[str]) -> str:
     if isinstance(sources, str):
         sources = [sources]
     return "\n\n".join(f"[{i + 1}] {s}" for i, s in enumerate(sources) if s and s.strip())
 
 
-def check(answer: str, sources, model: str, *, base_url: str | None = None, api_key: str | None = None, timeout: float = 30.0, temperature: float = 0.0, max_tokens: int = 8000) -> Result:
+def check(answer: str, sources: str | list[str], model: str, *, base_url: str | None = None, api_key: str | None = None, timeout: float = 30.0, temperature: float = 0.0, max_tokens: int = 8000) -> Result:
     """Judge `answer` against `sources` with `model` over an OpenAI-compatible chat endpoint.
 
     Never raises on a bad model reply: a judge that cannot be parsed returns the
