@@ -2,6 +2,7 @@
 import argparse
 import json
 import sys
+from pathlib import Path
 
 from . import check
 
@@ -12,7 +13,7 @@ def main() -> None:
     ap.add_argument("--sources", nargs="+", required=True, help="text files the answer must be grounded in")
     ap.add_argument("--base-url")
     a = ap.parse_args()
-    sources = [open(p, encoding="utf-8").read() for p in a.sources]
+    sources = [Path(p).read_text(encoding="utf-8") for p in a.sources]
     r = check(sys.stdin.read(), sources, a.model, base_url=a.base_url)
     print(json.dumps({"grounded": r.grounded, "score": round(r.score, 3), "unsupported": r.unsupported, "fixed": r.fixed}, ensure_ascii=False, indent=2))
 
