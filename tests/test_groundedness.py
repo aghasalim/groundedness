@@ -73,3 +73,10 @@ def test_offline_malformed_unsupported_is_unjudged(monkeypatch, value):
     _fake_judge(monkeypatch, '{"unsupported": %s, "answer": "x"}' % value)
     r = check("It costs 25 AZN.", ["It costs 30 AZN."], "m", api_key="x")
     assert not r.judged and r.unsupported == [] and not r.grounded
+
+
+def test_offline_unjudged_has_no_score(monkeypatch):
+    """An unusable reply is unknown, so it must not score as fully grounded."""
+    _fake_judge(monkeypatch, "")
+    r = check("It costs 25 AZN.", ["It costs 30 AZN."], "m", api_key="x")
+    assert not r.judged and r.score is None
