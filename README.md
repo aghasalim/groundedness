@@ -53,7 +53,7 @@ Set `OPENAI_BASE_URL` and `OPENAI_API_KEY`, or just `GROQ_API_KEY` (Groq's endpo
 echo "the answer" | groundedness --model qwen/qwen3.8-27b --sources facts.txt policy.md
 ```
 
-Prints JSON: `grounded`, `score`, `unsupported`, `fixed`.
+Prints JSON: `grounded`, `judged`, `score`, `unsupported`, `fixed`. When the judge reply cannot be used, `judged` is false and `score` is null.
 
 ## What it is not
 

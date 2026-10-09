@@ -8,7 +8,7 @@ detector (HHEM, LettuceDetect, Lynx) is English-only.
     r = check(answer, sources=[doc], model="qwen/qwen3.8-27b")
     r.unsupported   # claims the sources do not support
     r.fixed         # the answer with those claims removed, same language
-    r.score         # 1.0 = fully grounded
+    r.score         # 1.0 = fully grounded, None = could not judge
 
 No dependencies. Uses OPENAI_BASE_URL / OPENAI_API_KEY (or GROQ_API_KEY).
 """
@@ -55,8 +55,10 @@ class Result:
         return self.judged and not self.unsupported
 
     @property
-    def score(self) -> float:
-        """1.0 when nothing was unsupported; otherwise 1 minus the share of the answer's text the unsupported claims make up."""
+    def score(self) -> float | None:
+        """1.0 when nothing was unsupported; otherwise 1 minus the share of the answer's text the unsupported claims make up. None when the judge gave nothing usable."""
+        if not self.judged:
+            return None
         if not self.unsupported:
             return 1.0
         if not self.original:
