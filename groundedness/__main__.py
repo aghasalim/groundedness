@@ -15,7 +15,7 @@ def main() -> None:
     a = ap.parse_args()
     sources = [Path(p).read_text(encoding="utf-8") for p in a.sources]
     r = check(sys.stdin.read(), sources, a.model, base_url=a.base_url)
-    print(json.dumps({"grounded": r.grounded, "score": round(r.score, 3), "unsupported": r.unsupported, "fixed": r.fixed}, ensure_ascii=False, indent=2))
+    print(json.dumps({"grounded": r.grounded, "judged": r.judged, "score": None if r.score is None else round(r.score, 3), "unsupported": r.unsupported, "fixed": r.fixed}, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
