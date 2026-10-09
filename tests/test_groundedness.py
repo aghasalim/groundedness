@@ -42,3 +42,34 @@ def test_grounded_answer_unchanged():
 def test_no_sources_is_a_noop():
     r = check("anything", [], "any-model")
     assert r.grounded and r.fixed == "anything"
+
+
+def _fake_judge(monkeypatch, content):
+    """Make urlopen return one chat completion whose message is `content`."""
+    import io
+    import json
+    import urllib.request
+
+    class Reply(io.BytesIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+    body = json.dumps({"choices": [{"message": {"content": content}}]}).encode()
+    monkeypatch.setattr(urllib.request, "urlopen", lambda req, timeout=None: Reply(body))
+
+
+def test_offline_judge_reply_is_parsed(monkeypatch):
+    _fake_judge(monkeypatch, '{"unsupported": ["25 AZN"], "answer": "I do not have the price."}')
+    r = check("It costs 25 AZN.", ["It costs 30 AZN."], "m", api_key="x")
+    assert r.judged and r.unsupported == ["25 AZN"] and r.fixed == "I do not have the price."
+
+
+@pytest.mark.parametrize("value", ["null", '"25 AZN"', "{}", "3"])
+def test_offline_malformed_unsupported_is_unjudged(monkeypatch, value):
+    """Never raises, and never splits a string into characters."""
+    _fake_judge(monkeypatch, '{"unsupported": %s, "answer": "x"}' % value)
+    r = check("It costs 25 AZN.", ["It costs 30 AZN."], "m", api_key="x")
+    assert not r.judged and r.unsupported == [] and not r.grounded
