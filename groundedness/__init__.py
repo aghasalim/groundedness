@@ -132,9 +132,11 @@ def check(answer: str, sources: str | list[str], model: str, *, base_url: str | 
             j = json.loads(m.group(0)) if m else {}
         except json.JSONDecodeError:
             j = {}
-    if not isinstance(j, dict) or "unsupported" not in j:
+    # A null or a string here is a malformed reply, not an empty list: iterating
+    # null raises and iterating a string splits it into characters.
+    if not isinstance(j, dict) or not isinstance(j.get("unsupported"), list):
         return Result(fixed=answer, original=answer, model=model, raw=raw, judged=False)
-    unsupported = [str(x).strip() for x in j.get("unsupported", []) if str(x).strip()]
+    unsupported = [str(x).strip() for x in j["unsupported"] if str(x).strip()]
     fixed = j.get("answer") if isinstance(j.get("answer"), str) else None
     return Result(unsupported=unsupported, fixed=(fixed or answer).strip(), original=answer, model=model, raw=raw)
 
