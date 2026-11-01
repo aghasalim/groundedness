@@ -82,6 +82,14 @@ The full tables are in [`benchmark/results_v3-siba.json`](benchmark/results_v3-s
 
 The judges only cover as many languages as the free daily quota allowed on 2026-09-20. I'll fill in the remaining rows as it resets. Our detector's false alarms are all paraphrases of the source, like "Monday to Saturday" for "Mon-Sat". Fixing that is the first item of future work.
 
+![Recall against false alarms, benchmark v3](benchmark/detectors_v3.png)
+
+Planted errors caught against grounded answers wrongly flagged, for every detector run on v3. Hollow points are judges, run only on the languages the quota allowed.
+
+![Share of each planted error type caught, benchmark v3](benchmark/error_types_v3.png)
+
+Each planted error type, caught out of planted. Our detector's weakest type is the changed phone digit (53/62). LettuceDetect catches 1 of 31 wrong return windows.
+
 ![Planted errors caught per language](benchmark/heatmap.png)
 
 ## Benchmark v2: judges vs the English-trained detectors, eleven languages
