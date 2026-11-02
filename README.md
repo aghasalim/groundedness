@@ -96,8 +96,6 @@ Each planted error type, caught out of planted. Our detector's weakest type is t
 
 I used two domains, a dental clinic and an electronics shop, in eleven languages across five scripts. Each one has a grounded answer plus seven variants, and I planted a single error in each variant by slot substitution. The errors are a wrong price, wrong hours, a wrong street number, one changed phone digit, a wrong return window, an invented Sunday opening and an added claim. That makes 154 answers, and 132 of them are wrong. They're identical across languages. The full tables are in [`benchmark/results_v2.md`](benchmark/results_v2.md), [`results_v2-gemini.md`](benchmark/results_v2-gemini.md) and [`results_v2-baselines.md`](benchmark/results_v2-baselines.md). The paper is [`paper/groundedness-eleven-languages-v2.pdf`](paper/groundedness-eleven-languages-v2.pdf), and the live leaderboard is at [grounded.siba.az](https://grounded.siba.az/#leaderboard).
 
-![Planted errors caught per language, nine detectors](benchmark/heatmap.png)
-
 | Detector | Kind | Errors caught | False alarms | Median latency |
 |---|---|---:|---:|---:|
 | `openai/gpt-oss-120b` | LLM judge, Groq | **132/132** | **0/22** | 0.70 s |
