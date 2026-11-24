@@ -1,5 +1,3 @@
-<p align="center"><img src="assets/banner.jpg" alt="Line drawing of a source document tied by threads to the lines of an answer, with one line left untied" width="100%"></p>
-
 # groundedness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23003649.svg)](https://doi.org/10.5281/zenodo.23003649)
