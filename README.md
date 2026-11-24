@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.jpg" alt="Line drawing of a source document tied by threads to the lines of an answer, with one line left untied" width="100%"></p>
+
 # groundedness
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23003649.svg)](https://doi.org/10.5281/zenodo.23003649)
@@ -17,6 +19,23 @@ r.score        # 0.47
 ```
 
 That's Azerbaijani. It works the same way in Russian, Turkish, Arabic or English, since the judge reads the answer in its own language. Every trained hallucination detector published so far is English-only, including Vectara HHEM, LettuceDetect and Patronus Lynx.
+
+<details>
+<summary>Contents</summary>
+
+- [Why](#why)
+- [No key at all: the hosted detector](#no-key-at-all-the-hosted-detector)
+- [Install](#install)
+- [CLI](#cli)
+- [What it is not](#what-it-is-not)
+- [Tests](#tests)
+- [Benchmark v3: our detector vs judges vs the English-trained detectors, 31 languages](#benchmark-v3-our-detector-vs-judges-vs-the-english-trained-detectors-31-languages)
+- [Benchmark v2: judges vs the English-trained detectors, eleven languages](#benchmark-v2-judges-vs-the-english-trained-detectors-eleven-languages)
+- [Roadmap](#roadmap)
+- [Origin](#origin)
+- [Citation](#citation)
+
+</details>
 
 ## Why
 
@@ -132,3 +151,17 @@ The old results are kept in [`benchmark/RESULTS.md`](benchmark/RESULTS.md) and [
 ## Origin
 
 I pulled this out of the groundedness judge that runs on every channel of [SIBA](https://siba.az)'s assistant. MIT.
+
+## Citation
+
+If you use this work, please cite it. The same record is in [`CITATION.cff`](CITATION.cff).
+
+```bibtex
+@software{mustafazada2026groundedness,
+  author  = {Mustafazada, Aghasalim},
+  title   = {groundedness},
+  year    = {2026},
+  doi     = {10.5281/zenodo.23003649},
+  url     = {https://github.com/aghasalim/groundedness}
+}
+```
